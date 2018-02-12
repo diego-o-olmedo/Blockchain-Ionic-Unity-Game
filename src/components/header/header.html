@@ -1,0 +1,25 @@
+<!-- Generated template for the HeaderComponent component -->
+
+<ion-header #header>
+  <ion-navbar>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3></ion-col>
+        <ion-col col-6 text-center>
+          <!-- <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'Auctions'}">Auctions</span>
+          <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'My Ships'}">My Ships</span>
+          <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'Battle'}">Battle</span> -->
+          <span class="headerLinks" *ngFor="let p of pages" (click)="openPage(p)" tappable [ngClass]="{'selected': page == 'My Ships'}">{{p.title}}</span>
+        </ion-col>
+
+        <ion-col col-3>{{appState.accountStatus}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <ion-tabs color="dark">
+      <ion-tab tabTitle="Auctions" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="My Ships" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="Nattle" [root]="rootPage"></ion-tab>
+    </ion-tabs> -->
+  </ion-navbar>
+</ion-header>

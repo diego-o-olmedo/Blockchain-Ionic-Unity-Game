@@ -1,0 +1,22 @@
+<!--
+  Generated template for the MyShipsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header #head>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+<header-component></header-component>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-spinner *ngIf="loading" ion-col col-12>
+      </ion-spinner>
+      <ship-card *ngFor="let ship of ships" ion-col col-4 [ship]="ship"></ship-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>z

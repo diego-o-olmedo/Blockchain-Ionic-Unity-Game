@@ -1,0 +1,42 @@
+page-game {
+  .chatbox {
+    border-width: 2px !important;
+    border-color: black;
+    height: 100% !important;
+    margin-bottom: 0px;
+    margin-top: auto;
+  }
+  .username {
+    font-weight: bold;
+  }
+  .chatwrapper {
+  }
+
+  ion-menu {
+    margin: 0;
+    padding: 0;
+    .scroll-content {
+      margin: 0;
+      width: 100% !important;
+    }
+  }
+  .chatbutton {
+    // height: 100px;assets/imgs/logo.png
+    height: 200px;
+    width: 50px;
+    z-index: 500;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-image: url("../assets/imgs/chat-tab.png");
+  }
+
+  .gameContainer,
+  .webgl-content,
+  canvas {
+    z-index: 10000 !important;
+  }
+  ion-content {
+    overflow: auto !important;
+  }
+}

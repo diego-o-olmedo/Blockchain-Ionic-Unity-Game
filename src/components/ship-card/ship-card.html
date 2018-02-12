@@ -1,0 +1,22 @@
+<ion-card>
+
+  <div>
+    <img src="assets/imgs/ships/{{ship.img}}" />
+  </div>
+
+  <ion-card-content>
+    <ion-card-title style="text-overflow: ellipsis">
+      {{ship.name ? ship.name : 'Ship '+ship.id}}
+    </ion-card-title>
+  </ion-card-content>
+
+  <ion-row no-padding>
+    <ion-col>
+      <button ion-button clear small color="danger" icon-start>
+        <!-- <ion-icon name='star'></ion-icon> -->
+        Ship #{{ship.id}}
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
