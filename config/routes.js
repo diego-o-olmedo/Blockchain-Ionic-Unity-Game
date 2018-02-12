@@ -34,7 +34,7 @@ module.exports.routes = {
   //   view: "assets/www/index"
   // }
 
-  "get /api/ships": "ShipController.ships",
+  "get /api/v1/ships": "ShipController.ships",
   "r|^/(?!.*api).*|": {
     view: "index",
     skipAssets: true
