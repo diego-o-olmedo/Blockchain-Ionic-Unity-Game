@@ -4,13 +4,13 @@ var web3 = new Web3("https://mainnet.infura.io/")
 
 module.exports = {
   ships: function(req, res) {
-    let response = []
+    sails.log(req.query)
     let address = req.query.address
-      ? req.query.address
-      : "0x221f890d45213b100c90f50a4509943156ecbff5"
+    sails.log.debug(address)
     if (address && address != "undefined") {
       cryptoKitties(address).then(data => {
         if (data.kitties.length > 0) {
+          let response = []
           GetGenes(data).then(result => {
             result.forEach(r => {
               let modelPoint = r.gene.charAt(r.gene.length - 1)
@@ -23,41 +23,43 @@ module.exports = {
             res.json(result)
           })
         } else {
-          res.json([])
+          res.json(getDefault())
         }
       })
     } else {
-      response = [
-        {
-          id: 777,
-          name: "Ship X",
-          model: 0,
-          size: "Small",
-          color1: "Blue",
-          color2: "Orange"
-        },
-        {
-          id: 333,
-          name: "Ship YY",
-          model: 1,
-          size: "Large",
-          color1: "Blue",
-          color2: "Green"
-        },
-        {
-          id: 123,
-          name: "Ship Yamato",
-          model: 2,
-          size: "Normal",
-          color1: "Pink",
-          color2: "Red"
-        }
-      ]
-      res.json(response)
+      res.json(getDefault())
     }
   }
 }
 
+function getDefault() {
+  return [
+    {
+      id: 777,
+      name: "Placeholder Ship1",
+      model: 0,
+      size: "Small",
+      color1: "Blue",
+      color2: "Orange"
+    },
+    {
+      id: 333,
+      name: "Placeholder Ship2",
+      model: 1,
+      size: "Large",
+      color1: "Blue",
+      color2: "Green"
+    },
+    {
+      id: 123,
+      name: "Placeholder Ship3",
+      model: 2,
+      size: "Normal",
+      color1: "Pink",
+      color2: "Red"
+    }
+  ]
+}
 function cryptoKitties(address) {
   let url =
     "http://api.cryptokitties.co/kitties?owner_wallet_address=" + address

@@ -28,7 +28,7 @@
 
 module.exports.cors = {
   allRoutes: true,
-  origin: "https://eth.bid, https://api.eth.bid",
+  origin: "https://eth.bid, https://api.eth.bid, http://localhost:8080",
   credentials: true,
   headers: ["Authorization", "content-type", "user-agent"]
 
