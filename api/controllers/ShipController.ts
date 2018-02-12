@@ -57,6 +57,14 @@ function getDefault() {
       size: "Normal",
       color1: "Pink",
       color2: "Red"
+    },
+    {
+      id: 90,
+      name: "Placeholder Ship4",
+      model: 0,
+      size: "Normal",
+      color1: "Pink",
+      color2: "Red"
     }
   ]
 }
