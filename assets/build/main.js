@@ -1,1 +1,524 @@
-webpackJsonp([3],{112:function(n,l,u){"use strict";u.d(l,"a",function(){return t});u(5),u(37);var t=function(){return function(){}}()},113:function(n,l,u){"use strict";u(5),u(0);u.d(l,"a",function(){return t});var t=function(){return function(){}}()},135:function(n,l){function u(n){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+n+"'.")})}u.keys=function(){return[]},u.resolve=u,n.exports=u,u.id=135},161:function(n,l,u){function t(n){var l=a[n];return l?u.e(l[1]).then(function(){return u(l[0])}):Promise.reject(new Error("Cannot find module '"+n+"'."))}var a={"../pages/auctions/auctions.module.ngfactory":[231,2],"../pages/game/game.module.ngfactory":[232,1],"../pages/my-ships/my-ships.module.ngfactory":[233,0]};t.keys=function(){return Object.keys(a)},t.id=161,n.exports=t},195:function(n,l,u){"use strict";function t(n){return e._19(0,[(n()(),e.Z(0,0,null,null,3,"span",[["class","headerLinks"],["tappable",""]],null,[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.openPage(n.context.$implicit)&&t}return t},null,null)),e.Y(1,278528,null,0,o.g,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),e._14(2,{selected:0}),(n()(),e._18(3,null,["",""]))],function(n,l){n(l,1,0,"headerLinks",n(l,2,0,"My Ships"==l.component.page))},function(n,l){n(l,3,0,l.context.$implicit.title)})}function a(n){return e._19(0,[(n()(),e._18(-1,null,["\n\n"])),(n()(),e.Z(1,0,[["header",1]],null,30,"ion-header",[],null,null,null,null,null)),e.Y(2,16384,null,0,i.a,[c.a,e.j,e.z,[2,s.a]],null,null),(n()(),e._18(-1,null,["\n  "])),(n()(),e.Z(4,0,null,null,26,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,r.b,r.a)),e.Y(5,49152,null,0,_.a,[p.a,[2,s.a],[2,f.a],c.a,e.j,e.z],null,null),(n()(),e._18(-1,3,["\n\n    "])),(n()(),e.Z(7,0,null,3,21,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(8,16384,null,0,h.a,[],null,null),(n()(),e._18(-1,null,["\n      "])),(n()(),e.Z(10,0,null,null,17,"ion-row",[["class","row"]],null,null,null,null,null)),e.Y(11,16384,null,0,d.a,[],null,null),(n()(),e._18(-1,null,["\n        "])),(n()(),e.Z(13,0,null,null,1,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(14,16384,null,0,g.a,[],null,null),(n()(),e._18(-1,null,["\n        "])),(n()(),e.Z(16,0,null,null,6,"ion-col",[["class","col"],["col-6",""],["text-center",""]],null,null,null,null,null)),e.Y(17,16384,null,0,g.a,[],null,null),(n()(),e._18(-1,null,["\n          "])),(n()(),e._18(-1,null,["\n          "])),(n()(),e.U(16777216,null,null,1,null,t)),e.Y(21,802816,null,0,o.h,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(n()(),e._18(-1,null,["\n        "])),(n()(),e._18(-1,null,["\n\n        "])),(n()(),e.Z(24,0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),e.Y(25,16384,null,0,g.a,[],null,null),(n()(),e._18(26,null,["",""])),(n()(),e._18(-1,null,["\n      "])),(n()(),e._18(-1,null,["\n    "])),(n()(),e._18(-1,3,["\n    "])),(n()(),e._18(-1,3,["\n  "])),(n()(),e._18(-1,null,["\n"]))],function(n,l){n(l,21,0,l.component.pages)},function(n,l){var u=l.component;n(l,4,0,e._13(l,5)._hidden,e._13(l,5)._sbPadding);n(l,26,0,u.appState.accountStatus)})}u.d(l,"a",function(){return m}),l.b=a;var e=u(0),o=u(12),i=u(52),c=u(1),s=u(4),r=u(114),_=u(25),p=u(8),f=u(14),h=u(75),d=u(73),g=u(72),m=(u(33),e.X({encapsulation:2,styles:[],data:{}}))},200:function(n,l,u){"use strict";function t(n){return o._19(0,[o._16(402653184,1,{nav:0}),(n()(),o.Z(1,0,null,null,3,"ion-nav",[["swipeBackEnabled","false"]],null,null,null,Z.b,Z.a)),o._15(6144,null,P.a,null,[S.a]),o.Y(3,4374528,[[1,4],["content",4]],0,S.a,[[2,j.a],[2,M.a],C.a,Y.a,x.a,o.j,o.u,o.z,o.i,A.l,F.a,[2,z.a],O.a,o.k],{swipeBackEnabled:[0,"swipeBackEnabled"],root:[1,"root"]},null),(n()(),o._18(-1,null,["\n"]))],function(n,l){n(l,3,0,"false",l.component.rootPage)},null)}function a(n){return o._19(0,[(n()(),o.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),o.Y(1,16384,null,0,G.a,[Y.a,o.j,o.z,[2,j.a]],null,null),(n()(),o._18(-1,null,["\n  "])),(n()(),o.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,L.b,L.a)),o.Y(4,49152,null,0,N.a,[C.a,[2,j.a],[2,M.a],Y.a,o.j,o.z],null,null),(n()(),o._18(-1,3,["\n  "])),(n()(),o._18(-1,null,["\n"])),(n()(),o._18(-1,null,["\n"])),(n()(),o.Z(8,0,null,null,1,"header-component",[],null,null,null,I.b,I.a)),o.Y(9,49152,null,0,q.a,[M.a,c.a,o.u],null,null),(n()(),o._18(-1,null,["\n\n"])),(n()(),o.Z(11,0,null,null,38,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,D.b,D.a)),o.Y(12,4374528,null,0,H.a,[Y.a,x.a,O.a,o.j,o.z,C.a,J.a,o.u,[2,j.a],[2,M.a]],null,null),(n()(),o._18(-1,1,["\n  "])),(n()(),o.Z(14,0,null,1,1,"h3",[],null,null,null,null,null)),(n()(),o._18(-1,null,["Domain for sale, contact hajaekyung@protonmail.com"])),(n()(),o._18(-1,1,["\n\n  "])),(n()(),o.Z(17,0,null,1,31,":svg:svg",[["height","150"],["width","400"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n    "])),(n()(),o.Z(19,0,null,null,24,":svg:defs",[],null,null,null,null,null)),(n()(),o._18(-1,null,["\n      "])),(n()(),o.Z(21,0,null,null,5,":svg:linearGradient",[["id","grad1"],["x1","0%"],["x2","100%"],["y1","0%"],["y2","0%"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n        "])),(n()(),o.Z(23,0,null,null,0,":svg:stop",[["offset","5%"],["stop-color","#F60"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n        "])),(n()(),o.Z(25,0,null,null,0,":svg:stop",[["offset","95%"],["stop-color","#FF6"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n      "])),(n()(),o._18(-1,null,["\n      "])),(n()(),o.Z(28,0,null,null,14,":svg:filter",[["id","demo3"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n        "])),(n()(),o._18(-1,null,["\n        "])),(n()(),o.Z(31,0,null,null,0,":svg:feGaussianBlur",[["result","blur3"],["stdDeviation","10"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n        "])),(n()(),o._18(-1,null,["\n        "])),(n()(),o.Z(34,0,null,null,4,":svg:feSpecularLighting",[["in","blur3"],["lighting-color","#FFF"],["result","spec3"],["specularConstant","1.2"],["specularExponent","7"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n          "])),(n()(),o._18(-1,null,["\n          "])),(n()(),o.Z(37,0,null,null,0,":svg:feSpotLight",[["limitingConeAngle","8"],["x","400"],["y","400"],["z","500"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n        "])),(n()(),o._18(-1,null,["\n        "])),(n()(),o._18(-1,null,["\n        "])),(n()(),o.Z(41,0,null,null,0,":svg:feComposite",[["in","SourceGraphic"],["in2","spec3"],["k1","0"],["k2","1"],["k3","1"],["k4","0"],["operator","arithmetic"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n      "])),(n()(),o._18(-1,null,["\n    "])),(n()(),o._18(-1,null,["\n    "])),(n()(),o.Z(45,0,null,null,0,":svg:ellipse",[["cx","200"],["cy","70"],["fill","url(#grad1)"],["rx","85"],["ry","55"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n    "])),(n()(),o.Z(47,0,null,null,0,":svg:ellipse",[["cx","100"],["cy","70"],["fill","url(#grad1)"],["filter","url(#demo3)"],["rx","85"],["ry","55"]],null,null,null,null,null)),(n()(),o._18(-1,null,["\n  "])),(n()(),o._18(-1,1,["\n"]))],null,function(n,l){n(l,3,0,o._13(l,4)._hidden,o._13(l,4)._sbPadding);n(l,11,0,o._13(l,12).statusbarPadding,o._13(l,12)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var e=u(27),o=u(0),i=(u(5),u(37),u(119)),c=u(33),s=function(){function n(n){this.navCtrl=n}return n.prototype.ionViewDidLoad=function(){var n=document.getElementById("grad1");console.log(n)},n}(),r=function(){function n(n,l){this.platform=n,this.appState=l,this.rootPage=s,this.initializeApp(),this.pages=[{title:"Auctions",component:"AuctionsPage"},{title:"Home",component:s},{title:"Battle",component:"GamePage"},{title:"MyShips",component:"MyShipsPage"}]}return n.prototype.initializeApp=function(){this.platform.ready().then(function(){})},n.prototype.page=function(n){console.log("select",n)},n.prototype.openPage=function(n){this.nav.setRoot(n.component)},n}(),_=u(112),p=function(){return function(){}}(),f=u(45),h=u(186),d=u(187),g=u(188),m=u(189),y=u(190),b=u(191),v=u(192),k=u(193),w=u(194),Z=u(230),P=u(34),S=u(50),j=u(4),M=u(14),C=u(8),Y=u(1),x=u(3),A=u(7),F=u(30),z=u(13),O=u(9),B=o.X({encapsulation:2,styles:[],data:{}}),E=o.V("ng-component",r,function(n){return o._19(0,[(n()(),o.Z(0,0,null,null,1,"ng-component",[],null,null,null,t,B)),o.Y(1,49152,null,0,r,[x.a,c.a],null,null)],null,null)},{},{},[]),G=u(52),L=u(114),N=u(25),I=u(195),q=u(71),D=u(196),H=u(21),J=u(24),R=o.X({encapsulation:2,styles:[],data:{}}),V=o.V("page-home",s,function(n){return o._19(0,[(n()(),o.Z(0,0,null,null,1,"page-home",[],null,null,null,a,R)),o.Y(1,49152,null,0,s,[M.a],null,null)],null,null)},{},{},[]),X=u(12),$=u(17),T=u(92),U=u(83),W=u(85),K=u(74),Q=u(15),nn=u(32),ln=u(90),un=u(115),tn=u(47),an=u(38),en=u(96),on=u(61),cn=u(100),sn=u(94),rn=u(108),_n=u(113),pn=u(185),fn=u(93),hn=u(26),dn=u(91),gn=u(95),mn=o.W(p,[f.b],function(n){return o._10([o._11(512,o.i,o.S,[[8,[h.a,d.a,g.a,m.a,y.a,b.a,v.a,k.a,w.a,E,V]],[3,o.i],o.s]),o._11(5120,o.r,o._9,[[3,o.r]]),o._11(4608,X.k,X.j,[o.r,[2,X.s]]),o._11(4608,$.k,$.k,[]),o._11(4608,$.c,$.c,[]),o._11(5120,o.b,o._0,[]),o._11(5120,o.p,o._6,[]),o._11(5120,o.q,o._7,[]),o._11(4608,e.c,e.q,[X.c]),o._11(6144,o.D,null,[e.c]),o._11(4608,e.f,T.a,[]),o._11(5120,e.d,function(n,l,u,t,a){return[new e.k(n,l),new e.o(u),new e.n(t,a)]},[X.c,o.u,X.c,X.c,e.f]),o._11(4608,e.e,e.e,[e.d,o.u]),o._11(135680,e.m,e.m,[X.c]),o._11(4608,e.l,e.l,[e.e,e.m]),o._11(6144,o.B,null,[e.l]),o._11(6144,e.p,null,[e.m]),o._11(4608,o.G,o.G,[o.u]),o._11(4608,e.h,e.h,[X.c]),o._11(4608,e.i,e.i,[X.c]),o._11(4608,i.c,i.c,[]),o._11(4608,i.g,i.b,[]),o._11(5120,i.i,i.j,[]),o._11(4608,i.h,i.h,[i.c,i.g,i.i]),o._11(4608,i.f,i.a,[]),o._11(5120,i.d,i.k,[i.h,i.f]),o._11(4608,U.a,U.a,[C.a,Y.a]),o._11(4608,W.a,W.a,[C.a,Y.a]),o._11(4608,K.a,K.a,[]),o._11(4608,Q.a,Q.a,[]),o._11(4608,nn.a,nn.a,[x.a]),o._11(4608,J.a,J.a,[Y.a,x.a,o.u,O.a]),o._11(4608,ln.a,ln.a,[C.a,Y.a]),o._11(5120,X.f,un.c,[X.q,[2,X.a],Y.a]),o._11(4608,X.e,X.e,[X.f]),o._11(5120,tn.b,tn.d,[C.a,tn.a]),o._11(5120,z.a,z.b,[C.a,tn.b,X.e,an.b,o.i]),o._11(4608,en.a,en.a,[C.a,Y.a,z.a]),o._11(4608,on.a,on.a,[C.a,Y.a]),o._11(4608,cn.a,cn.a,[C.a,Y.a,z.a]),o._11(4608,sn.a,sn.a,[Y.a,x.a,O.a,C.a,A.l]),o._11(4608,rn.a,rn.a,[C.a,Y.a]),o._11(4608,F.a,F.a,[x.a,Y.a]),o._11(4608,c.a,c.a,[K.a]),o._11(512,_n.a,_n.a,[]),o._11(512,X.b,X.b,[]),o._11(512,$.j,$.j,[]),o._11(512,$.d,$.d,[]),o._11(512,$.i,$.i,[]),o._11(512,un.a,un.a,[]),o._11(512,_.a,_.a,[]),o._11(512,o.k,pn.a,[]),o._11(256,Y.b,{locationStrategy:"path"},[]),o._11(1024,fn.a,fn.b,[]),o._11(1024,x.a,x.b,[e.b,fn.a,o.u]),o._11(1024,Y.a,Y.c,[Y.b,x.a]),o._11(512,O.a,O.a,[x.a]),o._11(512,hn.a,hn.a,[]),o._11(512,C.a,C.a,[Y.a,x.a,[2,hn.a]]),o._11(512,A.l,A.l,[C.a]),o._11(256,tn.a,{links:[{loadChildren:"../pages/auctions/auctions.module.ngfactory#AuctionsPageModuleNgFactory",name:"AuctionsPage",segment:"auctions",priority:"low",defaultHistory:[]},{loadChildren:"../pages/game/game.module.ngfactory#GamePageModuleNgFactory",name:"GamePage",segment:"game",priority:"low",defaultHistory:[]},{loadChildren:"../pages/my-ships/my-ships.module.ngfactory#MyShipsPageModuleNgFactory",name:"MyShipsPage",segment:"my-ships",priority:"low",defaultHistory:[]}]},[]),o._11(512,o.h,o.h,[]),o._11(512,dn.a,dn.a,[o.h]),o._11(1024,an.b,an.c,[dn.a,o.o]),o._11(1024,o.c,function(n,l,u,t,a,o,i,c,s,r,_,p,f){return[e.s(n),gn.a(l),K.b(u,t),sn.b(a,o,i,c,s),an.d(r,_,p,f)]},[[2,o.t],Y.a,x.a,O.a,Y.a,x.a,O.a,C.a,A.l,Y.a,tn.a,an.b,o.u]),o._11(512,o.d,o.d,[[2,o.c]]),o._11(131584,o.f,o.f,[o.u,o.T,o.o,o.k,o.i,o.d]),o._11(512,o.e,o.e,[o.f]),o._11(512,e.a,e.a,[[3,e.a]]),o._11(512,i.e,i.e,[]),o._11(512,p,p,[]),o._11(256,f.a,r,[]),o._11(256,X.a,"/",[])])});Object(o.M)(),Object(e.j)().bootstrapModuleFactory(mn)},33:function(n,l,u){"use strict";u.d(l,"a",function(){return t});u(5),u(37);var t=function(){function n(n){this.events=n,this._state={},this.web3=window.web3,this.accountStatus="Loading...",this.web3?0==this.web3.eth.accounts.length?(this.accountStatus="MetaMask account is locked!",this.startCheck()):(this.account=this.web3.eth.accounts[0],this.accountStatus=this.account,this.startCheck()):this.accountStatus="No MetaMask extension installed"}return n.prototype.startCheck=function(){var n=this;this.checkAccount||(this.checkAccount=setInterval(function(){n.account!=n.web3.eth.accounts[0]&&(n.account=n.web3.eth.accounts[0],n.accountStatus="string"==typeof n.account?n.account:"MetaMask account is locked!",n.events.publish("account:changed",n.account))},100))},Object.defineProperty(n.prototype,"state",{get:function(){return this._state=this._clone(this._state)},set:function(n){throw new Error("do not mutate the `.state` directly")},enumerable:!0,configurable:!0}),n.prototype.get=function(n){var l=this.state;return l.hasOwnProperty(n)?l[n]:l},n.prototype.set=function(n,l){return this._state[n]=l},n.prototype._clone=function(n){return JSON.parse(JSON.stringify(n))},n}()},71:function(n,l,u){"use strict";u.d(l,"a",function(){return t});u(5),u(37),u(33);var t=function(){function n(n,l,u){this.navCtrl=n,this.appState=l,this.zone=u,this.pages=[{title:"Auctions",component:"AuctionsPage",href:"auctions"},{title:"Battle",component:"GamePage",href:"battle"},{title:"MyShips",component:"MyShipsPage",href:"my-ships"}]}return n.prototype.openPage=function(n){var l=this;this.zone.run(function(){if(l.navCtrl.getActive().component.name!=n.component)if(console.log(l.navCtrl.getActive().component.name),window.gameInstance){document.getElementById("canvaswindow");window.location.href="auctions"}else l.navCtrl.setRoot(n.component)})},n}()}},[200]);
+webpackJsonp([5],{
+
+/***/ 108:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 108;
+
+/***/ }),
+
+/***/ 149:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/auctions/auctions.module": [
+		264,
+		4
+	],
+	"../pages/game/game.module": [
+		265,
+		3
+	],
+	"../pages/my-ships/my-ships.module": [
+		266,
+		1
+	],
+	"../pages/profile/profile.module": [
+		267,
+		0
+	],
+	"../pages/ship/ship.module": [
+		268,
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 149;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 189:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage.prototype.ionViewDidLoad = function () {
+        var grad = document.getElementById("grad1");
+        console.log(grad);
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-home",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\home\home.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content padding>\n  <h3>Domain for sale, contact hajaekyung@protonmail.com</h3>\n\n  <svg height="150" width="400">\n    <defs>\n      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">\n        <stop offset="5%" stop-color="#F60" />\n        <stop offset="95%" stop-color="#FF6" />\n      </linearGradient>\n      <filter id="demo3">\n        <!--Blur effect-->\n        <feGaussianBlur stdDeviation="10" result="blur3" />\n        <!--Lighting effect-->\n        <feSpecularLighting result="spec3" in="blur3" specularConstant="1.2" specularExponent="7" lighting-color="#FFF">\n          <!--Light source effect-->\n          <feSpotLight x="400" y="400" z="500" limitingConeAngle="8" />\n        </feSpecularLighting>\n        <!--Composition of inputs-->\n        <feComposite in="SourceGraphic" in2="spec3" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />\n      </filter>\n    </defs>\n    <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />\n    <ellipse filter="url(#demo3)" cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />\n  </svg>\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 190:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(192);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var HeaderComponentModule = (function () {
+    function HeaderComponentModule() {
+    }
+    HeaderComponentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__header__["a" /* HeaderComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* DirectivesModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__header__["a" /* HeaderComponent */]]
+        })
+    ], HeaderComponentModule);
+    return HeaderComponentModule;
+}());
+
+//# sourceMappingURL=header.module.js.map
+
+/***/ }),
+
+/***/ 192:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectivesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__ = __webpack_require__(245);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var DirectivesModule = (function () {
+    function DirectivesModule() {
+    }
+    DirectivesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */]],
+            imports: [],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */]]
+        })
+    ], DirectivesModule);
+    return DirectivesModule;
+}());
+
+//# sourceMappingURL=directives.module.js.map
+
+/***/ }),
+
+/***/ 194:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(219);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 219:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_service__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_header_header_module__ = __webpack_require__(190);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_7__components_header_header_module__["a" /* HeaderComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/auctions/auctions.module#AuctionsPageModule', name: 'AuctionsPage', segment: 'auctions', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/game/game.module#GamePageModule', name: 'GamePage', segment: 'game', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-ships/my-ships.module#MyShipsPageModule', name: 'MyShipsPage', segment: 'my-ships', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile/:address', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ship/ship.module#ShipPageModule', name: 'ShipPage', segment: 'ship/:id', priority: 'low', defaultHistory: [] }
+                    ]
+                })
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_4__app_service__["a" /* AppState */], { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 244:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(50);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var HeaderComponent = (function () {
+    function HeaderComponent(navCtrl, appState, zone) {
+        this.navCtrl = navCtrl;
+        this.appState = appState;
+        this.zone = zone;
+        this.pages = [
+            { title: "Auctions", component: "AuctionsPage", href: "auctions" },
+            { title: "Battle", component: "GamePage", href: "battle" },
+            { title: "MyShips", component: "MyShipsPage", href: "my-ships" }
+        ];
+    }
+    HeaderComponent.prototype.openPage = function (page) {
+        var _this = this;
+        // this.nav.setRoot(page.component)
+        this.zone.run(function () {
+            if (window.location.pathname.split("/")[1] != page.href) {
+                if (window["gameInstance"]) {
+                    // window["gameInstance"] = null
+                    // let element = document.getElementById("canvaswindow")
+                    window.location.href = page.href;
+                    // element.outerHTML = ""
+                    // window["gameInstance"].SendMessage("Web3", "Exit")
+                }
+                else {
+                    _this.navCtrl.setRoot(page.component);
+                }
+            }
+        });
+    };
+    HeaderComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "header-component",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\header\header.html"*/'<!-- Generated template for the HeaderComponent component -->\n\n<ion-header #header>\n  <ion-navbar>\n\n    <ion-grid>\n      <ion-row>\n        <ion-col col-3></ion-col>\n        <ion-col col-6 text-center>\n          <!-- <span (click)="page(\'AuctionsPage\')" tappable [ngClass]="{\'selected\': page == \'Auctions\'}">Auctions</span>\n          <span (click)="page(\'AuctionsPage\')" tappable [ngClass]="{\'selected\': page == \'My Ships\'}">My Ships</span>\n          <span (click)="page(\'AuctionsPage\')" tappable [ngClass]="{\'selected\': page == \'Battle\'}">Battle</span> -->\n          <span class="headerLinks" *ngFor="let p of pages" (click)="openPage(p)" tappable [ngClass]="{\'selected\': page == \'My Ships\'}">{{p.title}}</span>\n        </ion-col>\n\n        <ion-col col-3>{{appState.accountStatus}}</ion-col>\n      </ion-row>\n    </ion-grid>\n    <!-- <ion-tabs color="dark">\n      <ion-tab tabTitle="Auctions" [root]="rootPage"></ion-tab>\n      <ion-tab tabTitle="My Ships" [root]="rootPage"></ion-tab>\n      <ion-tab tabTitle="Nattle" [root]="rootPage"></ion-tab>\n    </ion-tabs> -->\n  </ion-navbar>\n</ion-header>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\header\header.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */]])
+    ], HeaderComponent);
+    return HeaderComponent;
+}());
+
+//# sourceMappingURL=header.js.map
+
+/***/ }),
+
+/***/ 245:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HideHeaderDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the HideHeaderDirective directive.
+ *
+ * See https://angular.io/docs/ts/latest/api/core/index/DirectiveMetadata-class.html
+ * for more info on Angular Directives.
+ */
+var HideHeaderDirective = (function () {
+    function HideHeaderDirective(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        console.log("Hello HideHeaderDirective Directive", this.header);
+    }
+    HideHeaderDirective.prototype.ngOnInit = function () {
+        this.headerHeight = this.header.clientHeight;
+        this.renderer.setElementStyle(this.header, "webkitTransition", "top 700ms");
+        this.scrollContent = this.element.nativeElement.getElementsByClassName("scroll-content")[0];
+        this.renderer.setElementStyle(this.scrollContent, "webkitTransition", "margin-top 700ms");
+    };
+    HideHeaderDirective.prototype.onContentScroll = function (event) {
+        if (event.scrollTop > 56) {
+            this.renderer.setElementStyle(this.header, "top", "-56px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "0px");
+        }
+        else {
+            this.renderer.setElementStyle(this.header, "top", "0px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "56px");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])("header"),
+        __metadata("design:type", HTMLElement)
+    ], HideHeaderDirective.prototype, "header", void 0);
+    HideHeaderDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: "[hide-header]",
+            host: {
+                "(ionScroll)": "onContentScroll($event)"
+            }
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+    ], HideHeaderDirective);
+    return HideHeaderDirective;
+}());
+
+//# sourceMappingURL=hide-header.js.map
+
+/***/ }),
+
+/***/ 263:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_service__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(189);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, appState) {
+        this.platform = platform;
+        this.appState = appState;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_3__pages_home_home__["a" /* HomePage */];
+        this.initializeApp();
+        // used for an example of ngFor and navigation
+        this.pages = [
+            { title: "Auctions", component: "AuctionsPage" },
+            { title: "Home", component: __WEBPACK_IMPORTED_MODULE_3__pages_home_home__["a" /* HomePage */] },
+            { title: "Battle", component: "GamePage" },
+            { title: "MyShips", component: "MyShipsPage" }
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        this.platform.ready().then(function () { });
+    };
+    MyApp.prototype.page = function (selected) {
+        console.log("select", selected);
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\app\app.html"*/'<ion-nav [root]="rootPage" #content swipeBackEnabled="false">\n</ion-nav>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* AppState */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 50:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppState; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AppState = (function () {
+    function AppState(events) {
+        this.events = events;
+        this._state = {};
+        this.web3 = window["web3"];
+        this.accountStatus = "Loading...";
+        if (!this.web3) {
+            this.accountStatus = "No MetaMask extension installed";
+        }
+        else if (this.web3.eth.accounts.length == 0) {
+            this.accountStatus = "MetaMask account is locked!";
+            this.startCheck();
+        }
+        else {
+            this.account = this.web3.eth.accounts[0];
+            this.accountStatus = this.account;
+            this.startCheck();
+        }
+        // this.web3.eth.getAccounts(console.log)
+    }
+    AppState.prototype.startCheck = function () {
+        var _this = this;
+        if (!this.checkAccount) {
+            this.checkAccount = setInterval(function () {
+                if (_this.account != _this.web3.eth.accounts[0]) {
+                    _this.account = _this.web3.eth.accounts[0];
+                    if (typeof _this.account == "string") {
+                        _this.accountStatus = _this.account;
+                    }
+                    else {
+                        _this.accountStatus = "MetaMask account is locked!";
+                    }
+                    _this.events.publish("account:changed", _this.account);
+                }
+            }, 100);
+        }
+    };
+    Object.defineProperty(AppState.prototype, "state", {
+        // already return a clone of the current state
+        get: function () {
+            return (this._state = this._clone(this._state));
+        },
+        // never allow mutation
+        set: function (value) {
+            throw new Error("do not mutate the `.state` directly");
+        },
+        enumerable: true,
+        configurable: true
+    });
+    AppState.prototype.get = function (prop) {
+        // use our state getter for the clone
+        var state = this.state;
+        return state.hasOwnProperty(prop) ? state[prop] : state;
+    };
+    AppState.prototype.set = function (prop, value) {
+        // internally mutate our state
+        return (this._state[prop] = value);
+    };
+    AppState.prototype._clone = function (object) {
+        // simple object clone
+        return JSON.parse(JSON.stringify(object));
+    };
+    AppState = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
+    ], AppState);
+    return AppState;
+}());
+
+//# sourceMappingURL=app.service.js.map
+
+/***/ })
+
+},[194]);
+//# sourceMappingURL=main.js.map

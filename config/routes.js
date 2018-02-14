@@ -34,6 +34,9 @@ module.exports.routes = {
   //   view: "assets/www/index"
   // }
 
+  "post /api/v1/chat/join": "ChatMessageController.join",
+  "post /api/v1/chat/send": "ChatMessageController.send",
+  "get /api/v1/ships": "ShipController.ships",
   "get /api/v1/ships": "ShipController.ships",
   "r|^/(?!.*api).*|": {
     view: "index",

@@ -1,1 +1,276 @@
-webpackJsonp([1],{232:function(l,n,u){"use strict";function t(l){return f._19(2,[f._16(402653184,1,{backdrop:0}),(l()(),f.Z(1,0,null,null,1,"div",[["class","menu-inner"]],null,null,null,null,null)),f._12(null,0),(l()(),f.Z(3,0,null,null,1,"ion-backdrop",[["disable-activated",""],["role","presentation"],["tappable",""]],null,null,null,null,null)),f.Y(4,16384,[[1,4]],0,R.a,[f.j,f.z],null,null)],null,null)}function a(l){return f._19(2,[(l()(),f.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),f.Y(1,278528,null,0,K.g,[f.p,f.q,f.j,f.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),f._12(null,0),f._12(null,1),f._12(null,2),(l()(),f.Z(5,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),f.Y(6,278528,null,0,K.g,[f.p,f.q,f.j,f.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),f._12(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,6,0,"toolbar-content","toolbar-content-"+u._mode)},null)}function e(l){return f._19(2,[(l()(),f.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),f.Y(1,278528,null,0,K.g,[f.p,f.q,f.j,f.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),f._12(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}function o(l){return f._19(0,[(l()(),f.Z(0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,a=l.component;if("input"===n){t=!1!==a.onInput(u)&&t}if("blur"===n){t=!1!==a.onBlur(u)&&t}if("focus"===n){t=!1!==a.onFocus(u)&&t}if("keydown"===n){t=!1!==a.onKeydown(u)&&t}return t},null,null)),f.Y(1,278528,null,0,K.g,[f.p,f.q,f.j,f.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function i(l){return f._19(0,[(l()(),f.Z(0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,a=l.component;if("input"===n){t=!1!==a.onInput(u)&&t}if("blur"===n){t=!1!==a.onBlur(u)&&t}if("focus"===n){t=!1!==a.onFocus(u)&&t}if("keydown"===n){t=!1!==a.onKeydown(u)&&t}return t},null,null)),f.Y(1,278528,null,0,K.g,[f.p,f.q,f.j,f.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function s(l){return f._19(0,[(l()(),f.Z(0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var t=!0,a=l.component;if("click"===n){t=!1!==a.clearTextInput(u)&&t}if("mousedown"===n){t=!1!==a.clearTextInput(u)&&t}return t},ol.b,ol.a)),f.Y(1,1097728,null,0,il.a,[[8,""],P.a,f.j,f.z],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function c(l){return f._19(0,[(l()(),f.Z(0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var t=!0,a=l.component;if("touchstart"===n){t=!1!==a._pointerStart(u)&&t}if("touchend"===n){t=!1!==a._pointerEnd(u)&&t}if("mousedown"===n){t=!1!==a._pointerStart(u)&&t}if("mouseup"===n){t=!1!==a._pointerEnd(u)&&t}return t},null,null))],null,null)}function r(l){return f._19(2,[f._16(671088640,1,{_native:0}),(l()(),f.U(16777216,null,null,1,null,o)),f.Y(2,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null),(l()(),f.U(16777216,null,null,1,null,i)),f.Y(4,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null),(l()(),f.U(16777216,null,null,1,null,s)),f.Y(6,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null),(l()(),f.U(16777216,null,null,1,null,c)),f.Y(8,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}function d(l){return f._19(0,[(l()(),f.Z(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),f._18(1,null,["Ethereum account required to play. ",""]))],null,function(l,n){l(n,1,0,n.component.appState.accountStatus)})}function p(l){return f._19(0,[(l()(),f.Z(0,0,null,null,18,"div",[],null,null,null,null,null)),(l()(),f._18(-1,null,["\n\n      "])),(l()(),f.Z(2,0,null,null,1,"div",[["class","chatbutton"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.toggleChat()&&t}return t},null,null)),(l()(),f._18(-1,null,["\n      "])),(l()(),f._18(-1,null,["\n      "])),(l()(),f.Z(5,0,null,null,11,"div",[["id","canvaswindow"]],null,null,null,null,null)),(l()(),f._18(-1,null,["\n        "])),(l()(),f.Z(7,0,null,null,8,"div",[["class","webgl-content"],["id","canvaswrapper"]],null,null,null,null,null)),(l()(),f._18(-1,null,["\n          "])),(l()(),f.Z(9,0,null,null,0,"div",[["id","gameContainer"],["style","width: 960px; height: 540px;"]],null,null,null,null,null)),(l()(),f._18(-1,null,["\n          "])),(l()(),f.Z(11,0,null,null,3,"div",[["class","footer"]],null,null,null,null,null)),(l()(),f._18(-1,null,["\n            "])),(l()(),f.Z(13,0,null,null,0,"div",[["class","fullscreen"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.goFull()&&t}return t},null,null)),(l()(),f._18(-1,null,["\n          "])),(l()(),f._18(-1,null,["\n        "])),(l()(),f._18(-1,null,["\n      "])),(l()(),f._18(-1,null,["\n      "])),(l()(),f._18(-1,null,["\n    "]))],null,null)}function _(l){return f._19(0,[(l()(),f.Z(0,0,null,null,12,"ion-item",[["class","item item-block"]],null,null,null,F.b,F.a)),f.Y(1,1097728,null,3,z.a,[S.a,P.a,f.j,f.z,[2,T.a]],null,null),f._16(335544320,5,{contentLabel:0}),f._16(603979776,6,{_buttons:1}),f._16(603979776,7,{_icons:1}),f.Y(5,16384,null,0,U.a,[],null,null),(l()(),f._18(-1,2,["\n          "])),(l()(),f.Z(7,0,null,2,1,"span",[["class","username"]],null,null,null,null,null)),(l()(),f._18(8,null,["",":"])),(l()(),f._18(-1,2,["\n          "])),(l()(),f.Z(10,0,null,2,1,"span",[["class","message"]],null,null,null,null,null)),(l()(),f._18(11,null,["",""])),(l()(),f._18(-1,2,["\n        "]))],null,function(l,n){l(n,8,0,n.context.$implicit.username);l(n,11,0,n.context.$implicit.text)})}function g(l){return f._19(0,[f._16(402653184,1,{chatcontent:0}),(l()(),f.Z(1,0,null,null,65,"ion-split-pane",[],null,null,null,null,null)),f.Y(2,4341760,null,1,B.b,[f.u,A.a,P.a,f.j,f.z],{when:[0,"when"]},null),f._16(603979776,2,{_setchildren:1}),f._15(2048,[[2,4]],B.a,null,[B.b]),(l()(),f._18(-1,null,["\n  "])),(l()(),f.Z(6,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),f.Y(7,16384,null,0,E.a,[P.a,f.j,f.z,[2,V.a]],null,null),(l()(),f._18(-1,null,["\n    "])),(l()(),f.Z(9,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,q.b,q.a)),f.Y(10,49152,null,0,M.a,[N.a,[2,V.a],[2,D.a],P.a,f.j,f.z],null,null),(l()(),f._18(-1,3,["\n    "])),(l()(),f._18(-1,null,["\n  "])),(l()(),f._18(-1,null,["\n  "])),(l()(),f.Z(14,0,null,null,1,"header-component",[],null,null,null,G.b,G.a)),f.Y(15,49152,null,0,L.a,[D.a,h.a,f.u],null,null),(l()(),f._18(-1,null,["\n  "])),(l()(),f.Z(17,0,null,null,8,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,O.b,O.a)),f.Y(18,4374528,[["content",4]],0,X.a,[P.a,A.a,H.a,f.j,f.z,N.a,W.a,f.u,[2,V.a],[2,D.a]],null,null),(l()(),f._18(-1,1,["\n\n    "])),(l()(),f.U(16777216,null,1,1,null,d)),f.Y(21,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null),(l()(),f._18(-1,1,["\n    "])),(l()(),f.U(16777216,null,1,1,null,p)),f.Y(24,16384,null,0,K.i,[f.I,f.F],{ngIf:[0,"ngIf"]},null),(l()(),f._18(-1,1,["\n  "])),(l()(),f._18(-1,null,["\n\n  "])),(l()(),f.Z(27,0,null,null,38,"ion-menu",[["role","navigation"],["side","right"],["type","push"]],null,null,null,t,ll)),f.Y(28,245760,null,2,$.a,[J.a,f.j,P.a,A.a,f.z,W.a,Q.l,H.a,N.a],{content:[0,"content"],type:[1,"type"],side:[2,"side"]},null),f._16(335544320,3,{menuContent:0}),f._16(335544320,4,{menuNav:0}),f._15(2048,[[2,4]],B.a,null,[$.a]),(l()(),f._18(-1,0,["\n    "])),(l()(),f.Z(33,0,null,0,10,"ion-header",[],null,null,null,null,null)),f.Y(34,16384,null,0,E.a,[P.a,f.j,f.z,[2,V.a]],null,null),(l()(),f._18(-1,null,["\n      "])),(l()(),f.Z(36,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,a,ul)),f.Y(37,49152,null,0,nl.a,[P.a,f.j,f.z],null,null),(l()(),f._18(-1,3,["\n        "])),(l()(),f.Z(39,0,null,3,2,"ion-title",[],null,null,null,e,al)),f.Y(40,49152,null,0,tl.a,[P.a,f.j,f.z,[2,nl.a],[2,M.a]],null,null),(l()(),f._18(-1,0,["Menu"])),(l()(),f._18(-1,3,["\n      "])),(l()(),f._18(-1,null,["\n    "])),(l()(),f._18(-1,0,["\n    "])),(l()(),f.Z(45,0,null,0,8,"ion-footer",[],null,null,null,null,null)),f.Y(46,16384,null,0,el.a,[P.a,f.j,f.z,[2,V.a]],null,null),(l()(),f._18(-1,null,["\n      "])),(l()(),f.Z(48,0,null,null,4,"ion-input",[["placeholder","Send a message"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keypress"]],function(l,n,u){var t=!0,a=l.component;if("ngModelChange"===n){t=!1!==(a.msg=u)&&t}if("keypress"===n){t=!1!==a.send(u.keyCode)&&t}return t},r,rl)),f.Y(49,671744,null,0,cl.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),f._15(2048,null,cl.f,null,[cl.h]),f.Y(51,16384,null,0,cl.g,[cl.f],null,null),f.Y(52,5423104,null,0,sl.a,[P.a,A.a,S.a,N.a,f.j,f.z,[2,X.a],[2,z.a],[2,cl.f],H.a],{placeholder:[0,"placeholder"]},null),(l()(),f._18(-1,null,["\n    "])),(l()(),f._18(-1,0,["\n    "])),(l()(),f.Z(55,0,null,0,9,"ion-content",[["ion-scroll",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,O.b,O.a)),f.Y(56,4374528,[[3,4],[1,4],["chatcontent",4]],0,X.a,[P.a,A.a,H.a,f.j,f.z,N.a,W.a,f.u,[2,V.a],[2,D.a]],null,null),(l()(),f._18(-1,1,["\n      "])),(l()(),f.Z(58,0,null,1,5,"ion-list",[["class","chatbox"],["no-lines",""]],null,null,null,null,null)),f.Y(59,16384,null,0,dl.a,[P.a,f.j,f.z,A.a,Q.l,H.a],null,null),(l()(),f._18(-1,null,["\n        "])),(l()(),f.U(16777216,null,null,1,null,_)),f.Y(62,802816,null,0,K.h,[f.I,f.F,f.p],{ngForOf:[0,"ngForOf"]},null),(l()(),f._18(-1,null,["\n      "])),(l()(),f._18(-1,1,["\n    "])),(l()(),f._18(-1,0,["\n  "])),(l()(),f._18(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,2,0,u.showChat);l(n,21,0,!u.appState.account);l(n,24,0,u.appState.account);l(n,28,0,f._13(n,18),"push","right");l(n,49,0,u.msg);l(n,52,0,"Send a message");l(n,62,0,u.msgs)},function(l,n){l(n,9,0,f._13(n,10)._hidden,f._13(n,10)._sbPadding);l(n,17,0,f._13(n,18).statusbarPadding,f._13(n,18)._hasRefresher);l(n,36,0,f._13(n,37)._sbPadding);l(n,48,0,f._13(n,51).ngClassUntouched,f._13(n,51).ngClassTouched,f._13(n,51).ngClassPristine,f._13(n,51).ngClassDirty,f._13(n,51).ngClassValid,f._13(n,51).ngClassInvalid,f._13(n,51).ngClassPending);l(n,55,0,f._13(n,56).statusbarPadding,f._13(n,56)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var f=u(0),h=(u(5),u(37),u(33)),m=function(){function l(l,n,u,t,a){this.navCtrl=l,this.navParams=n,this.appState=u,this.menuCtrl=t,this.events=a,this.noAccount=!1,this.showChat=!1,this.isFullscreen=!1,this.msgs=[{username:"0x221",text:"hi"}]}return l.prototype.ionViewDidEnter=function(){console.log(this.appState.account),this.chatcontent.scrollToBottom(1e3)},l.prototype.ionViewWillLeave=function(){console.log("view leaving")},l.prototype.ionViewWillUnload=function(){console.log("view unloaded")},l.prototype.ionViewDidLoad=function(){var l=this;console.log("ionViewDidLoad GamePage"),this.loadGame(),this.events.subscribe("account:changed",function(n){setTimeout(function(){l.loadGame()},0)})},l.prototype.loadGame=function(){if(this.appState.account&&!window.gameInstance){window.gameInstance=window.UnityLoader.instantiate("gameContainer","/assets/game/Build/unitywebDemo.json",{onProgress:window.UnityProgress});document.getElementById("#canvas").tabIndex=1}else console.log("already loaded")},l.prototype.send=function(l){var n=this;13==l&&(console.log("msg: ",this.msg),this.msgs.push({username:this.appState.account.substring(0,5),text:this.msg}),this.msg="",setTimeout(function(){n.chatcontent.scrollToBottom(300)},100))},l.prototype.goFull=function(l){void 0===l&&(l=!0);for(var n=document.getElementById("canvaswindow"),u=document.getElementById("canvasfull");n.childNodes.length>0;)u.appendChild(n.childNodes[0]);if(window.gameInstance.SetFullscreen(1),l){this.isFullscreen=!0;var t=setInterval(function(){if(console.log(1>=outerHeight-innerHeight),1<outerHeight-innerHeight){for(;u.childNodes.length>0;)n.appendChild(u.childNodes[0]);clearInterval(t)}},100)}},l.prototype.toggleChat=function(){var l=this;this.showChat=!this.showChat,setTimeout(function(){var n=l.msgs.pop();setTimeout(function(){l.msgs.push(n)},0)},20)},l}(),b=u(112),v=function(){return function(){}}(),y=u(186),w=u(187),I=u(188),C=u(189),Z=u(190),k=u(191),Y=u(192),x=u(193),j=u(194),F=u(199),z=u(18),S=u(15),P=u(1),T=u(43),U=u(76),B=u(34),A=u(3),E=u(52),V=u(4),q=u(114),M=u(25),N=u(8),D=u(14),G=u(195),L=u(71),O=u(196),X=u(21),H=u(9),W=u(24),K=u(12),R=u(22),$=u(117),J=u(26),Q=u(7),ll=f.X({encapsulation:2,styles:[],data:{}}),nl=u(53),ul=f.X({encapsulation:2,styles:[],data:{}}),tl=u(118),al=f.X({encapsulation:2,styles:[],data:{}}),el=u(123),ol=u(39),il=u(19),sl=u(116),cl=u(17),rl=f.X({encapsulation:2,styles:[],data:{}}),dl=u(54),pl=u(10),_l=u(74),gl=f.X({encapsulation:2,styles:[],data:{}}),fl=f.V("page-game",m,function(l){return f._19(0,[(l()(),f.Z(0,0,null,null,1,"page-game",[],null,null,null,g,gl)),f.Y(1,49152,null,0,m,[D.a,pl.a,h.a,J.a,_l.a],null,null)],null,null)},{},{},[]),hl=u(113),ml=u(115),bl=u(38);u.d(n,"GamePageModuleNgFactory",function(){return vl});var vl=f.W(v,[],function(l){return f._10([f._11(512,f.i,f.S,[[8,[y.a,w.a,I.a,C.a,Z.a,k.a,Y.a,x.a,j.a,fl]],[3,f.i],f.s]),f._11(4608,K.k,K.j,[f.r,[2,K.s]]),f._11(4608,cl.k,cl.k,[]),f._11(4608,cl.c,cl.c,[]),f._11(512,hl.a,hl.a,[]),f._11(512,K.b,K.b,[]),f._11(512,cl.j,cl.j,[]),f._11(512,cl.d,cl.d,[]),f._11(512,cl.i,cl.i,[]),f._11(512,ml.a,ml.a,[]),f._11(512,b.a,b.a,[]),f._11(512,ml.b,ml.b,[]),f._11(512,v,v,[]),f._11(256,bl.a,m,[])])})}});
+webpackJsonp([1],{
+
+/***/ 266:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyShipsPageModule", function() { return MyShipsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_ships__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_header_header_module__ = __webpack_require__(190);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+// import { HeaderComponentModule } from "../../components/header/header"
+
+
+
+// import { ComponentsModule } from "../../components/components.module"
+var MyShipsPageModule = (function () {
+    function MyShipsPageModule() {
+    }
+    MyShipsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__my_ships__["a" /* MyShipsPage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_5__components_header_header_module__["a" /* HeaderComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* DirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_ships__["a" /* MyShipsPage */])
+            ]
+        })
+    ], MyShipsPageModule);
+    return MyShipsPageModule;
+}());
+
+//# sourceMappingURL=my-ships.module.js.map
+
+/***/ }),
+
+/***/ 269:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(11);
+var map_1 = __webpack_require__(191);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+
+/***/ 270:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship_card__ = __webpack_require__(271);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ShipCardComponentModule = (function () {
+    function ShipCardComponentModule() {
+    }
+    ShipCardComponentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__ship_card__["a" /* ShipCardComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__ship_card__["a" /* ShipCardComponent */]]
+        })
+    ], ShipCardComponentModule);
+    return ShipCardComponentModule;
+}());
+
+//# sourceMappingURL=ship-card.module.js.map
+
+/***/ }),
+
+/***/ 271:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the ShipCardComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var ShipCardComponent = (function () {
+    function ShipCardComponent() {
+        this.text = "Hello World";
+    }
+    ShipCardComponent.prototype.ngOnInit = function () {
+        console.log(this.ship);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Array)
+    ], ShipCardComponent.prototype, "ship", void 0);
+    ShipCardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n\n  <div>\n    <img src="assets/imgs/ships/{{ship.img}}" />\n  </div>\n\n  <ion-card-content>\n    <ion-card-title style="text-overflow: ellipsis">\n      {{ship.name ? ship.name : \'Ship \'+ship.id}}\n    </ion-card-title>\n  </ion-card-content>\n\n  <ion-row no-padding>\n    <ion-col>\n      <button ion-button clear small color="danger" icon-start>\n        <!-- <ion-icon name=\'star\'></ion-icon> -->\n        Ship #{{ship.id}}\n      </button>\n    </ion-col>\n  </ion-row>\n  <ion-row no-padding>\n    <ion-col col-6>\n      <span>Primary Weapon: {{ship.weapon1}}</span>\n    </ion-col>\n    <ion-col col-6>\n      <span>Secondary Weapon: {{ship.weapon2}}</span>\n    </ion-col>\n  </ion-row>\n  <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row>\n</ion-card>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], ShipCardComponent);
+    return ShipCardComponent;
+}());
+
+//# sourceMappingURL=ship-card.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyShipsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyShipsPage = (function () {
+    function MyShipsPage(navCtrl, navParams, appState, http, events) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.appState = appState;
+        this.http = http;
+        this.events = events;
+        this.ships = [];
+        this.noAccount = false;
+        this.loading = true;
+        this.request();
+        events.subscribe("account:changed", function (account) {
+            _this.changeAccount();
+        });
+    }
+    MyShipsPage.prototype.request = function () {
+        var _this = this;
+        if (this.appState.account && this.appState.account.length > 8) {
+            var url = "https://api.eth.bid/api/v1/ships?address=" +
+                // "http://localhost:8080/api/v1/ships?address=" +
+                encodeURI(this.appState.account);
+            console.log(url);
+            this.http
+                .get(url)
+                .map(function (res) { return res.json(); })
+                .subscribe(function (data) { return _this.parseResult(data); }, function (err) { return console.log(err); }, function () { return console.log("Complete"); });
+        }
+        else {
+            this.noAccount = true;
+            this.loading = false;
+            this.ships = [
+                {
+                    id: 777,
+                    name: "Placeholder Ship1",
+                    model: 0,
+                    size: "Small",
+                    color1: "Blue",
+                    color2: "Orange",
+                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                },
+                {
+                    id: 333,
+                    name: "Placeholder Ship2",
+                    model: 1,
+                    size: "Large",
+                    color1: "Blue",
+                    color2: "Green",
+                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                },
+                {
+                    id: 123,
+                    name: "Placeholder Ship3",
+                    model: 2,
+                    size: "Normal",
+                    color1: "Pink",
+                    color2: "Red",
+                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                },
+                {
+                    id: 123,
+                    name: "Placeholder Ship4",
+                    model: 0,
+                    size: "Normal",
+                    color1: "Pink",
+                    color2: "Red",
+                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                }
+            ];
+        }
+    };
+    MyShipsPage.prototype.parseResult = function (data) {
+        this.loading = false;
+        console.log(data);
+        if (data.length > 0) {
+            data.forEach(function (ship) {
+                ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png";
+            });
+            this.ships = data;
+            console.log(this.ships[2].img);
+        }
+        console.log("done");
+    };
+    MyShipsPage.prototype.changeAccount = function () {
+        this.loading = true;
+        this.ships = [];
+        this.request();
+    };
+    MyShipsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad MyShipsPage");
+    };
+    MyShipsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-spinner *ngIf="loading" ion-col col-12>\n      </ion-spinner>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>z'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
+    ], MyShipsPage);
+    return MyShipsPage;
+}());
+
+//# sourceMappingURL=my-ships.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=1.js.map

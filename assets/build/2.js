@@ -1,1 +1,79 @@
-webpackJsonp([2],{231:function(n,l,a){"use strict";function u(n){return o._19(0,[(n()(),o.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),o.Y(1,16384,null,0,h.a,[j.a,o.j,o.z,[2,v.a]],null,null),(n()(),o._18(-1,null,["\n  "])),(n()(),o.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,P.b,P.a)),o.Y(4,49152,null,0,Y.a,[Z.a,[2,v.a],[2,k.a],j.a,o.j,o.z],null,null),(n()(),o._18(-1,3,["\n  "])),(n()(),o._18(-1,null,["\n"])),(n()(),o._18(-1,null,["\n"])),(n()(),o.Z(8,0,null,null,1,"header-component",[],null,null,null,y.b,y.a)),o.Y(9,49152,null,0,m.a,[k.a,w.a,o.u],null,null),(n()(),o._18(-1,null,["\n\n"])),(n()(),o.Z(11,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,z.b,z.a)),o.Y(12,4374528,null,0,V.a,[j.a,A.a,C.a,o.j,o.z,Z.a,D.a,o.u,[2,v.a],[2,k.a]],null,null),(n()(),o._18(-1,1,["\n  Coming soon\n"]))],null,function(n,l){n(l,3,0,o._13(l,4)._hidden,o._13(l,4)._sbPadding);n(l,11,0,o._13(l,12).statusbarPadding,o._13(l,12)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var o=a(0),t=(a(5),a(37),function(){function n(n,l){this.navCtrl=n,this.navParams=l,console.log("auction con")}return n.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AuctionsPage")},n}()),e=a(112),i=function(){return function(){}}(),r=a(186),s=a(187),_=a(188),c=a(189),d=a(190),b=a(191),f=a(192),g=a(193),p=a(194),h=a(52),j=a(1),v=a(4),P=a(114),Y=a(25),Z=a(8),k=a(14),y=a(195),m=a(71),w=a(33),z=a(196),V=a(21),A=a(3),C=a(9),D=a(24),L=a(10),M=o.X({encapsulation:2,styles:[],data:{}}),F=o.V("page-auctions",t,function(n){return o._19(0,[(n()(),o.Z(0,0,null,null,1,"page-auctions",[],null,null,null,u,M)),o.Y(1,49152,null,0,t,[k.a,L.a],null,null)],null,null)},{},{},[]),J=a(12),N=a(17),O=a(113),R=a(115),S=a(38);a.d(l,"AuctionsPageModuleNgFactory",function(){return W});var W=o.W(i,[],function(n){return o._10([o._11(512,o.i,o.S,[[8,[r.a,s.a,_.a,c.a,d.a,b.a,f.a,g.a,p.a,F]],[3,o.i],o.s]),o._11(4608,J.k,J.j,[o.r,[2,J.s]]),o._11(4608,N.k,N.k,[]),o._11(4608,N.c,N.c,[]),o._11(512,O.a,O.a,[]),o._11(512,J.b,J.b,[]),o._11(512,N.j,N.j,[]),o._11(512,N.d,N.d,[]),o._11(512,N.i,N.i,[]),o._11(512,R.a,R.a,[]),o._11(512,e.a,e.a,[]),o._11(512,R.b,R.b,[]),o._11(512,i,i,[]),o._11(256,S.a,t,[])])})}});
+webpackJsonp([2],{
+
+/***/ 268:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShipPageModule", function() { return ShipPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_header_header_module__ = __webpack_require__(190);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ShipPageModule = (function () {
+    function ShipPageModule() {
+    }
+    ShipPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__ship__["a" /* ShipPage */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3__components_header_header_module__["a" /* HeaderComponentModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ship__["a" /* ShipPage */])]
+        })
+    ], ShipPageModule);
+    return ShipPageModule;
+}());
+
+//# sourceMappingURL=ship.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ShipPage = (function () {
+    function ShipPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ShipPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad ShipPage");
+    };
+    ShipPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-ship",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], ShipPage);
+    return ShipPage;
+}());
+
+//# sourceMappingURL=ship.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=2.js.map
