@@ -6,9 +6,22 @@
  */
 
 module.exports = {
-
+  autoPK: false,
   attributes: {
-
+    id: {
+      type: "integer",
+      autoIncrement: true
+    },
+    address: {
+      primaryKey: true,
+      type: "string",
+      unique: true
+    },
+    username: {
+      type: "string"
+    },
+    email: {
+      type: "email"
+    }
   }
-};
-
+}

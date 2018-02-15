@@ -25630,13 +25630,59 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.scroll-content {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.contentRoom {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 0 auto !important;
+  -ms-flex: 1 0 auto !important;
+  flex: 1 0 auto !important;
+  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px !important;
+}
+
+footer-component {
+  -webkit-flex-shrink: 0 !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+}
+
+footer-component .toolbar-content {
+  padding: 0px;
+}
+
+footer-component .toolbar-background {
+  background-color: lightgray;
+}
+
 .headerLinks {
   padding-left: 8px;
   padding-right: 8px;
 }
 
+ship-card {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
 ship-card ion-card-title {
   text-overflow: ellipsis !important;
+}
+
+ship-card .shipSVG {
+  margin: 4%;
 }
 
 page-game .chatbox {
@@ -25672,6 +25718,6 @@ page-game .chatbutton {
   z-index: 10 !important;
 }
 
-page-game .scroll-content {
+.scroll-content {
   overflow-y: auto !important;
 }

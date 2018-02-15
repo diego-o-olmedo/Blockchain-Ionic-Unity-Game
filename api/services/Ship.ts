@@ -53,7 +53,7 @@ module.exports = {
       "Bolt Weakening"
     ]
     let weapon2List = [
-      "Hominh Missile",
+      "Homing Missile",
       "Pacifist Missile",
       "Basic Mine",
       "Schrodinger's Mine",

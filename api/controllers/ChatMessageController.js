@@ -7,7 +7,13 @@
 
 module.exports = {
   join: function(req, res) {
+    sails.log.debug("User joine dthis room=" + req.body.room)
     sails.sockets.join(req.socket, req.body.room)
+    res.send(200)
+  },
+  leave: function(req, res) {
+    sails.log.debug("User left dthis room=" + req.body.room)
+    sails.sockets.leave(req.socket, req.body.room)
     res.send(200)
   },
   send: function(req, res) {

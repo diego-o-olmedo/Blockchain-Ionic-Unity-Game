@@ -35,6 +35,7 @@ module.exports.routes = {
   // }
 
   "post /api/v1/chat/join": "ChatMessageController.join",
+  "post /api/v1/chat/leave": "ChatMessageController.leave",
   "post /api/v1/chat/send": "ChatMessageController.send",
   "get /api/v1/ships": "ShipController.ships",
   "get /api/v1/ships": "ShipController.ships",
