@@ -1,15 +1,16 @@
 <ion-card>
 
-  <div>
-    <img src="assets/imgs/ships/{{ship.img}}" />
+  <div class="shipWrap">
+    <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->
+    <object #svg type="image/svg+xml" data="assets/imgs/ships/ship1.svg" class="shipSVG" [hidden]="!finished"  (load)="doneLoading()">
+      Ship Image
+    </object>
   </div>
 
   <ion-card-content>
     <ion-card-title style="text-overflow: ellipsis">
       {{ship.name ? ship.name : 'Ship '+ship.id}}
     </ion-card-title>
-  </ion-card-content>
-
   <ion-row no-padding>
     <ion-col>
       <button ion-button clear small color="danger" icon-start>
@@ -18,5 +19,25 @@
       </button>
     </ion-col>
   </ion-row>
+  <ion-row no-padding>
+    <ion-col col-12>
+      <span>Primary Weapon: {{ship.weapon1}}</span>
+    </ion-col>
+  </ion-row>
 
+  <ion-row no-padding>
+    <ion-col col-12>
+      <span>Secondary Weapon: {{ship.weapon2}}</span>
+    </ion-col>
+  </ion-row>
+  </ion-card-content>
+
+  <!-- <ion-row no-padding>
+    <ion-col col-6>
+      <span [ngStyle]="{'color': 'rgb(' + ship.color1[0] + ',' + ship.color1[1] + ',' + ship.color1[2] +')'}">Primary Color</span>
+    </ion-col>
+    <ion-col col-6>
+      <span [ngStyle]="{'color': 'rgb(' + ship.color2[0] + ',' + ship.color2[1] + ',' + ship.color2[2] +')'}">Secondary Color</span>
+    </ion-col>
+  </ion-row> -->
 </ion-card>

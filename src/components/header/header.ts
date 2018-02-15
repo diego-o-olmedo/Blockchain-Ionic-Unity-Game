@@ -1,6 +1,5 @@
-import { Component } from "@angular/core"
-
-import { Nav } from "ionic-angular"
+import { Component, NgZone } from "@angular/core"
+import { NavController } from "ionic-angular"
 import { AppState } from "../../app/app.service"
 
 @Component({
@@ -9,13 +8,30 @@ import { AppState } from "../../app/app.service"
 })
 export class HeaderComponent {
   pages = [
-    { title: "Auctions", component: "AuctionsPage" },
-    { title: "Battle", component: "GamePage" },
-    { title: "MyShips", component: "MyShipsPage" }
+    { title: "Auctions", component: "AuctionsPage", href: "auctions" },
+    { title: "Battle", component: "GamePage", href: "battle" },
+    { title: "MyShips", component: "MyShipsPage", href: "my-ships" }
   ]
-  constructor(public nav: Nav, public appState: AppState) {}
+  constructor(
+    public navCtrl: NavController,
+    public appState: AppState,
+    public zone: NgZone
+  ) {}
 
   openPage(page) {
-    this.nav.setRoot(page.component)
+    // this.nav.setRoot(page.component)
+    this.zone.run(() => {
+      if (window.location.pathname.split("/")[1] != page.href) {
+        if (window["gameInstance"]) {
+          // window["gameInstance"] = null
+          // let element = document.getElementById("canvaswindow")
+          window.location.href = page.href
+          // element.outerHTML = ""
+          // window["gameInstance"].SendMessage("Web3", "Exit")
+        } else {
+          this.navCtrl.setRoot(page.component)
+        }
+      }
+    })
   }
 }

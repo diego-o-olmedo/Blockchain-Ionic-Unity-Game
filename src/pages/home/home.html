@@ -4,6 +4,34 @@
 </ion-header>
 <header-component></header-component>
 
-<ion-content padding>
-  <h3>Domain for sale, contact hajaekyung@protonmail.com</h3>
+<ion-content>
+  <div class="contentRoom">
+    <p *ngIf="appState.username">Username is: {{appState.username}}</p>
+    <div *ngIf="!appState.username">
+      <p>
+        Register your ethereum address</p>
+      <div (ngSubmit)="register()">
+
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="requestedName"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="requestedEmail"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <div padding>
+          <button ion-button color="primary" block type="submit">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer-component></footer-component>
 </ion-content>

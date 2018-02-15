@@ -1,21 +1,17 @@
 import { NgModule } from "@angular/core"
 import { IonicPageModule } from "ionic-angular"
-import { MyShipsPage } from "./my-ships"
-// import { HeaderComponentModule } from "../../components/header/header"
+import { ProfilePage } from "./profile"
 import { ShipCardComponentModule } from "../../components/ship-card/ship-card.module"
 import { DirectivesModule } from "../../directives/directives.module"
-import { ComponentsModule } from "../../components/components.module"
-
 import { HeaderComponentModule } from "../../components/header/header.module"
-// import { ComponentsModule } from "../../components/components.module"
+
 @NgModule({
-  declarations: [MyShipsPage],
+  declarations: [ProfilePage],
   imports: [
     HeaderComponentModule,
     DirectivesModule,
-    ComponentsModule,
     ShipCardComponentModule,
-    IonicPageModule.forChild(MyShipsPage)
+    IonicPageModule.forChild(ProfilePage)
   ]
 })
-export class MyShipsPageModule {}
+export class ProfilePageModule {}

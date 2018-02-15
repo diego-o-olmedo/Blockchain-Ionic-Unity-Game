@@ -2,4 +2,13 @@ ship-card {
   ion-card-title {
     text-overflow: ellipsis !important;
   }
+  .shipSVG {
+    margin: 4%;
+  }
+  .shipWrap {
+    
+  }
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }

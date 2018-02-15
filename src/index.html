@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">1
+  <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:;">
-  <!--todo to do remove in production-->
+  <!--todo to do remove content policy in production-->
   <title>Game</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -36,16 +36,9 @@
 
 <body>
 
-  <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
-  <!-- <div class="webgl-content" style="width: 960px; height: 540px; margin: auto;">
-    <div id="gameContainer" style="width: 960px; height: 540px; margin: auto;"></div>
-    <div class="footer">
-      <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-    </div>
-  </div> -->
-
   <div id="canvasfull"></div>
+
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 

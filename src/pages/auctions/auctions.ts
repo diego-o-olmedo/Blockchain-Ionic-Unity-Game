@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core"
+import { IonicPage, NavController, NavParams } from "ionic-angular"
 
 /**
  * Generated class for the AuctionsPage page.
@@ -10,16 +10,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-auctions',
-  templateUrl: 'auctions.html',
+  selector: "page-auctions",
+  templateUrl: "auctions.html"
 })
 export class AuctionsPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log("auction con")
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AuctionsPage');
+    console.log("ionViewDidLoad AuctionsPage")
   }
-
 }

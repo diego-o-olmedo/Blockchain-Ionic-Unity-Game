@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core"
 import { Events } from "ionic-angular"
+declare let io: any
 
 @Injectable()
 export class AppState {
@@ -8,6 +9,7 @@ export class AppState {
   account
   checkAccount
   accountStatus = "Loading..."
+  username = false
 
   constructor(public events: Events) {
     if (!this.web3) {
@@ -18,9 +20,21 @@ export class AppState {
     } else {
       this.account = this.web3.eth.accounts[0]
       this.accountStatus = this.account
+      this.getUser()
       this.startCheck()
     }
     // this.web3.eth.getAccounts(console.log)
+  }
+
+  getUser() {
+    if (io) {
+      io.socket.get("/api/user/" + this.account, res => {
+        if (typeof res == "string") {
+        } else {
+          this.username = res.username
+        }
+      })
+    }
   }
 
   startCheck() {
@@ -30,6 +44,7 @@ export class AppState {
           this.account = this.web3.eth.accounts[0]
           if (typeof this.account == "string") {
             this.accountStatus = this.account
+            this.getUser()
           } else {
             this.accountStatus = "MetaMask account is locked!"
           }

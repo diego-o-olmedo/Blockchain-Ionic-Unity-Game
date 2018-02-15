@@ -7,15 +7,17 @@ import { AppState } from "./app.service"
 import { MyApp } from "./app.component"
 import { HomePage } from "../pages/home/home"
 import { HeaderComponentModule } from "../components/header/header.module"
+import { ComponentsModule } from "../components/components.module"
 
 @NgModule({
   declarations: [MyApp, HomePage],
   imports: [
     HeaderComponentModule,
+    ComponentsModule,
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp, {
-      locationStrategy: "path"
+      // locationStrategy: "path"
     })
   ],
   bootstrap: [IonicApp],

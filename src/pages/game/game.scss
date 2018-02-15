@@ -29,14 +29,16 @@ page-game {
     right: 0;
     top: 35%;
     background-image: url("../assets/imgs/chat-tab.png");
+    z-index: 10 !important;
   }
 
   .gameContainer,
   .webgl-content,
   canvas {
-    z-index: 10000 !important;
+    // z-index: 10000 !important;
   }
-  ion-content {
-    overflow: auto !important;
-  }
+}
+
+.scroll-content {
+  overflow-y: auto !important;
 }

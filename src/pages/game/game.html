@@ -4,19 +4,22 @@
     </ion-navbar>
   </ion-header>
   <header-component></header-component>
-  <ion-content padding #content>
+  <ion-content no-padding #content>
 
-    <div class="chatbutton" (click)="toggleChat()">
-    </div>
-    <div id="canvaswindow">
-      <div class="webgl-content" id="canvaswrapper">
-        <div id="gameContainer" style="width: 960px; height: 540px;"></div>
-        <div class="footer">
-          <div class="fullscreen" (click)="goFull()"></div>
+    <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>
+    <div *ngIf="appState.account">
+
+      <div class="chatbutton" (click)="toggleChat()">
+      </div>
+      <div id="canvaswindow">
+        <div class="webgl-content" id="canvaswrapper">
+          <div id="gameContainer" style="width: 960px; height: 540px;"></div>
+          <div class="footer">
+            <div class="fullscreen" (click)="goFull()"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- <ion-grid>
+      <!-- <ion-grid>
       <ion-row>
         <ion-col col-4>
         </ion-col>
@@ -26,6 +29,7 @@
         </ion-col>
       </ion-row>
     </ion-grid> -->
+    </div>
   </ion-content>
 
   <ion-menu side="right" type="push" [content]="content">
@@ -34,16 +38,28 @@
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-footer>
       <ion-input placeholder="Send a message" [(ngModel)]="msg" (keypress)="send($event.keyCode)"></ion-input>
     </ion-footer>
+
     <ion-content #chatcontent ion-scroll>
-      <ion-list no-lines class="chatbox">
+
+
+      <ion-row *ngIf="!chatConnected">
+        <ion-col col-12>
+          <p>Waiting to join a game lobby</p>
+        </ion-col>
+        <ion-spinner ion-col col-12>
+        </ion-spinner>
+      </ion-row>
+      <ion-list no-lines class="chatbox" *ngIf="chatConnected">
         <ion-item *ngFor="let msg of msgs">
-          <span class="username">{{msg.username}}:</span>
+          <span class="username">{{ msg.username }}:</span>
           <span class="message">{{ msg.text }}</span>
         </ion-item>
       </ion-list>
     </ion-content>
+
   </ion-menu>
 </ion-split-pane>
