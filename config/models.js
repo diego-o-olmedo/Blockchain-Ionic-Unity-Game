@@ -18,7 +18,8 @@ module.exports.models = {
    ***************************************************************************/
   // connection: 'localDiskDb',
   // connection: "PostgresURL",
-  connection: "remotePostgres",
+  // connection: "remotePostgresLocal",
+  connection: "remotePostgresServer",
   /***************************************************************************
    *                                                                          *
    * How and whether Sails will attempt to automatically rebuild the          *
