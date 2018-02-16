@@ -25640,6 +25640,7 @@ ion-navbar.toolbar {
   -webkit-flex-direction: column !important;
   -ms-flex-direction: column !important;
   flex-direction: column !important;
+  overflow-y: auto !important;
 }
 
 .contentRoom {
@@ -25649,6 +25650,13 @@ ion-navbar.toolbar {
   flex: 1 0 auto !important;
   /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 20px !important;
+}
+
+.customToast .toast-wrapper {
+  left: auto !important;
+  text-align: right !important;
+  width: auto !important;
+  border-top-left-radius: 8px !important;
 }
 
 footer-component {
@@ -25697,7 +25705,14 @@ page-game .username {
   font-weight: bold;
 }
 
+page-game .moveMenu {
+  -webkit-transform: translate(50px);
+  transform: translate(50px);
+}
+
 page-game ion-menu {
+  -webkit-transition: 1s !important;
+  transition: 1s !important;
   margin: 0;
   padding: 0;
 }
@@ -25705,6 +25720,11 @@ page-game ion-menu {
 page-game ion-menu .scroll-content {
   margin: 0;
   width: 100% !important;
+}
+
+page-game .menu-inner {
+  -webkit-transition: 1s !important;
+  transition: 1s !important;
 }
 
 page-game .chatbutton {
@@ -25718,6 +25738,27 @@ page-game .chatbutton {
   z-index: 10 !important;
 }
 
-.scroll-content {
-  overflow-y: auto !important;
+page-game #gameContainer,
+page-game .webgl-content,
+page-game canvas {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+}
+
+page-game .load-img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+page-game .load-pink {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }

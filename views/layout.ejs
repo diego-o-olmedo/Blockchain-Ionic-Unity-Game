@@ -11,8 +11,8 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
-  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4e8ef7">
 
   <!-- add to homescreen for ios -->
@@ -28,22 +28,13 @@
     }
   </script>-->
 
-  <link href="build/main.css" rel="stylesheet">
+  <link href="/build/main.css" rel="stylesheet">
 
-  <link href="/game/TemplateData/style.css" rel="stylesheet">
-  <script src="/game/TemplateData/UnityProgress.js"></script>
-  <script src="/game/Build/UnityLoader.js"></script>
-  <script src="/js/dependencies/sails.io.js"></script>
 </head>
 
 <body>
 
-  <%- body %>
-
-    <div id="canvasfull">
-    </div>
-
-    <!--
+  <!--
         Client-side Templates
         ========================
 
@@ -64,12 +55,12 @@
               stringfile before they're served.
     -->
 
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
+  <!--TEMPLATES-->
+  
+  <!--TEMPLATES END-->
 
 
-    <!--
+  <!--
 
       Client-side Javascript
       ========================
@@ -91,9 +82,17 @@
           + Use a different preprocessor, like TypeScript
 
     -->
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
+  <!--SCRIPTS-->
+  <script src="/js/dependencies/sails.io.js"></script>
+  <!--SCRIPTS END-->
+
+  <%- body %>
+
+    <div id="canvasfull">
+    </div>
+    <link href="/game/TemplateData/style.css" rel="stylesheet">
+    <script src="/game/TemplateData/UnityProgress.js"></script>
+    <script src="/game/Build/UnityLoader.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,9 @@
   <script data-ionic="inject">
     (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.0.3';i.staticDir='build/';})(window);
   </script>
-  <meta charset="UTF-8">1
+  <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:;">
-  <!--todo to do remove in production-->
+  <!--todo to do remove content policy in production-->
   <title>Game</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -21,7 +21,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-
   <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
@@ -33,12 +32,15 @@
 
   <link href="build/main.css" rel="stylesheet">
 
+  <link href="assets/game/TemplateData/style.css" rel="stylesheet">
+  <script src="assets/game/TemplateData/UnityProgress.js"></script>
+  <script src="assets/game/Build/UnityLoader.js"></script>
 </head>
 
 <body>
 
-  <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
+  <div id="canvasfull"></div>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>

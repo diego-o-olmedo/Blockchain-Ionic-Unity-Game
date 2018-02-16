@@ -27,23 +27,38 @@ module.exports.http = {
      * router is invoked by the "router" middleware below.)                     *
      *                                                                          *
      ***************************************************************************/
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+    fixRoutes: function(req, res, next) {
+      // sails.log.debug("1111111Requested :: ", req.method, req.url)
+      // sails.log.debug("2Requested :: ", req.url.split("/")[2])
+      // let p1 = req.url.split("/")[2]
+      // let p2 = p1.split("/")[1]
+      // sails.log.debug("333355Requested :: ", p2)
+      if (req.url.split("/")[2] === "build") {
+        sails.log.debug("fffff :: ", req.url)
+        let r = req.url.substr(req.url.indexOf("/build"))
+        sails.log.debug("uuuu :: ", r)
+        req.url = r
+      }
+      return next()
+    },
+    order: [
+      "startRequestTimer",
+      "cookieParser",
+      "session",
+      "myRequestLogger",
+      "bodyParser",
+      "handleBodyParserError",
+      "compress",
+      "methodOverride",
+      "poweredBy",
+      "$custom",
+      "fixRoutes",
+      "router",
+      "www",
+      "favicon",
+      "404",
+      "500"
+    ]
     /****************************************************************************
      *                                                                           *
      * Example custom middleware; logs each request to the console.              *
