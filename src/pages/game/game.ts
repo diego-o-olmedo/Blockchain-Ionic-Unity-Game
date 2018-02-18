@@ -7,6 +7,7 @@ import {
   Events,
   Content
 } from "ionic-angular"
+import { DomSanitizer } from "@angular/platform-browser"
 import { AppState } from "../../app/app.service"
 declare var io: any
 
@@ -16,6 +17,7 @@ declare var io: any
   templateUrl: "game.html"
 })
 export class GamePage {
+  gameLoaded = false
   msgs = []
   msg: string
   noAccount = false
@@ -23,6 +25,7 @@ export class GamePage {
   chatConnected = false
   room
   listening: any
+  loadingStyle = this.sanitizer.bypassSecurityTrustStyle("inset(0 100% 0 0)")
 
   @ViewChild("chatcontent") chatcontent
   @ViewChild(Content) content: Content
@@ -32,22 +35,28 @@ export class GamePage {
     public navParams: NavParams,
     public appState: AppState,
     public menuCtrl: MenuController,
-    public events: Events
+    public events: Events,
+    private sanitizer: DomSanitizer
   ) {
     // io.socket.on("chatmessage", msg => {
     //   this.msgs.push(msg.data)
     // })
+  }
 
-    window.addEventListener("room", (e: any) => {
-      if (e.detail.join) {
-        this.joinRoom(e.detail.room)
-      } else {
-        if (this.room) {
-          this.leaveRoom()
-        }
-      }
+  ionViewDidLoad() {
+    console.log("ionViewDidLoad GamePage")
+
+    this.loadGame()
+    this.events.subscribe("account:changed", account => {
+      setTimeout(() => {
+        this.loadGame()
+      }, 0)
     })
   }
+
+  // public loadingStyle() {
+  //   return this.sanitizer.bypassSecurityTrustStyle("inset(0 74% 0 0)")
+  // }
 
   leaveRoom() {
     io.socket.post("/api/v1/chat/leave", { room: this.room }, () => {
@@ -57,6 +66,7 @@ export class GamePage {
   }
 
   joinRoom(room: string) {
+    console.log("join room000")
     io.socket.post("/api/v1/chat/join", { room: room }, () => {
       console.log("joined room " + room)
       this.room = room
@@ -64,9 +74,12 @@ export class GamePage {
       if (!this.listening) {
         this.listening = true
         io.socket.on("message", message => {
-          console.log("gotmsg", message)
-          this.msgs.push(message)
-          console.log(this.msgs)
+          if (message) {
+            console.log("gotmsg", message)
+            this.msgs.push(message)
+          } else {
+            console.log("why")
+          }
         })
       }
     })
@@ -89,20 +102,32 @@ export class GamePage {
     console.log("view unloaded")
   }
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad GamePage")
-
-    this.loadGame()
-    this.events.subscribe("account:changed", account => {
-      setTimeout(() => {
-        this.loadGame()
-      }, 0)
+  loadGameServices() {
+    window["UnityProgress"] = (gameInstance, progress) => {
+      let calc = 100 - progress * 100
+      if (calc == 0) {
+        this.gameLoaded = true
+      }
+      console.log("in ionc=", progress, calc)
+      this.loadingStyle = this.sanitizer.bypassSecurityTrustStyle(
+        "inset(0 " + calc + "% 0 0)"
+      )
+    }
+    window.addEventListener("room", (e: any) => {
+      if (e.detail.join) {
+        this.joinRoom(e.detail.room)
+      } else {
+        if (this.room) {
+          this.leaveRoom()
+        }
+      }
     })
   }
 
   loadGame() {
     // console.log(document.getElementById("gameContainer"))
     if (this.appState.account && !window["gameInstance"]) {
+      this.loadGameServices()
       window["gameInstance"] = window["UnityLoader"].instantiate(
         "gameContainer",
         "/game/Build/unitywebDemo.json",

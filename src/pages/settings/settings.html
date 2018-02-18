@@ -1,0 +1,39 @@
+<ion-header #head>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+<header-component></header-component>
+
+<ion-content>
+  <div class="contentRoom">
+    <p *ngIf="appState.username && !success">Username is: {{appState.username}}</p>
+    <p *ngIf="appState.username && success">
+      Registration success for: {{appState.username}}</p>
+    <div *ngIf="!appState.username">
+      <div *ngIf="!appState.account">{{appState.accountStatus}}</div>
+      <form *ngIf="appState.account" (ngSubmit)="register()">
+        <p>Register your ethereum address</p>
+
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="requestedName" name="requestedName"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="requestedEmail" name="requestedEmail"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div padding>
+          <button ion-button color="primary" block type="submit">Register</button>
+          <p block text-center>{{status}}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer-component></footer-component>
+</ion-content>

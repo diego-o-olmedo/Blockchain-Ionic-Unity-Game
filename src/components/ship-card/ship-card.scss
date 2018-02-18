@@ -6,9 +6,40 @@ ship-card {
     margin: 4%;
   }
   .shipWrap {
-    
   }
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
+
+  --primary-color: orange;
+  --secondary-color: purple;
+
+  // svg {
+  //   --secondary-color: green;
+  // }
+
+  // use {
+  //   .cls-4 {
+  //     fill: red;
+  //   }
+  // }
+
+  // svg path {
+  //   fill: inherit;
+  // }
+
+  // .svgClass {
+  //   --second-color: yellow;
+  // }
+
+  // --primary-color: #0099cc;
+  // --secondary-color: #ffdf34;
+  // --tertiary-color: #333;
+
+  // #shiper1,
+  // #ship1 {
+  //   --primary-color: #0099cc;
+  //   --secondary-color: #ffdf34;
+  //   --tertiary-color: #333;
+  // }
 }

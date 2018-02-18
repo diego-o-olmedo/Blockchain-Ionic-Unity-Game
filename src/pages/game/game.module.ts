@@ -2,9 +2,9 @@ import { NgModule } from "@angular/core"
 import { IonicPageModule } from "ionic-angular"
 import { GamePage } from "./game"
 
-import { HeaderComponentModule } from "../../components/header/header.module"
+import { ComponentsModule } from "../../components/components.module"
 @NgModule({
   declarations: [GamePage],
-  imports: [HeaderComponentModule, IonicPageModule.forChild(GamePage)]
+  imports: [ComponentsModule, IonicPageModule.forChild(GamePage)]
 })
 export class GamePageModule {}

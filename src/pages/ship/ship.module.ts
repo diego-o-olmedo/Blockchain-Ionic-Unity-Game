@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core"
 import { IonicPageModule } from "ionic-angular"
 import { ShipPage } from "./ship"
-import { HeaderComponentModule } from "../../components/header/header.module"
+import { ComponentsModule } from "../../components/components.module"
 
 @NgModule({
   declarations: [ShipPage],
-  imports: [HeaderComponentModule, IonicPageModule.forChild(ShipPage)]
+  imports: [ComponentsModule, IonicPageModule.forChild(ShipPage)]
 })
 export class ShipPageModule {}

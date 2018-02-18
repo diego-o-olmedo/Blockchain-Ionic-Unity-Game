@@ -10,6 +10,8 @@ declare let io: any
 export class HomePage {
   requestedEmail
   requestedName
+  status
+  success
 
   constructor(public navCtrl: NavController, public appState: AppState) {
     // if (this.appState.account) {
@@ -21,12 +23,15 @@ export class HomePage {
     //     }
     //   })
     // }
+    console.log("home loaded")
   }
 
   ionViewDidLoad() {}
 
   register() {
+    console.log("clicked register", this.appState.account)
     if (this.appState.account) {
+      console.log("posting")
       io.socket.post(
         "/api/user",
         {
@@ -35,8 +40,15 @@ export class HomePage {
           address: this.appState.account
         },
         res => {
-          console.log("registered")
-          this.appState.username = this.requestedName
+          console.log(res)
+          if (!res.status) {
+            this.appState.username = res.username
+            this.success = true
+          } else if (res.status == 400) {
+            this.status = res.details
+          } else {
+            this.status = res.details
+          }
         }
       )
     }

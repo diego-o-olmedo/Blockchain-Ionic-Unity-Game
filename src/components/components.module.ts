@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core"
 import { IonicModule } from "ionic-angular"
+import { HeaderComponent } from "./header/header"
 import { FooterComponent } from "./footer/footer"
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [FooterComponent, HeaderComponent],
   imports: [IonicModule],
-  exports: [FooterComponent]
+  exports: [FooterComponent, HeaderComponent]
 })
 export class ComponentsModule {}

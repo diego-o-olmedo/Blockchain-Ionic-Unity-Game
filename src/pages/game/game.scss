@@ -12,13 +12,20 @@ page-game {
   .chatwrapper {
   }
 
+  .moveMenu {
+    transform: translate(50px);
+  }
   ion-menu {
+    transition: 1s !important;
     margin: 0;
     padding: 0;
     .scroll-content {
       margin: 0;
       width: 100% !important;
     }
+  }
+  .menu-inner {
+    transition: 1s !important;
   }
   .chatbutton {
     // height: 100px;assets/imgs/logo.png
@@ -32,13 +39,30 @@ page-game {
     z-index: 10 !important;
   }
 
-  .gameContainer,
+  #gameContainer {
+  }
+  #gameContainer,
   .webgl-content,
   canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
     // z-index: 10000 !important;
   }
-}
 
-.scroll-content {
-  overflow-y: auto !important;
+  .load-img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  .load-pink {
+    transition: 1s;
+    transform: translateZ(0);
+    // clip-path: inset(0 24% 0 0);
+  }
 }

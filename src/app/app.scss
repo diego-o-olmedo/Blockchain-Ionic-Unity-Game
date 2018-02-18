@@ -16,10 +16,29 @@
 .scroll-content {
   display: flex !important;
   flex-direction: column !important;
+  overflow-y: auto !important;
   // height: 66% !important;
 }
 
 .contentRoom {
   flex: 1 0 auto !important; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 20px !important;
+}
+
+.customToast {
+  .toast-wrapper {
+    left: auto !important;
+    text-align: right !important;
+    width: auto !important;
+    border-top-left-radius: 8px !important;
+  }
+}
+
+html {
+  --primary-color: green;
+  --secondary-color: yellow;
+}
+
+.stop-color1 {
+  stop-color: purple !important;
 }

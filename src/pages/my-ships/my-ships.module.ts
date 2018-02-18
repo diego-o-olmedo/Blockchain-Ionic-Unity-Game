@@ -6,12 +6,9 @@ import { ShipCardComponentModule } from "../../components/ship-card/ship-card.mo
 import { DirectivesModule } from "../../directives/directives.module"
 import { ComponentsModule } from "../../components/components.module"
 
-import { HeaderComponentModule } from "../../components/header/header.module"
-// import { ComponentsModule } from "../../components/components.module"
 @NgModule({
   declarations: [MyShipsPage],
   imports: [
-    HeaderComponentModule,
     DirectivesModule,
     ComponentsModule,
     ShipCardComponentModule,

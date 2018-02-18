@@ -1,35 +1,43 @@
 <ion-card>
 
-  <div class="shipWrap">
+  <div class="shipWrap" #wrapper>
     <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->
-    <object #svg type="image/svg+xml" data="assets/imgs/ships/ship1.svg" class="shipSVG" [hidden]="!finished"  (load)="doneLoading()">
+
+    <!-- <svg #svg class="svgClass">
+      <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>
+    </svg> -->
+    <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">
       Ship Image
-    </object>
+    </object> -->
+    <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">
+      Ship Image
+    </object> -->
+
   </div>
 
   <ion-card-content>
     <ion-card-title style="text-overflow: ellipsis">
       {{ship.name ? ship.name : 'Ship '+ship.id}}
     </ion-card-title>
-  <ion-row no-padding>
-    <ion-col>
-      <button ion-button clear small color="danger" icon-start>
-        <!-- <ion-icon name='star'></ion-icon> -->
-        Ship #{{ship.id}}
-      </button>
-    </ion-col>
-  </ion-row>
-  <ion-row no-padding>
-    <ion-col col-12>
-      <span>Primary Weapon: {{ship.weapon1}}</span>
-    </ion-col>
-  </ion-row>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <!-- <ion-icon name='star'></ion-icon> -->
+          Ship #{{ship.id}}
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col col-12>
+        <span>Primary Weapon: {{ship.weapon1}}</span>
+      </ion-col>
+    </ion-row>
 
-  <ion-row no-padding>
-    <ion-col col-12>
-      <span>Secondary Weapon: {{ship.weapon2}}</span>
-    </ion-col>
-  </ion-row>
+    <ion-row no-padding>
+      <ion-col col-12>
+        <span style="color: var(--primary-color)">Secondary Weapon: {{ship.weapon2}}</span>
+      </ion-col>
+    </ion-row>
   </ion-card-content>
 
   <!-- <ion-row no-padding>
