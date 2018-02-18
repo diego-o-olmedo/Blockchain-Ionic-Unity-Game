@@ -1,1 +1,86 @@
-webpackJsonp([5],{235:function(l,n,u){"use strict";function a(l){return o._19(0,[(l()(),o.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),o.Y(1,16384,null,0,h.a,[m.a,o.j,o.z,[2,v.a]],null,null),(l()(),o._18(-1,null,["\n  "])),(l()(),o.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Z.b,Z.a)),o.Y(4,49152,null,0,P.a,[Y.a,[2,v.a],[2,j.a],m.a,o.j,o.z],null,null),(l()(),o._18(-1,3,["\n  "])),(l()(),o._18(-1,null,["\n"])),(l()(),o._18(-1,null,["\n"])),(l()(),o.Z(8,0,null,null,1,"header-component",[],null,null,null,y.b,y.a)),o.Y(9,49152,null,0,w.a,[j.a,z.a,o.u],null,null),(l()(),o._18(-1,null,["\n\n"])),(l()(),o.Z(11,0,null,null,8,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,V.b,V.a)),o.Y(12,4374528,null,0,k.a,[m.a,A.a,C.a,o.j,o.z,Y.a,D.a,o.u,[2,v.a],[2,j.a]],null,null),(l()(),o._18(-1,1,["\n  "])),(l()(),o.Z(14,0,null,1,1,"div",[["class","contentRoom"]],null,null,null,null,null)),(l()(),o._18(-1,null,["\n    Coming soon\n  "])),(l()(),o._18(-1,1,["\n\n  "])),(l()(),o.Z(17,0,null,1,1,"footer-component",[],null,null,null,L.b,L.a)),o.Y(18,49152,null,0,M.a,[],null,null),(l()(),o._18(-1,1,["\n"]))],null,function(l,n){l(n,3,0,o._13(n,4)._hidden,o._13(n,4)._sbPadding);l(n,11,0,o._13(n,12).statusbarPadding,o._13(n,12)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var o=u(0),t=(u(5),u(39),function(){function l(l,n){this.navCtrl=l,this.navParams=n,console.log("auction con")}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AuctionsPage")},l}()),e=u(115),i=function(){return function(){}}(),r=u(187),s=u(188),_=u(189),c=u(190),d=u(191),b=u(192),f=u(193),g=u(194),p=u(195),h=u(54),m=u(1),v=u(4),Z=u(116),P=u(22),Y=u(8),j=u(17),y=u(196),w=u(74),z=u(25),V=u(197),k=u(20),A=u(3),C=u(9),D=u(26),L=u(199),M=u(77),R=u(11),F=o.X({encapsulation:2,styles:[],data:{}}),J=o.V("page-auctions",t,function(l){return o._19(0,[(l()(),o.Z(0,0,null,null,1,"page-auctions",[],null,null,null,a,F)),o.Y(1,49152,null,0,t,[j.a,R.a],null,null)],null,null)},{},{},[]),N=u(10),O=u(14),S=u(117),W=u(40);u.d(n,"AuctionsPageModuleNgFactory",function(){return X});var X=o.W(i,[],function(l){return o._10([o._11(512,o.i,o.S,[[8,[r.a,s.a,_.a,c.a,d.a,b.a,f.a,g.a,p.a,J]],[3,o.i],o.s]),o._11(4608,N.k,N.j,[o.r,[2,N.s]]),o._11(4608,O.o,O.o,[]),o._11(4608,O.d,O.d,[]),o._11(512,N.b,N.b,[]),o._11(512,O.m,O.m,[]),o._11(512,O.e,O.e,[]),o._11(512,O.l,O.l,[]),o._11(512,S.a,S.a,[]),o._11(512,e.a,e.a,[]),o._11(512,S.b,S.b,[]),o._11(512,i,i,[]),o._11(256,W.a,t,[])])})}});
+webpackJsonp([5],{
+
+/***/ 263:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuctionsPageModule", function() { return AuctionsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auctions__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(190);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AuctionsPageModule = (function () {
+    function AuctionsPageModule() {
+    }
+    AuctionsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */])]
+        })
+    ], AuctionsPageModule);
+    return AuctionsPageModule;
+}());
+
+//# sourceMappingURL=auctions.module.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuctionsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the AuctionsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AuctionsPage = (function () {
+    function AuctionsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        console.log("auction con");
+    }
+    AuctionsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad AuctionsPage");
+    };
+    AuctionsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content>\n  <div class="contentRoom">\n    <!-- <svg>\n      <use xlink:href="#ship1"></use>\n    </svg> -->\n    Coming soon\n  </div>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+    ], AuctionsPage);
+    return AuctionsPage;
+}());
+
+//# sourceMappingURL=auctions.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map
