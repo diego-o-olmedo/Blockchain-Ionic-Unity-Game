@@ -96,7 +96,7 @@ function getDefault() {
     {
       id: 90,
       name: "Placeholder Ship4",
-      model: 0,
+      model: 3,
       size: "Normal",
       color1: "Pink",
       color2: "Red"

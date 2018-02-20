@@ -17,9 +17,8 @@ module.exports.models = {
    *                                                                          *
    ***************************************************************************/
   // connection: 'localDiskDb',
-  // connection: "PostgresURL",
-  connection: "remotePostgresLocal",
-  // connection: "remotePostgresServer",
+  // connection: "remotePostgresLocal",
+  connection: "remotePostgresServer",
   /***************************************************************************
    *                                                                          *
    * How and whether Sails will attempt to automatically rebuild the          *
@@ -28,6 +27,6 @@ module.exports.models = {
    * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
    *                                                                          *
    ***************************************************************************/
-  // migrate: "alter"
-  migrate: "drop"
+  migrate: "alter"
+  // migrate: "drop"
 }

@@ -100,6 +100,7 @@ var ShipCardComponentModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,13 +113,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ShipCardComponent = (function () {
-    function ShipCardComponent(sanitizer, appState) {
+    function ShipCardComponent(sanitizer, appState, navCtrl) {
         this.sanitizer = sanitizer;
         this.appState = appState;
+        this.navCtrl = navCtrl;
     }
     ShipCardComponent.prototype.ngOnInit = function () {
-        var shipModel = this.ship.model == 1 ? 1 : 2;
+        var shipModel = this.ship.model <= 2 ? 1 : 2;
         this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl("/assets/imgs/ships/ship" + shipModel + ".svg");
         // console.log(this.ship)
         // let shipModel = this.ship.model == 1 ? 1 : 2
@@ -150,6 +153,10 @@ var ShipCardComponent = (function () {
             }
         }
         // this.doneLoading()
+    };
+    ShipCardComponent.prototype.goToShip = function (e, id) {
+        e.preventDefault();
+        this.navCtrl.setRoot("ShipPage", { id: id });
     };
     ShipCardComponent.prototype.ionViewDidLoad = function () { };
     ShipCardComponent.prototype.getColors = function (data) {
@@ -264,13 +271,14 @@ var ShipCardComponent = (function () {
     ], ShipCardComponent.prototype, "wrapper", void 0);
     ShipCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n\n  <div class="shipWrap" #wrapper>\n    <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n    <!-- <svg #svg class="svgClass">\n      <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n    </svg> -->\n    <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n      Ship Image\n    </object> -->\n    <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n      Ship Image\n    </object> -->\n\n  </div>\n\n  <ion-card-content>\n    <ion-card-title style="text-overflow: ellipsis">\n      {{ship.name ? ship.name : \'Ship \'+ship.id}}\n    </ion-card-title>\n    <ion-row no-padding>\n      <ion-col>\n        <button ion-button clear small color="danger" icon-start>\n          <!-- <ion-icon name=\'star\'></ion-icon> -->\n          Ship #{{ship.id}}\n        </button>\n      </ion-col>\n    </ion-row>\n    <ion-row no-padding>\n      <ion-col col-12>\n        <span>Primary Weapon: {{ship.weapon1}}</span>\n      </ion-col>\n    </ion-row>\n\n    <ion-row no-padding>\n      <ion-col col-12>\n        <span style="color: var(--primary-color)">Secondary Weapon: {{ship.weapon2}}</span>\n      </ion-col>\n    </ion-row>\n  </ion-card-content>\n\n  <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\'+ship.id" (click)="goToShip($event, ship.id)">\n    <div class="shipWrap" #wrapper>\n      <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n      <!-- <svg #svg class="svgClass">\n      <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n    </svg> -->\n      <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n      Ship Image\n    </object> -->\n      <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n      Ship Image\n    </object> -->\n\n    </div>\n\n    <ion-card-content>\n      <ion-card-title style="text-overflow: ellipsis">\n        {{ship.name ? ship.name : \'Ship \'+ship.id}}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start>\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ship.id}}\n          </button>\n          <span *ngIf="ship.price">{{ship.price / 1000000000000000000}} Eth</span>\n        </ion-col>\n      </ion-row>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Primary Weapon: {{ship.weapon1}}</span>\n        </ion-col>\n      </ion-row>\n\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Secondary Weapon: {{ship.weapon2}}</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewEncapsulation */].None
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */]])
     ], ShipCardComponent);
     return ShipCardComponent;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=ship-card.js.map
@@ -470,14 +478,14 @@ var MyShipsPage = (function () {
         }
     };
     MyShipsPage.prototype.parseResult = function (data) {
+        console.log("got result", data);
         this.loading = false;
         console.log(data);
         if (data.length > 0) {
-            data.forEach(function (ship) {
-                ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png";
-            });
+            // data.forEach(ship => {
+            //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+            // })
             this.ships = data;
-            console.log(this.ships[2].img);
         }
         console.log("done");
     };
@@ -491,7 +499,7 @@ var MyShipsPage = (function () {
     };
     MyShipsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row>\n      <ion-spinner *ngIf="loading" ion-col col-12>\n      </ion-spinner>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
+            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-row>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
