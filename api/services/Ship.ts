@@ -1,9 +1,14 @@
 declare let Auctions
-// declare let sails
-// declare let Ship
+declare let sails
+declare let Ship
 
 const Web3 = require("web3")
-const web3 = new Web3("wss://mainnet.infura.io/ws")
+
+const web3 = new Web3("https://mainnet.infura.io")
+// web3.currentProvider.sendAsync = function() {
+//   return web3.currentProvider.send.apply(web3.currentProvider, arguments)
+// }
+// const web3 = new Web3("wss://mainnet.infura.io/ws") //to do todo web3 1.0
 const CoreAbi = [
   {
     constant: true,
@@ -28,7 +33,9 @@ const CoreAbi = [
 ]
 
 const CoreAddress = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"
-const CoreContract = new web3.eth.Contract(CoreAbi, CoreAddress)
+
+// const CoreContract = web3.eth.contract(CoreAbi).at(CoreAddress)
+const CoreContract = new web3.eth.Contract(CoreAbi, CoreAddress) //to do todo web3 1.0
 
 const AuctionAbi = [
   {
@@ -247,7 +254,9 @@ const AuctionAbi = [
 
 const AuctionAddress = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"
 
-const AuctionContract = new web3.eth.Contract(AuctionAbi, AuctionAddress)
+// const AuctionContract = web3.eth.contract(AuctionAbi).at(AuctionAddress)
+const AuctionContract = new web3.eth.Contract(AuctionAbi, AuctionAddress) //to do todo web3 1.0
+
 // console.log(CoreContract)
 // Or pass a callback to start watching immediately
 // AuctionContract.getPastEvents(
@@ -283,17 +292,40 @@ const AuctionContract = new web3.eth.Contract(AuctionAbi, AuctionAddress)
 //   }
 // )
 
-let auctionWatch = AuctionContract.events.allEvents({
-  fromBlock: "latest"
-})
+// let auctionWatch = AuctionContract.events.allEvents({ //to do todo web3 1.0
+//   fromBlock: "latest"
+// })
+// auctionWatch.subscribe(function(error, result) {
+//   if (result) {
+//     Ship.AuctionEvent(result)
+//   } else {
+//     console.log(error)
+//   }
+// })
+
+// let events = AuctionContract.allEvents(
+//   { fromBlock: "latest" },
+//   (error, result) => {
+//     if (result) {
+//       Ship.AuctionEvent(result)
+//     } else {
+//       console.log(error)
+//     }
+//   }
+// )
+
+// var events = AuctionContract.allEvents({
+//   fromBlock: 5136927,
+//   toBlock: "latest"
+// })
+// events.watch(function(error, result) {
+//   if (result) {
+//     Ship.AuctionEvent(result)
+//   } else {
+//     console.log(error)
+//   }
+// })
 sails.log("created auction")
-auctionWatch.subscribe(function(error, result) {
-  if (result) {
-    Ship.AuctionEvent(result)
-  } else {
-    console.log(error)
-  }
-})
 
 module.exports = {
   AuctionEvent: function(result, isPast = false) {
@@ -333,7 +365,7 @@ module.exports = {
       rgb2[i] = Math.floor((r.gene[j++] + r.gene[j++]) * 2.5)
     }
     let modelPoint = r.gene.charAt(r.gene.length - 1)
-    let model = Math.floor(modelPoint / 5)
+    let model = Math.floor(modelPoint / 2.75)
     let weapon1List = [
       "Bolt Basic",
       "Bolt Poison",
@@ -372,12 +404,21 @@ module.exports = {
   get: function(id, name) {
     return new Promise(function(resolve, reject) {
       CoreContract.methods.getKitty(id).call({}, (err, res) => {
+        //to do todo web3 1.0
         if (err) {
           console.log(err)
         } else {
           resolve({ id: id, name: name, gene: res[9].toString(10) })
         }
       })
+
+      // CoreContract.getKitty(id, (err, res) => {
+      //   if (err) {
+      //     console.log(err)
+      //   } else {
+      //     resolve({ id: id, name: name, gene: res[9].toString(10) })
+      //   }
+      // })
     })
   }
 }

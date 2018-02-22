@@ -33429,6 +33429,7 @@ ship-card ion-card-title {
 
 ship-card .shipSVG {
   margin: 4%;
+  overflow: visible !important;
 }
 
 ship-card a {
