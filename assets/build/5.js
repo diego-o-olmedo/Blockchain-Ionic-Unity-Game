@@ -1,15 +1,16 @@
 webpackJsonp([5],{
 
-/***/ 263:
+/***/ 266:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GamePageModule", function() { return GamePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_pagination__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(190);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,6 +20,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+ // <-- import the module
 
 var GamePageModule = (function () {
     function GamePageModule() {
@@ -26,7 +28,11 @@ var GamePageModule = (function () {
     GamePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [__WEBPACK_IMPORTED_MODULE_2__game__["a" /* GamePage */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__game__["a" /* GamePage */])]
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3_ngx_pagination__["a" /* NgxPaginationModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__game__["a" /* GamePage */])
+            ]
         })
     ], GamePageModule);
     return GamePageModule;
@@ -36,15 +42,15 @@ var GamePageModule = (function () {
 
 /***/ }),
 
-/***/ 274:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_service__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_service__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,11 +78,32 @@ var GamePage = (function () {
         this.showChat = false;
         this.chatConnected = false;
         this.loadingStyle = this.sanitizer.bypassSecurityTrustStyle("inset(0 100% 0 0)");
+        this.selectLoad = false;
+        this.showSelect = false;
         this.isFullscreen = false;
         // io.socket.on("chatmessage", msg => {
         //   this.msgs.push(msg.data)
         // })
+        this.getShips();
     }
+    GamePage.prototype.getShips = function () {
+        var _this = this;
+        this.selectLoad = true;
+        console.log("getting io");
+        io.socket.get("/api/v1/ships?address=" + encodeURI(this.appState.account), {}, function (data) {
+            console.log(data);
+            _this.selectLoad = false;
+            if (data.length > 0) {
+                // data.forEach(ship => {
+                //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                // })
+                _this.ships = data;
+            }
+        });
+    };
+    GamePage.prototype.shipSelect = function () {
+        // return window["ShowSelect"]
+    };
     GamePage.prototype.mouseVisible = function () {
         return !document.pointerLockElement;
     };
@@ -107,6 +134,9 @@ var GamePage = (function () {
             console.log("joined room " + room);
             _this.room = room;
             _this.chatConnected = true;
+            _this.msgs.push({
+                text: _this.appState.account.substring(0, 5) + " connected to chat"
+            });
             if (!_this.listening) {
                 _this.listening = true;
                 io.socket.on("message", function (message) {
@@ -154,6 +184,9 @@ var GamePage = (function () {
                     _this.leaveRoom();
                 }
             }
+        });
+        window.addEventListener("show-select", function (e) {
+            _this.showSelect = e.detail;
         });
     };
     GamePage.prototype.loadGame = function () {
@@ -237,20 +270,16 @@ var GamePage = (function () {
     ], GamePage.prototype, "chatcontent", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]) === "function" && _a || Object)
     ], GamePage.prototype, "content", void 0);
     GamePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-game",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/'<ion-split-pane [when]="showChat">\n  <ion-header #head>\n    <ion-navbar>\n    </ion-navbar>\n  </ion-header>\n  <header-component></header-component>\n  <ion-content no-padding #content>\n\n    <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>\n    <div *ngIf="appState.account">\n\n      <div class="chatbutton" (click)="toggleChat()" *ngIf="mouseVisible() && gameLoaded">\n      </div>\n\n      <div *ngIf="!gameLoaded">\n        <img src="/assets/imgs/loading-grey.png" class="load-img load-grey">\n        <img src="/assets/imgs/loading-pink.png" class="load-img load-pink" [style.clip-path]="loadingStyle">\n      </div>\n\n      <div id="canvaswindow">\n        <div class="webgl-content" id="canvaswrapper">\n          <div id="gameContainer"></div>\n          <div class="footer">\n            <div class="fullscreen" (click)="goFull()"></div>\n          </div>\n        </div>\n      </div>\n      <!-- <ion-grid>\n      <ion-row>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n    </ion-grid> -->\n    </div>\n  </ion-content>\n\n  <ion-menu side="right" type="push" [content]="content" [ngClass]="{\'moveMenu\' : \'showChat\'}">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n\n    <ion-footer>\n      <ion-input placeholder="Send a message" [(ngModel)]="msg" (keypress)="send($event.keyCode)"></ion-input>\n    </ion-footer>\n\n    <ion-content #chatcontent ion-scroll>\n\n      <ion-row *ngIf="!chatConnected">\n        <ion-col col-12>\n          <p>Waiting to join a game lobby</p>\n        </ion-col>\n        <ion-spinner ion-col col-12>\n        </ion-spinner>\n        <div class="swapping-squares-spinner" :style="spinnerStyle">\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n        </div>\n      </ion-row>\n      <ion-list no-lines class="chatbox" *ngIf="chatConnected">\n        <ion-item *ngFor="let msg of msgs">\n          <span class="username">{{ msg.username }}:</span>\n          <span class="message">{{ msg.text }}</span>\n        </ion-item>\n      </ion-list>\n    </ion-content>\n\n  </ion-menu>\n</ion-split-pane>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/
+            selector: "page-game",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/'<ion-split-pane [when]="showChat">\n  <ion-header #head>\n    <ion-navbar>\n    </ion-navbar>\n  </ion-header>\n  <header-component></header-component>\n  <ion-content no-padding #content>\n\n    <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>\n    <div *ngIf="appState.account">\n\n      <div class="chatbutton" (click)="toggleChat()" *ngIf="mouseVisible() && gameLoaded">\n      </div>\n\n      <div *ngIf="!gameLoaded">\n        <img src="/assets/imgs/loading-grey.png" class="load-img load-grey">\n        <img src="/assets/imgs/loading-pink.png" class="load-img load-pink" [style.clip-path]="loadingStyle">\n      </div>\n\n      <div id="canvaswindow">\n        <div class="webgl-content" id="canvaswrapper">\n          <div id="gameContainer"></div>\n          <div class="footer">\n            <div class="fullscreen" (click)="goFull()"></div>\n          </div>\n        </div>\n      </div>\n      <!-- <ion-grid>\n      <ion-row>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n    </ion-grid> -->\n    </div>\n\n\n    <div class="shipSelect abs-center" *ngIf="showSelect">\n      <ion-spinner *ngIf="!ships" class="abs-center">\n      </ion-spinner>\n      <div class="contentRoom">\n        <ion-grid>\n          <ion-row justify-content-center>\n            <ship-select *ngFor="let ship of ships | paginate: { itemsPerPage: 8, currentPage: p }" ion-col col-12 col-xl-3 col-lg-3\n              col-md-4 col-sm-6 [ship]="ship"></ship-select>\n          </ion-row>\n        </ion-grid>\n      </div>\n      <ion-row ion-col col-12 class="select-footer">\n        <pagination-controls *ngIf="ships" previousLabel="" nextLabel="" class="ship-pagination" (pageChange)="p = $event"></pagination-controls>\n      </ion-row>\n    </div>\n\n  </ion-content>\n\n  <ion-menu side="right" type="push" [content]="content" [ngClass]="{\'moveMenu\' : \'showChat\'}">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n\n    <ion-footer>\n      <ion-input placeholder="Send a message" [(ngModel)]="msg" (keypress)="send($event.keyCode)"></ion-input>\n    </ion-footer>\n\n    <ion-content #chatcontent ion-scroll>\n\n      <ion-row *ngIf="!chatConnected">\n        <ion-col col-12>\n          <p>Waiting to join a game lobby</p>\n        </ion-col>\n        <ion-spinner ion-col col-12>\n        </ion-spinner>\n        <div class="swapping-squares-spinner" :style="spinnerStyle">\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n        </div>\n      </ion-row>\n      <ion-list no-lines class="chatbox" *ngIf="chatConnected">\n        <ion-item *ngFor="let msg of msgs">\n          <span class="username" *ngIf="msg.username">{{ msg.username }}:</span>\n          <span class="message" [ngClass]="{\'boldChat\': !msg.username}">{{ msg.text }}</span>\n        </ion-item>\n      </ion-list>\n    </ion-content>\n\n  </ion-menu>\n</ion-split-pane>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__app_app_service__["a" /* AppState */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_app_service__["a" /* AppState */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _g || Object])
     ], GamePage);
     return GamePage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=game.js.map

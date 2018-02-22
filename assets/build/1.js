@@ -1,17 +1,18 @@
 webpackJsonp([1],{
 
-/***/ 265:
+/***/ 268:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyShipsPageModule", function() { return MyShipsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_ships__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_ships__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_pagination__ = __webpack_require__(193);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25,6 +26,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+ // <-- import the module
 var MyShipsPageModule = (function () {
     function MyShipsPageModule() {
     }
@@ -32,6 +34,7 @@ var MyShipsPageModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [__WEBPACK_IMPORTED_MODULE_2__my_ships__["a" /* MyShipsPage */]],
             imports: [
+                __WEBPACK_IMPORTED_MODULE_6_ngx_pagination__["a" /* NgxPaginationModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* DirectivesModule */],
                 __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* ComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
@@ -46,7 +49,7 @@ var MyShipsPageModule = (function () {
 
 /***/ }),
 
-/***/ 269:
+/***/ 272:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58,14 +61,14 @@ Observable_1.Observable.prototype.map = map_1.map;
 
 /***/ }),
 
-/***/ 270:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship_card__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship_card__ = __webpack_require__(274);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -92,15 +95,15 @@ var ShipCardComponentModule = (function () {
 
 /***/ }),
 
-/***/ 271:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -130,6 +133,7 @@ var ShipCardComponent = (function () {
         // )
         // console.log(this.wrapper)
         var shipLoad = this.ship.model == 1 ? this.appState.ship1 : this.appState.ship2;
+        shipLoad = shipLoad.slice(0);
         var data = shipLoad.replace(/ChangeName/g, "id" + this.ship.id);
         data = data.replace(/cls-/g, "id" + this.ship.id + "-");
         this.appState.changedOne = true;
@@ -157,6 +161,7 @@ var ShipCardComponent = (function () {
     ShipCardComponent.prototype.goToShip = function (e, id) {
         e.preventDefault();
         this.navCtrl.setRoot("ShipPage", { id: id });
+        this.appState.activePage = "/ship";
     };
     ShipCardComponent.prototype.ionViewDidLoad = function () { };
     ShipCardComponent.prototype.getColors = function (data) {
@@ -285,13 +290,13 @@ var ShipCardComponent = (function () {
 
 /***/ }),
 
-/***/ 272:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectivesModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__ = __webpack_require__(276);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -317,7 +322,7 @@ var DirectivesModule = (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -381,16 +386,16 @@ var HideHeaderDirective = (function () {
 
 /***/ }),
 
-/***/ 276:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyShipsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -407,99 +412,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MyShipsPage = (function () {
+    // loading = true
     function MyShipsPage(navCtrl, navParams, appState, http, events) {
-        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.appState = appState;
         this.http = http;
         this.events = events;
-        this.ships = [];
+        this.p = 1;
         this.noAccount = false;
-        this.loading = true;
-        this.request();
-        events.subscribe("account:changed", function (account) {
-            _this.changeAccount();
-        });
-    }
-    MyShipsPage.prototype.request = function () {
-        var _this = this;
         if (this.appState.account && this.appState.account.length > 8) {
-            var url = "https://api.eth.bid/api/v1/ships?address=" +
-                // "http://localhost:8080/api/v1/ships?address=" +
-                encodeURI(this.appState.account);
-            console.log(url);
-            this.http
-                .get(url)
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) { return _this.parseResult(data); }, function (err) { return console.log(err); }, function () { return console.log("Complete"); });
         }
         else {
             this.noAccount = true;
-            this.loading = false;
-            this.ships = [
-                {
-                    id: 777,
-                    name: "Placeholder Ship1",
-                    model: 0,
-                    size: "Small",
-                    color1: "Blue",
-                    color2: "Orange",
-                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
-                },
-                {
-                    id: 333,
-                    name: "Placeholder Ship2",
-                    model: 1,
-                    size: "Large",
-                    color1: "Blue",
-                    color2: "Green",
-                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
-                },
-                {
-                    id: 123,
-                    name: "Placeholder Ship3",
-                    model: 2,
-                    size: "Normal",
-                    color1: "Pink",
-                    color2: "Red",
-                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
-                },
-                {
-                    id: 123,
-                    name: "Placeholder Ship4",
-                    model: 0,
-                    size: "Normal",
-                    color1: "Pink",
-                    color2: "Red",
-                    img: "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
-                }
-            ];
+            // this.loading = false
         }
-    };
-    MyShipsPage.prototype.parseResult = function (data) {
-        console.log("got result", data);
-        this.loading = false;
-        console.log(data);
-        if (data.length > 0) {
-            // data.forEach(ship => {
-            //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
-            // })
-            this.ships = data;
-        }
-        console.log("done");
-    };
-    MyShipsPage.prototype.changeAccount = function () {
-        this.loading = true;
-        this.ships = [];
-        this.request();
-    };
+        // this.request()
+        // events.subscribe("account:changed", account => {
+        //   this.changeAccount()
+        // })
+    }
+    // request() {
+    //   if (this.appState.account && this.appState.account.length > 8) {
+    //     let url =
+    //       "https://api.eth.bid/api/v1/ships?address=" +
+    //       // "http://localhost:8080/api/v1/ships?address=" +
+    //       encodeURI(this.appState.account)
+    //     console.log(url)
+    //     this.http
+    //       .get(url)
+    //       .map(res => res.json())
+    //       .subscribe(
+    //         data => this.parseResult(data),
+    //         err => console.log(err),
+    //         () => console.log("Complete")
+    //       )
+    //   } else {
+    //     this.noAccount = true
+    //     this.loading = false
+    //   }
+    // }
+    // parseResult(data) {
+    //   console.log("got result", data)
+    //   this.loading = false
+    //   console.log(data)
+    //   if (data.length > 0) {
+    //     // data.forEach(ship => {
+    //     //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+    //     // })
+    //     this.ships = data
+    //   }
+    //   console.log("done")
+    // }
+    // changeAccount() {
+    //   this.loading = true
+    //   this.ships = []
+    //   this.request()
+    // }
     MyShipsPage.prototype.ionViewDidLoad = function () {
         console.log("ionViewDidLoad MyShipsPage");
     };
     MyShipsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-row>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
+            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="!appState.ships" class="abs-center">\n    </ion-spinner>\n    <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>\n    <ion-row *ngIf="appState.ships">\n      <ship-card *ngFor="let ship of appState.ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],

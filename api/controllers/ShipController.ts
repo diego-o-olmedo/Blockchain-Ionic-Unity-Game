@@ -70,36 +70,24 @@ module.exports = {
 function getDefault() {
   return [
     {
-      id: 777,
-      name: "Placeholder Ship1",
-      model: 0,
-      size: "Small",
-      color1: "Blue",
-      color2: "Orange"
-    },
-    {
       id: 333,
-      name: "Placeholder Ship2",
+      name: "Starter ShipA",
       model: 1,
       size: "Large",
-      color1: "Blue",
-      color2: "Green"
+      color1: [255, 215, 0],
+      color2: [128, 0, 128],
+      weapon1: "Shotgun Blast",
+      weapon2: "Homing Missile"
     },
     {
-      id: 123,
-      name: "Placeholder Ship3",
-      model: 2,
-      size: "Normal",
-      color1: "Pink",
-      color2: "Red"
-    },
-    {
-      id: 90,
-      name: "Placeholder Ship4",
+      id: 777,
+      name: "Starter ShipB",
       model: 3,
-      size: "Normal",
-      color1: "Pink",
-      color2: "Red"
+      size: "Small",
+      color1: [252, 70, 107],
+      color2: [63, 94, 251],
+      weapon1: "Void Bolt",
+      weapon2: "Sun Burst Laser"
     }
   ]
 }

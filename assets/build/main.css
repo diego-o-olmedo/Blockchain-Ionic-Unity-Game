@@ -33444,6 +33444,25 @@ ship-card button {
   background-color: transparent !important;
 }
 
+ship-select {
+  pointer-events: auto !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+ship-select ion-card:hover {
+  opacity: 0.7;
+}
+
+ship-select ion-card-title {
+  text-overflow: ellipsis !important;
+}
+
+ship-select .shipSVG {
+  margin: 4%;
+}
+
 page-game .chatbox {
   border-width: 2px !important;
   border-color: black;
@@ -33507,6 +33526,72 @@ page-game .load-pink {
   transition: 1s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+page-game .shipSelect {
+  z-index: 222222222222222;
+  background-color: grey;
+  width: 90%;
+  height: 90%;
+  opacity: 0.9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+page-game .shipSelect .contentRoom {
+  padding: 8px;
+  height: 94%;
+}
+
+page-game .shipSelect .contentRoom ion-grid {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  height: 100%;
+}
+
+page-game .shipSelect .contentRoom ion-row {
+  position: relative !important;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) !important;
+  transform: translateY(-50%) !important;
+}
+
+page-game .select-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
+  width: 100%;
+  background-color: rgba(16, 16, 111, 0.638);
+  height: 6%;
+  border-radius: 0% 0% 20px 20px;
+}
+
+page-game .ship-pagination {
+  margin: auto;
+  color: var(--text) !important;
+}
+
+page-game .ship-pagination .ngx-pagination {
+  padding: 0px !important;
+}
+
+page-game .ship-pagination a {
+  color: var(--text) !important;
+}
+
+page-home .registration {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+page-home .metamask {
+  margin: auto;
 }
 
 page-ship .actions button {
