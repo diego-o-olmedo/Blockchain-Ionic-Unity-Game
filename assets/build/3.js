@@ -1,1 +1,383 @@
-webpackJsonp([3],{238:function(l,n,u){"use strict";function o(l){return e._21(0,[(l()(),e.Z(0,0,null,null,2,"ion-spinner",[["class","abs-center"]],[[2,"spinner-paused",null]],null,null,y.b,y.a)),e.Y(1,114688,null,0,w.a,[Z.a,e.j,e.z],null,null),(l()(),e._19(-1,null,["\n    "]))],function(l,n){l(n,1,0)},function(l,n){l(n,0,0,e._13(n,1)._paused)})}function i(l){return e._21(0,[(l()(),e.Z(0,0,null,null,2,"ship-card",[["class","col"],["col-12",""],["col-lg-4",""],["col-md-6",""],["col-xl-3",""],["ion-col",""]],null,null,null,Y.b,Y.a)),e.Y(1,114688,null,0,C.a,[S.c,E.a,L.a],{ship:[0,"ship"]},null),e.Y(2,16384,null,0,O.a,[],null,null)],function(l,n){l(n,1,0,n.context.$implicit)},null)}function t(l){return e._21(0,[(l()(),e.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),e.Y(1,16384,null,0,T.a,[Z.a,e.j,e.z,[2,I.a]],null,null),(l()(),e._19(-1,null,["\n  "])),(l()(),e.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,P.b,P.a)),e.Y(4,49152,null,0,D.a,[M.a,[2,I.a],[2,L.a],Z.a,e.j,e.z],null,null),(l()(),e._19(-1,3,["\n  "])),(l()(),e._19(-1,null,["\n"])),(l()(),e._19(-1,null,["\n"])),(l()(),e.Z(8,0,null,null,1,"header-component",[],null,null,null,j.b,j.a)),e.Y(9,114688,null,0,z.a,[L.a,E.a,e.u],null,null),(l()(),e._19(-1,null,["\n\n"])),(l()(),e.Z(11,0,null,null,19,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,A.b,A.a)),e.Y(12,4374528,null,0,W.a,[Z.a,H.a,F.a,e.j,e.z,M.a,R.a,e.u,[2,I.a],[2,L.a]],null,null),(l()(),e._19(-1,1,["\n  "])),(l()(),e.Z(14,0,null,1,12,"ion-grid",[["class","contentRoom grid"]],null,null,null,null,null)),e.Y(15,16384,null,0,k.a,[],null,null),(l()(),e._19(-1,null,["\n    "])),(l()(),e.U(16777216,null,null,1,null,o)),e.Y(18,16384,null,0,G.i,[e.I,e.F],{ngIf:[0,"ngIf"]},null),(l()(),e._19(-1,null,["\n    "])),(l()(),e.Z(20,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),e.Y(21,16384,null,0,U.a,[],null,null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.U(16777216,null,null,1,null,i)),e.Y(24,802816,null,0,G.h,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(l()(),e._19(-1,null,["\n    "])),(l()(),e._19(-1,null,["\n  "])),(l()(),e._19(-1,1,["\n\n  "])),(l()(),e.Z(28,0,null,1,1,"footer-component",[],null,null,null,x.b,x.a)),e.Y(29,49152,null,0,B.a,[],null,null),(l()(),e._19(-1,1,["\n"])),(l()(),e._19(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,9,0);l(n,18,0,u.loading);l(n,24,0,u.ships)},function(l,n){l(n,3,0,e._13(n,4)._hidden,e._13(n,4)._sbPadding);l(n,11,0,e._13(n,12).statusbarPadding,e._13(n,12)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(0),a=(u(5),u(27),u(116)),s=(u(246),function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this.http=u,this.loading=!0,console.log("auction con"),this.request()}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AuctionsPage")},l.prototype.request=function(){var l=this;console.log("io auctions//"),io.socket.get("/api/auction",function(n){console.log(n);var u=[];n.auctions.forEach(function(l){l.stats.price=l.currentPrice,u.push(l.stats)}),l.ships=u,l.loading=!1})},l.prototype.parseResult=function(l){console.log("got result",l),this.loading=!1,console.log(l),l.length>0&&(this.ships=l),console.log("done")},l}()),r=u(115),c=u(245),p=function(){return function(){}}(),h=u(189),_=u(190),d=u(191),g=u(192),f=u(193),v=u(194),m=u(195),b=u(196),N=u(197),y=u(200),w=u(55),Z=u(1),Y=u(247),C=u(244),S=u(24),E=u(23),L=u(17),O=u(74),T=u(54),I=u(4),P=u(117),D=u(22),M=u(8),j=u(198),z=u(76),A=u(199),W=u(20),H=u(3),F=u(9),R=u(28),k=u(77),G=u(10),U=u(75),x=u(202),B=u(78),V=u(11),q=e.X({encapsulation:2,styles:[],data:{}}),X=e.V("page-auctions",s,function(l){return e._21(0,[(l()(),e.Z(0,0,null,null,1,"page-auctions",[],null,null,null,t,q)),e.Y(1,49152,null,0,s,[L.a,V.a,a.d],null,null)],null,null)},{},{},[]),J=u(14),$=u(118),K=u(40);u.d(n,"AuctionsPageModuleNgFactory",function(){return Q});var Q=e.W(p,[],function(l){return e._10([e._11(512,e.i,e.S,[[8,[h.a,_.a,d.a,g.a,f.a,v.a,m.a,b.a,N.a,X]],[3,e.i],e.s]),e._11(4608,G.k,G.j,[e.r,[2,G.s]]),e._11(4608,J.o,J.o,[]),e._11(4608,J.d,J.d,[]),e._11(512,G.b,G.b,[]),e._11(512,J.m,J.m,[]),e._11(512,J.e,J.e,[]),e._11(512,J.l,J.l,[]),e._11(512,$.a,$.a,[]),e._11(512,c.a,c.a,[]),e._11(512,r.a,r.a,[]),e._11(512,$.b,$.b,[]),e._11(512,p,p,[]),e._11(256,K.a,s,[])])})},244:function(l,n,u){"use strict";u.d(n,"a",function(){return o});u(5),u(23),u(27);var o=function(){function l(l,n,u){this.sanitizer=l,this.appState=n,this.navCtrl=u}return l.prototype.ngOnInit=function(){var l=this;setTimeout(function(){l.svgUrl=l.sanitizer.bypassSecurityTrustResourceUrl("/assets/imgs/ships/ship"+(l.ship.model<=2?1:2)+".svg");var n=(1==l.ship.model?l.appState.ship1:2==l.ship.model?l.appState.ship2:3==l.ship.model?l.appState.ship3:l.appState.ship4).slice(0).replace("Layer_1","Layer_1-"+Math.random()).replace(/ChangeName/g,"id"+l.ship.id);n=n.replace(/cls-/g,"id"+l.ship.id+"-"),l.appState.changedOne=!0,n=l.getColors(n),l.wrapper.nativeElement.innerHTML=n;var u=l.wrapper.nativeElement.children[0];if("B"==l.ship.weapon1[0])console.log("99"),u.children.CENTER_CANNON.innerHTML="";else{console.log("11"),u.children.WING_CANNON_1.innerHTML="";var o=u.children.WING_CANNON_2;o&&(o.innerHTML="")}},80)},l.prototype.goToShip=function(l,n){l.preventDefault(),this.navCtrl.setRoot("ShipPage",{id:n}),this.appState.activePage="/ship"},l.prototype.ionViewDidLoad=function(){},l.prototype.getColors=function(l){var n="rgb("+this.ship.color1[0]+","+this.ship.color1[1]+","+this.ship.color1[2]+")",u="rgb("+this.ship.color2[0]+","+this.ship.color2[1]+","+this.ship.color2[2]+")";if("B"==this.ship.weapon2[0]){var o=l.indexOf("fill:#");l=(l=(l=l.replace(l.substring(o+5,o+12),u)).replace(/PrimaryColor/g,n)).replace(/SecondaryColor/g,n)}else l=(l=l.replace(/PrimaryColor/g,n)).replace(/SecondaryColor/g,u);return l},l.prototype.doneLoading=function(){console.log("loading"),this.svg.nativeElement.style="--secondary-color: green;";var l=this.wrapper.nativeElement.children[0].contentDocument.all[1].children[1];if(l&&this.ship.weapon2)if("B"==this.ship.weapon2[0]?(l.children[1].attributes[1].value="rgb("+this.ship.color1[0]+","+this.ship.color1[1]+","+this.ship.color1[2]+")",l.children[0].attributes[1].value="rgb("+this.ship.color1[0]+","+this.ship.color1[1]+","+this.ship.color1[2]+")",console.log(this.svg.nativeElement.contentDocument.all[1].children[0].sheet),this.svg.nativeElement.contentDocument.all[1].children[0].sheet.rules[0].style.fill="rgb("+this.ship.color2[0]+","+this.ship.color2[1]+","+this.ship.color2[2]+")"):(l.children[1].attributes[1].value="rgb("+this.ship.color1[0]+","+this.ship.color1[1]+","+this.ship.color1[2]+")",l.children[0].attributes[1].value="rgb("+this.ship.color2[0]+","+this.ship.color2[1]+","+this.ship.color2[2]+")"),"B"==this.ship.weapon1[0]){if(this.svg.nativeElement.contentDocument.all.CENTER_CANNON.innerHTML="","F"!=this.ship.weapon1[5]){(n=this.svg.nativeElement.contentDocument.all.WING_CANNON_2)&&(n.innerHTML="")}}else{this.svg.nativeElement.contentDocument.all.WING_CANNON_1.innerHTML="";var n;(n=this.svg.nativeElement.contentDocument.all.WING_CANNON_2)&&(n.innerHTML="")}},l}()},245:function(l,n,u){"use strict";u.d(n,"a",function(){return o});u(5),u(27);var o=function(){return function(){}}()},246:function(l,n,u){"use strict";var o=u(21),i=u(201);o.Observable.prototype.map=i.map},247:function(l,n,u){"use strict";function o(l){return t._21(0,[(l()(),t.Z(0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),t._19(1,null,[""," Eth"]))],null,function(l,n){l(n,1,0,n.component.ship.price/1e18)})}function i(l){return t._21(0,[t._17(402653184,1,{svg:0}),t._17(402653184,2,{wrapper:0}),(l()(),t.Z(2,0,null,null,59,"ion-card",[],null,null,null,null,null)),t.Y(3,16384,null,0,e.a,[a.a,t.j,t.z],null,null),(l()(),t._19(-1,null,["\n  "])),(l()(),t.Z(5,0,null,null,55,"a",[],[[8,"href",4]],[[null,"click"]],function(l,n,u){var o=!0,i=l.component;if("click"===n){o=!1!==i.goToShip(u,i.ship.id)&&o}return o},null,null)),(l()(),t._19(-1,null,["\n    "])),(l()(),t.Z(7,0,[[2,0],["wrapper",1]],null,5,"div",[["class","shipWrap"]],null,null,null,null,null)),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n\n      "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n\n    "])),(l()(),t._19(-1,null,["\n\n    "])),(l()(),t.Z(14,0,null,null,44,"ion-card-content",[],null,null,null,null,null)),t.Y(15,16384,null,0,s.a,[a.a,t.j,t.z],null,null),(l()(),t._19(-1,null,["\n      "])),(l()(),t.Z(17,0,null,null,2,"ion-card-title",[["style","text-overflow: ellipsis"]],null,null,null,null,null)),t.Y(18,16384,null,0,r.a,[a.a,t.j,t.z],null,null),(l()(),t._19(19,null,["\n        ","\n      "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t.Z(21,0,null,null,14,"ion-row",[["class","row"],["no-padding",""]],null,null,null,null,null)),t.Y(22,16384,null,0,c.a,[],null,null),(l()(),t._19(-1,null,["\n        "])),(l()(),t.Z(24,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),t.Y(25,16384,null,0,p.a,[],null,null),(l()(),t._19(-1,null,["\n          "])),(l()(),t.Z(27,0,null,null,3,"button",[["clear",""],["color","danger"],["icon-start",""],["ion-button",""],["small",""]],null,null,null,h.b,h.a)),t.Y(28,1097728,null,0,_.a,[[8,""],a.a,t.j,t.z],{color:[0,"color"],small:[1,"small"],clear:[2,"clear"]},null),(l()(),t._19(-1,0,["\n            "])),(l()(),t._19(30,0,["\n            Ship #","\n          "])),(l()(),t._19(-1,null,["\n          "])),(l()(),t.U(16777216,null,null,1,null,o)),t.Y(33,16384,null,0,d.i,[t.I,t.F],{ngIf:[0,"ngIf"]},null),(l()(),t._19(-1,null,["\n        "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t.Z(37,0,null,null,9,"ion-row",[["class","row"],["no-padding",""]],null,null,null,null,null)),t.Y(38,16384,null,0,c.a,[],null,null),(l()(),t._19(-1,null,["\n        "])),(l()(),t.Z(40,0,null,null,5,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),t.Y(41,16384,null,0,p.a,[],null,null),(l()(),t._19(-1,null,["\n          "])),(l()(),t.Z(43,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),t._19(44,null,["Primary Weapon: ",""])),(l()(),t._19(-1,null,["\n        "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n\n      "])),(l()(),t.Z(48,0,null,null,9,"ion-row",[["class","row"],["no-padding",""]],null,null,null,null,null)),t.Y(49,16384,null,0,c.a,[],null,null),(l()(),t._19(-1,null,["\n        "])),(l()(),t.Z(51,0,null,null,5,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),t.Y(52,16384,null,0,p.a,[],null,null),(l()(),t._19(-1,null,["\n          "])),(l()(),t.Z(54,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),t._19(55,null,["Secondary Weapon: ",""])),(l()(),t._19(-1,null,["\n        "])),(l()(),t._19(-1,null,["\n      "])),(l()(),t._19(-1,null,["\n    "])),(l()(),t._19(-1,null,["\n\n    "])),(l()(),t._19(-1,null,["\n  "])),(l()(),t._19(-1,null,["\n"])),(l()(),t._19(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,28,0,"danger","","");l(n,33,0,u.ship.price)},function(l,n){var u=n.component;l(n,5,0,"/ship/"+u.ship.id);l(n,19,0,u.ship.name?u.ship.name:"Ship "+u.ship.id);l(n,30,0,u.ship.id);l(n,44,0,u.ship.weapon1);l(n,55,0,u.ship.weapon2)})}u.d(n,"a",function(){return g}),n.b=i;var t=u(0),e=u(120),a=u(1),s=u(121),r=u(122),c=u(75),p=u(74),h=u(29),_=u(18),d=u(10),g=(u(23),t.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([3],{
+
+/***/ 267:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuctionsPageModule", function() { return AuctionsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auctions__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__ = __webpack_require__(273);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var AuctionsPageModule = (function () {
+    function AuctionsPageModule() {
+    }
+    AuctionsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */])
+            ]
+        })
+    ], AuctionsPageModule);
+    return AuctionsPageModule;
+}());
+
+//# sourceMappingURL=auctions.module.js.map
+
+/***/ }),
+
+/***/ 272:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(11);
+var map_1 = __webpack_require__(191);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+
+/***/ 273:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship_card__ = __webpack_require__(274);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ShipCardComponentModule = (function () {
+    function ShipCardComponentModule() {
+    }
+    ShipCardComponentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__ship_card__["a" /* ShipCardComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__ship_card__["a" /* ShipCardComponent */]]
+        })
+    ], ShipCardComponentModule);
+    return ShipCardComponentModule;
+}());
+
+//# sourceMappingURL=ship-card.module.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ShipCardComponent = (function () {
+    function ShipCardComponent(sanitizer, appState, navCtrl) {
+        this.sanitizer = sanitizer;
+        this.appState = appState;
+        this.navCtrl = navCtrl;
+    }
+    ShipCardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            var shipModel = _this.ship.model <= 2 ? 1 : 2;
+            _this.svgUrl = _this.sanitizer.bypassSecurityTrustResourceUrl("/assets/imgs/ships/ship" + shipModel + ".svg");
+            // console.log(this.ship)
+            // let shipModel = this.ship.model == 1 ? 1 : 2
+            // this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            //   "/assets/imgs/ships/ship" + shipModel + ".svg"
+            // )
+            // console.log(this.wrapper)
+            var shipLoad;
+            if (_this.ship.model == 1) {
+                shipLoad = _this.appState.ship1;
+            }
+            else if (_this.ship.model == 2) {
+                shipLoad = _this.appState.ship2;
+            }
+            else if (_this.ship.model == 3) {
+                shipLoad = _this.appState.ship3;
+            }
+            else if (_this.ship.model == 4) {
+                shipLoad = _this.appState.ship4;
+            }
+            else {
+                console.log(_this.ship.model);
+                shipLoad = _this.appState.ship0;
+            }
+            shipLoad = shipLoad.slice(0);
+            shipLoad = shipLoad.replace("Layer_1", "Layer_1-" + Math.random());
+            var data = shipLoad.replace(/ChangeName/g, "id" + _this.ship.id);
+            data = data.replace(/cls-/g, "id" + _this.ship.id + "-");
+            _this.appState.changedOne = true;
+            data = _this.getColors(data);
+            _this.wrapper.nativeElement.innerHTML = data;
+            var svgNative = _this.wrapper.nativeElement.children[0];
+            if (_this.ship.primaryWeapon[0] == "B") {
+                svgNative.children["CENTER_CANNON"].innerHTML = "";
+                // if (this.ship.primaryWeapon[5] != "F") {
+                //   svgNative.children["WING_CANNON_1"].innerHTML = ""
+                //   let cannon2 = svgNative.children["WING_CANNON_2"]
+                //   if (cannon2) {
+                //     cannon2.innerHTML = ""
+                //   }
+                // }
+            }
+            else {
+                svgNative.children["WING_CANNON_1"].innerHTML = "";
+                var cannon2 = svgNative.children["WING_CANNON_2"];
+                if (cannon2) {
+                    cannon2.innerHTML = "";
+                }
+            }
+        }, 80);
+        // this.doneLoading()
+    };
+    ShipCardComponent.prototype.goToShip = function (e, id) {
+        e.preventDefault();
+        this.navCtrl.setRoot("ShipPage", { id: id });
+        this.appState.activePage = "/ship";
+    };
+    ShipCardComponent.prototype.ionViewDidLoad = function () { };
+    ShipCardComponent.prototype.getColors = function (data) {
+        var primaryColor = "rgb(" +
+            this.ship.primaryColor[0] +
+            "," +
+            this.ship.primaryColor[1] +
+            "," +
+            this.ship.primaryColor[2] +
+            ")";
+        var secondaryColor = "rgb(" +
+            this.ship.secondaryColor[0] +
+            "," +
+            this.ship.secondaryColor[1] +
+            "," +
+            this.ship.secondaryColor[2] +
+            ")";
+        if (this.ship.secondaryWeapon[0] == "B") {
+            var ind = data.indexOf("fill:#");
+            data = data.replace(data.substring(ind + 5, ind + 12), secondaryColor);
+            data = data.replace(/PrimaryColor/g, primaryColor);
+            data = data.replace(/SecondaryColor/g, primaryColor);
+        }
+        else {
+            data = data.replace(/PrimaryColor/g, primaryColor);
+            data = data.replace(/SecondaryColor/g, secondaryColor);
+        }
+        return data;
+    };
+    ShipCardComponent.prototype.doneLoading = function () {
+        console.log("loading");
+        this.svg.nativeElement.style = "--secondary-color: green;";
+        var gradient = this.wrapper.nativeElement.children[0].contentDocument.all[1]
+            .children[1];
+        if (gradient && this.ship.secondaryWeapon) {
+            if (this.ship.secondaryWeapon[0] == "B") {
+                gradient.children[1].attributes[1].value =
+                    "rgb(" +
+                        this.ship.primaryColor[0] +
+                        "," +
+                        this.ship.primaryColor[1] +
+                        "," +
+                        this.ship.primaryColor[2] +
+                        ")";
+                gradient.children[0].attributes[1].value =
+                    "rgb(" +
+                        this.ship.primaryColor[0] +
+                        "," +
+                        this.ship.primaryColor[1] +
+                        "," +
+                        this.ship.primaryColor[2] +
+                        ")";
+                console.log(this.svg.nativeElement.contentDocument.all[1].children[0].sheet);
+                this.svg.nativeElement.contentDocument.all[1].children[0].sheet.rules[0].style.fill =
+                    "rgb(" +
+                        this.ship.secondaryWeapon[0] +
+                        "," +
+                        this.ship.secondaryWeapon[1] +
+                        "," +
+                        this.ship.secondaryWeapon[2] +
+                        ")";
+            }
+            else {
+                gradient.children[1].attributes[1].value =
+                    "rgb(" +
+                        this.ship.primaryColor[0] +
+                        "," +
+                        this.ship.primaryColor[1] +
+                        "," +
+                        this.ship.primaryColor[2] +
+                        ")";
+                gradient.children[0].attributes[1].value =
+                    "rgb(" +
+                        this.ship.secondaryWeapon[0] +
+                        "," +
+                        this.ship.secondaryWeapon[1] +
+                        "," +
+                        this.ship.secondaryWeapon[2] +
+                        ")";
+            }
+            if (this.ship.primaryWeapon[0] == "B") {
+                this.svg.nativeElement.contentDocument.all["CENTER_CANNON"].innerHTML =
+                    "";
+                if (this.ship.primaryWeapon[5] != "F") {
+                    var cannon2 = this.svg.nativeElement.contentDocument.all["WING_CANNON_2"];
+                    if (cannon2) {
+                        cannon2.innerHTML = "";
+                    }
+                }
+            }
+            else {
+                this.svg.nativeElement.contentDocument.all["WING_CANNON_1"].innerHTML =
+                    "";
+                var cannon2 = this.svg.nativeElement.contentDocument.all["WING_CANNON_2"];
+                if (cannon2) {
+                    cannon2.innerHTML = "";
+                }
+            }
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], ShipCardComponent.prototype, "ship", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("svg"),
+        __metadata("design:type", Object)
+    ], ShipCardComponent.prototype, "svg", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("wrapper"),
+        __metadata("design:type", Object)
+    ], ShipCardComponent.prototype, "wrapper", void 0);
+    ShipCardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\'+ship.id" (click)="goToShip($event, ship.id)">\n\n\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!-- <svg #svg class="svgClass">\n          <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n        </svg> -->\n        <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n        <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n\n      </div>\n      <ion-card-title class="ellip">\n        {{ship.name ? ship.name : \'Ship \'+ship.id}}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start>\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ship.id}}\n          </button>\n          <span *ngIf="ship.price">{{ship.price / 1000000000000000000}} Eth</span>\n        </ion-col>\n      </ion-row>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Primary Weapon: {{ship.primaryWeapon}}</span>\n        </ion-col>\n      </ion-row>\n\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Secondary Weapon: {{ship.secondaryWeapon}}</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewEncapsulation */].None
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */]) === "function" && _c || Object])
+    ], ShipCardComponent);
+    return ShipCardComponent;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=ship-card.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuctionsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuctionsPage = (function () {
+    function AuctionsPage(navCtrl, navParams, http) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.loading = true;
+        console.log("auction con");
+        this.request();
+    }
+    AuctionsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad AuctionsPage");
+    };
+    AuctionsPage.prototype.request = function () {
+        var _this = this;
+        console.log("io auctions//");
+        io.socket.get("/api/auction", function (event) {
+            console.log(event);
+            var result = [];
+            event.auctions.forEach(function (record) {
+                record.stats["price"] = record.currentPrice;
+                result.push(record.stats);
+            });
+            _this.ships = result;
+            _this.loading = false;
+        });
+    };
+    AuctionsPage.prototype.parseResult = function (data) {
+        console.log("got result", data);
+        this.loading = false;
+        console.log(data);
+        if (data.length > 0) {
+            // data.forEach(ship => {
+            //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+            // })
+            this.ships = data;
+        }
+        console.log("done");
+    };
+    AuctionsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-row>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
+    ], AuctionsPage);
+    return AuctionsPage;
+}());
+
+//# sourceMappingURL=auctions.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=3.js.map

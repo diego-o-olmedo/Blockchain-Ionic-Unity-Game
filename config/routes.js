@@ -33,12 +33,13 @@ module.exports.routes = {
   // "/": {
   //   view: "assets/www/index"
   // }
+  "get /api/v1/gameship": "ShipController.gameship",
   "get /api/auction": "AuctionsController.auction",
   "post /api/chat/join": "ChatMessageController.join",
   "post /api/chat/leave": "ChatMessageController.leave",
   "post /api/chat/send": "ChatMessageController.send",
   "get /api/ship": "ShipController.ship",
-  "get /api/ships": "ShipController.ships",
+  // "get /api/ships": "ShipController.ships",
   "post /api/v1/chat/join": "ChatMessageController.join",
   "post /api/v1/chat/leave": "ChatMessageController.leave",
   "post /api/v1/chat/send": "ChatMessageController.send",

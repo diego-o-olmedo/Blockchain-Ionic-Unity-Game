@@ -1,5 +1,5 @@
-declare var sails: any
-declare var Ship: any
+declare let sails: any
+declare let Ship: any
 const axios = require("axios")
 
 function getUrl(url) {
@@ -16,6 +16,17 @@ function getUrl(url) {
 }
 
 module.exports = {
+  gameship: function(req, res) {
+    let id = req.query.id
+    if (id && id.length > 0) {
+      Ship.get(id, "").then(stats => {
+        let data = Ship.stats(stats, true)
+        res.json(data)
+      })
+    } else {
+      res.json([])
+    }
+  },
   ship: function(req, res) {
     let id = req.query.id
     if (id && id.length > 0) {
@@ -72,10 +83,20 @@ function getDefault() {
     {
       id: 333,
       name: "Starter ShipA",
-      model: 1,
+      model: 0,
       size: "Large",
       color1: [255, 215, 0],
       color2: [128, 0, 128],
+      weapon1: "Shotgun Blast",
+      weapon2: "Homing Missile"
+    },
+    {
+      id: 11,
+      name: "Starter ShipB",
+      model: 1,
+      size: "Large",
+      color1: [11, 215, 55],
+      color2: [128, 55, 111],
       weapon1: "Shotgun Blast",
       weapon2: "Homing Missile"
     },

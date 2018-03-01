@@ -1,14 +1,20 @@
-declare let Auctions
-declare let sails
-declare let Ship
+declare var Auctions: any
+declare var sails: any
+declare var Ship: any
+declare var Ships: any
+declare var ShipsModel: any
 
+const RateLimiter = require("limiter").RateLimiter
+const limiter = new RateLimiter(1, 10)
 const Web3 = require("web3")
 
-const web3 = new Web3("https://mainnet.infura.io")
+// const web3 = new Web3("https://mainnet.infura.io")
 // web3.currentProvider.sendAsync = function() {
 //   return web3.currentProvider.send.apply(web3.currentProvider, arguments)
 // }
-// const web3 = new Web3("wss://mainnet.infura.io/ws") //to do todo web3 1.0
+let web3 = new Web3("wss://mainnet.infura.io/ws") //to do todo web3 1.0
+let web3static = new Web3("https://mainnet.infura.io") //to do todo web3 1.0
+
 const CoreAbi = [
   {
     constant: true,
@@ -35,7 +41,7 @@ const CoreAbi = [
 const CoreAddress = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"
 
 // const CoreContract = web3.eth.contract(CoreAbi).at(CoreAddress)
-const CoreContract = new web3.eth.Contract(CoreAbi, CoreAddress) //to do todo web3 1.0
+const CoreContract = new web3static.eth.Contract(CoreAbi, CoreAddress) //to do todo web3 1.0
 
 const AuctionAbi = [
   {
@@ -292,7 +298,8 @@ const AuctionContract = new web3.eth.Contract(AuctionAbi, AuctionAddress) //to d
 //   }
 // )
 
-// let auctionWatch = AuctionContract.events.allEvents({ //to do todo web3 1.0
+// let auctionWatch = AuctionContract.events.allEvents({
+//   //to do todo web3 1.0
 //   fromBlock: "latest"
 // })
 // auctionWatch.subscribe(function(error, result) {
@@ -302,7 +309,57 @@ const AuctionContract = new web3.eth.Contract(AuctionAbi, AuctionAddress) //to d
 //     console.log(error)
 //   }
 // })
-
+let id = 0
+function all() {
+  Ship.getFull(++id).then(res => {
+    // console.log(res)
+    Ship.shipDB(id, res)
+    all()
+  })
+}
+setTimeout(() => {
+  all()
+}, 4000)
+function listenToEvent() {
+  console.log("Started listen")
+  AuctionContract.events
+    .allEvents(
+      {
+        toBlock: "latest"
+      },
+      (error, event) => {
+        // console.log(event)
+      }
+    )
+    .on("data", event => {
+      Ship.AuctionEvent(event)
+      // console.log("--contract.events.SomeEvent--")
+    })
+    .on("changed", event => {
+      console.log("--SomeEvent--Changed")
+    })
+    .on("error", e => {
+      console.log("--SomeEvent--Error")
+      // console.log(e)
+      web3.setProvider(
+        new Web3.providers.WebsocketProvider("wss://mainnet.infura.io/ws")
+      )
+      web3.eth.net
+        .isListening()
+        .then(() => {
+          console.log("is connected")
+          listenToEvent()
+        })
+        .catch(e => console.log("Wow. Something went wrong"))
+      // console.log(web3)
+    })
+  console.log("listening")
+}
+// listenToEvent()
+// setInterval(() => {
+//   console.log("keep alive")
+//   Ship.get(1, "test")
+// }, 30000)
 // let events = AuctionContract.allEvents(
 //   { fromBlock: "latest" },
 //   (error, result) => {
@@ -354,7 +411,7 @@ module.exports = {
       Auctions.destroy({ id: res.tokenId }).exec(function(err) {})
     }
   },
-  stats: function(r) {
+  stats: function(r, raw = false) {
     let rgb1 = []
     let rgb2 = []
     let j = 0
@@ -365,7 +422,7 @@ module.exports = {
       rgb2[i] = Math.floor((r.gene[j++] + r.gene[j++]) * 2.5)
     }
     let modelPoint = r.gene.charAt(r.gene.length - 1)
-    let model = Math.floor(modelPoint / 2.75)
+    let model = Math.floor(modelPoint / 1.81)
     let weapon1List = [
       "Bolt Basic",
       "Bolt Poison",
@@ -392,25 +449,95 @@ module.exports = {
       "Electrical Field"
     ]
 
-    r["model"] = model
-    r["size"] = "Small"
-    r["color1"] = rgb1
-    r["color2"] = rgb2
-    r["weapon1"] = weapon1List[parseInt(r.gene[j++])]
-    r["weapon2"] = weapon2List[parseInt(r.gene[j++])]
+    if (raw) {
+      const rgbToHex = (r, g, b) =>
+        "#" +
+        [r, g, b]
+          .map(x => {
+            const hex = x.toString(16)
+            return hex.length === 1 ? "0" + hex : hex
+          })
+          .join("")
+      return {
+        model: model,
+        size: 0.8,
+        primaryColor: rgbToHex(rgb1[0], rgb1[1], rgb1[2]),
+        secondaryColor: rgbToHex(rgb2[0], rgb2[1], rgb2[2]),
+        primaryWeapon: parseInt(r.gene[j++]),
+        secondaryWeapon: parseInt(r.gene[j++])
+      }
+    } else {
+      r["model"] = model
+      r["size"] = "Small"
+      r["primaryColor"] = rgb1
+      r["secondaryColor"] = rgb2
+      r["primaryWeapon"] = weapon1List[parseInt(r.gene[j++])]
+      r["secondaryWeapon"] = weapon2List[parseInt(r.gene[j++])]
+    }
     return r
   },
 
-  get: function(id, name) {
-    return new Promise(function(resolve, reject) {
+  shipDB: function(id, res) {
+    let r = Ship.stats({ gene: res[9] })
+    Ships.create({
+      id: id,
+      name: "pHolder",
+      genes: res[9],
+      generation: res[8],
+      currentowner: null,
+      dna: r,
+      kills: 0,
+      deaths: 0,
+      isGestating: res[0],
+      isReady: res[1],
+      nextAuctionAt: res[3],
+      siringWithId: res[4],
+      birthTime: res[5],
+      matronId: res[6],
+      sireId: res[7],
+      hullType: r.model,
+      primaryWeapon: r.primaryWeapon,
+      secondaryWeapon: r.secondaryWeapon,
+      primaryColor: r.primaryColor,
+      secondaryColor: r.secondaryColor
+    }).exec(function(err, newAuction) {
+      if (err) {
+        console.log(id, "create has error")
+        console.log(err)
+      } else {
+        console.log(id + " created success")
+      }
+    })
+  },
+
+  getFull: function(id, name) {
+    return new Promise((resolve, reject) => {
       CoreContract.methods.getKitty(id).call({}, (err, res) => {
         //to do todo web3 1.0
         if (err) {
           console.log(err)
         } else {
+          console.log("got the id", id)
+          resolve(res)
+        }
+      })
+    })
+  },
+
+  get: function(id, name) {
+    return new Promise((resolve, reject) => {
+      // limiter.removeTokens(1, () => {
+      console.log("tryering", id)
+      CoreContract.methods.getKitty(id).call({}, (err, res) => {
+        //to do todo web3 1.0
+        if (err) {
+          console.log(err)
+        } else {
+          console.log("got the id", id)
           resolve({ id: id, name: name, gene: res[9].toString(10) })
         }
       })
+      // })
 
       // CoreContract.getKitty(id, (err, res) => {
       //   if (err) {
