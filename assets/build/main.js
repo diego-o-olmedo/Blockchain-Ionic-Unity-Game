@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ 108:
 /***/ (function(module, exports) {
@@ -25,24 +25,28 @@ var map = {
 		266,
 		3
 	],
-	"../pages/game/game.module": [
+	"../pages/combine/combine.module": [
 		267,
+		6
+	],
+	"../pages/game/game.module": [
+		268,
 		5
 	],
 	"../pages/my-ships/my-ships.module": [
-		268,
+		269,
 		1
 	],
 	"../pages/profile/profile.module": [
-		269,
+		270,
 		0
 	],
 	"../pages/settings/settings.module": [
-		270,
+		271,
 		4
 	],
 	"../pages/ship/ship.module": [
-		271,
+		272,
 		2
 	]
 };
@@ -534,6 +538,7 @@ var AppModule = (function () {
                 }, {
                     links: [
                         { loadChildren: '../pages/auctions/auctions.module#AuctionsPageModule', name: 'AuctionsPage', segment: 'auctions', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/combine/combine.module#CombinePageModule', name: 'CombinePage', segment: 'combine', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/game/game.module#GamePageModule', name: 'GamePage', segment: 'game', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-ships/my-ships.module#MyShipsPageModule', name: 'MyShipsPage', segment: 'my-ships', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile/:address', priority: 'low', defaultHistory: [] },

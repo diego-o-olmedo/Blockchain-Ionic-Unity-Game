@@ -33483,6 +33483,10 @@ ship-select .shipSVG {
   margin: 4%;
 }
 
+page-combine .selectionList {
+  width: 30%;
+}
+
 page-game .chatbox {
   border-width: 2px !important;
   border-color: black;
