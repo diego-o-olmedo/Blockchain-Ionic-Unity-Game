@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 267:
+/***/ 266:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuctionsPageModule", function() { return AuctionsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auctions__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auctions__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__ = __webpack_require__(273);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -48,7 +48,7 @@ var AuctionsPageModule = (function () {
 "use strict";
 
 var Observable_1 = __webpack_require__(11);
-var map_1 = __webpack_require__(191);
+var map_1 = __webpack_require__(192);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
@@ -97,6 +97,9 @@ var ShipCardComponentModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,17 +113,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var ShipCardComponent = (function () {
-    function ShipCardComponent(sanitizer, appState, navCtrl) {
+    function ShipCardComponent(sanitizer, appState, navCtrl, http) {
         this.sanitizer = sanitizer;
         this.appState = appState;
         this.navCtrl = navCtrl;
+        this.http = http;
     }
     ShipCardComponent.prototype.ngOnInit = function () {
         var _this = this;
         setTimeout(function () {
-            var shipModel = _this.ship.model <= 2 ? 1 : 2;
-            _this.svgUrl = _this.sanitizer.bypassSecurityTrustResourceUrl("/assets/imgs/ships/ship" + shipModel + ".svg");
+            // let shipModel = this.ship.model <= 2 ? 1 : 2
+            // this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            //   "/assets/imgs/ships/ship" + shipModel + ".svg"
+            // )
             // console.log(this.ship)
             // let shipModel = this.ship.model == 1 ? 1 : 2
             // this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
@@ -128,49 +136,73 @@ var ShipCardComponent = (function () {
             // )
             // console.log(this.wrapper)
             var shipLoad;
-            if (_this.ship.model == 1) {
-                shipLoad = _this.appState.ship1;
-            }
-            else if (_this.ship.model == 2) {
-                shipLoad = _this.appState.ship2;
-            }
-            else if (_this.ship.model == 3) {
-                shipLoad = _this.appState.ship3;
-            }
-            else if (_this.ship.model == 4) {
-                shipLoad = _this.appState.ship4;
+            if (_this.appState.shipImages[_this.ship.model]) {
+                _this.finalizeShip(_this.appState.shipImages[_this.ship.model]);
             }
             else {
-                console.log(_this.ship.model);
-                shipLoad = _this.appState.ship0;
+                _this.http
+                    .get("/images/ships/" + _this.ship.model + "-ship.svg")
+                    .map(function (res) { return res.text(); })
+                    .subscribe(function (data) {
+                    _this.appState.shipImages[_this.ship.model] = data;
+                    _this.finalizeShip(data);
+                }, function (err) { return console.log(err); });
             }
-            shipLoad = shipLoad.slice(0);
-            shipLoad = shipLoad.replace("Layer_1", "Layer_1-" + Math.random());
-            var data = shipLoad.replace(/ChangeName/g, "id" + _this.ship.id);
-            data = data.replace(/cls-/g, "id" + _this.ship.id + "-");
-            _this.appState.changedOne = true;
-            data = _this.getColors(data);
-            _this.wrapper.nativeElement.innerHTML = data;
-            var svgNative = _this.wrapper.nativeElement.children[0];
-            if (_this.ship.primaryWeapon[0] == "B") {
-                svgNative.children["CENTER_CANNON"].innerHTML = "";
-                // if (this.ship.primaryWeapon[5] != "F") {
-                //   svgNative.children["WING_CANNON_1"].innerHTML = ""
-                //   let cannon2 = svgNative.children["WING_CANNON_2"]
-                //   if (cannon2) {
-                //     cannon2.innerHTML = ""
-                //   }
-                // }
-            }
-            else {
-                svgNative.children["WING_CANNON_1"].innerHTML = "";
-                var cannon2 = svgNative.children["WING_CANNON_2"];
-                if (cannon2) {
-                    cannon2.innerHTML = "";
-                }
-            }
+            // if (this.ship.model == 1) {
+            //   shipLoad = this.appState.ship1
+            // } else if (this.ship.model == 2) {
+            //   shipLoad = this.appState.ship2
+            // } else if (this.ship.model == 3) {
+            //   shipLoad = this.appState.ship3
+            // } else if (this.ship.model == 4) {
+            //   shipLoad = this.appState.ship4
+            // } else {
+            //   console.log(this.ship.model)
+            //   shipLoad = this.appState.ship0
+            // }
         }, 80);
         // this.doneLoading()
+    };
+    ShipCardComponent.prototype.positionEleToCenter = function () {
+        var bbox = this.svgNative.getBBox();
+        console.log(bbox.width + " bbox " + bbox.height);
+        var viewBox = this.svgNative.getAttribute("viewBox");
+        console.log(viewBox);
+        viewBox = viewBox.split(" ");
+        var cx = parseFloat(viewBox[0]) + parseFloat(viewBox[2]) / 2;
+        var cy = parseFloat(viewBox[1]) + parseFloat(viewBox[3]) / 2;
+        var x = cx - bbox.x - bbox.width / 2;
+        var y = cy - bbox.y - bbox.height / 2;
+        var matrix = "1 0 0 1 " + x + " " + y;
+        this.svgNative.setAttribute("transform", "matrix(" + matrix + ")");
+    };
+    ShipCardComponent.prototype.finalizeShip = function (shipLoad) {
+        shipLoad = shipLoad.slice(0);
+        shipLoad = shipLoad.replace("Layer_1", "Layer_1-" + Math.random());
+        var data = shipLoad.replace(/ChangeName/g, "id" + this.ship.id);
+        data = data.replace(/cls-/g, "id" + this.ship.id + "-");
+        this.appState.changedOne = true;
+        data = this.getColors(data);
+        this.wrapper.nativeElement.innerHTML = data;
+        this.svgNative = this.wrapper.nativeElement.children[0];
+        if (this.ship.primaryWeapon[0] == "B") {
+            this.svgNative.children["CENTER_CANNON"].innerHTML = "";
+            // if (this.ship.primaryWeapon[5] != "F") {
+            //   svgNative.children["WING_CANNON_1"].innerHTML = ""
+            //   let cannon2 = svgNative.children["WING_CANNON_2"]
+            //   if (cannon2) {
+            //     cannon2.innerHTML = ""
+            //   }
+            // }
+        }
+        else {
+            this.svgNative.children["WING_CANNON_1"].innerHTML = "";
+            var cannon2 = this.svgNative.children["WING_CANNON_2"];
+            if (cannon2) {
+                cannon2.innerHTML = "";
+            }
+        }
+        // this.positionEleToCenter()
     };
     ShipCardComponent.prototype.goToShip = function (e, id) {
         e.preventDefault();
@@ -290,27 +322,29 @@ var ShipCardComponent = (function () {
     ], ShipCardComponent.prototype, "wrapper", void 0);
     ShipCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\'+ship.id" (click)="goToShip($event, ship.id)">\n\n\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!-- <svg #svg class="svgClass">\n          <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n        </svg> -->\n        <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n        <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n\n      </div>\n      <ion-card-title class="ellip">\n        {{ship.name ? ship.name : \'Ship \'+ship.id}}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start>\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ship.id}}\n          </button>\n          <span *ngIf="ship.price">{{ship.price / 1000000000000000000}} Eth</span>\n        </ion-col>\n      </ion-row>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Primary Weapon: {{ship.primaryWeapon}}</span>\n        </ion-col>\n      </ion-row>\n\n      <ion-row no-padding>\n        <ion-col col-12>\n          <span>Secondary Weapon: {{ship.secondaryWeapon}}</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\'+ship.id" (click)="goToShip($event, ship.id)">\n\n\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!-- <svg #svg class="svgClass">\n          <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n        </svg> -->\n        <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n        <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n      </div>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <div class="weaponWrap">\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\'+ship.secondaryWeapon+\'.png\'" [title]="ship.secondaryWeapon">\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\'+ship.primaryWeapon+\'.png\'" [title]="ship.primaryWeapon">\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-card-title class="ellip">\n        {{ship.name ? ship.name : \'Ship \'+ship.id}}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start title="ship.model">\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ship.id}}\n          </button>\n          <span *ngIf="ship.price">{{ship.price / 1000000000000000000}} Eth</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewEncapsulation */].None
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
     ], ShipCardComponent);
     return ShipCardComponent;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=ship-card.js.map
 
 /***/ }),
 
-/***/ 278:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuctionsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

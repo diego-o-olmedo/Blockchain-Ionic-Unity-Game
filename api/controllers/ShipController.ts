@@ -69,46 +69,76 @@ module.exports = {
             })
           })
         } else {
-          res.json(getDefault())
+          let fn = id => {
+            return new Promise((resolve, reject) => {
+              Ship.get(id, "PlaceHolder Ship").then(r => {
+                resolve(Ship.stats(r))
+              })
+            })
+          }
+          Promise.all([2, 3, 4].map(fn)).then(data => {
+            res.json(data)
+          })
         }
       })
     } else {
-      res.json(getDefault())
+      let fn = id => {
+        return new Promise((resolve, reject) => {
+          Ship.get(id, "PlaceHolder Ship").then(r => {
+            resolve(Ship.stats(r))
+          })
+        })
+      }
+      Promise.all([1, 48, 51].map(fn)).then(data => {
+        res.json(data)
+      })
     }
   }
 }
 
 function getDefault() {
+  let tbl = []
+
+  // Ship.get(1, "Starter ShipA").then(stats => {
+  //   tbl.push(stats)
+  // })
+  // Ship.get(48, "Starter ShipB").then(stats => {
+  //   tbl.push(stats)
+  // })
+  // Ship.get(51, "Starter ShipC").then(stats => {
+  //   tbl.push(stats)
+  //   return tbl
+  // })
   return [
     {
-      id: 333,
+      id: 1,
       name: "Starter ShipA",
       model: 0,
       size: "Large",
-      color1: [255, 215, 0],
-      color2: [128, 0, 128],
-      weapon1: "Shotgun Blast",
-      weapon2: "Homing Missile"
+      primaryColor: [112, 195, 122],
+      secondaryColor: [47, 247, 215],
+      primaryWeapon: "Shotgun Blast",
+      secondaryWeapon: "Homing Missile"
     },
     {
-      id: 11,
+      id: 48,
       name: "Starter ShipB",
       model: 1,
       size: "Large",
-      color1: [11, 215, 55],
-      color2: [128, 55, 111],
-      weapon1: "Shotgun Blast",
-      weapon2: "Homing Missile"
+      primaryColor: [11, 215, 55],
+      secondaryColor: [128, 55, 111],
+      primaryWeapon: "Shotgun Blast",
+      secondaryWeapon: "Homing Missile"
     },
     {
-      id: 777,
+      id: 51,
       name: "Starter ShipB",
       model: 3,
       size: "Small",
-      color1: [252, 70, 107],
-      color2: [63, 94, 251],
-      weapon1: "Void Bolt",
-      weapon2: "Sun Burst Laser"
+      primaryColor: [252, 70, 107],
+      secondaryColor: [63, 94, 251],
+      primaryWeapon: "Void Bolt",
+      secondaryWeapon: "Sun Burst Laser"
     }
   ]
 }

@@ -33451,6 +33451,19 @@ ship-card button {
   background-color: transparent !important;
 }
 
+ship-card .weaponWrap,
+ship-select .weaponWrap {
+  bottom: 0;
+  position: absolute;
+}
+
+ship-card .weaponIcon,
+ship-select .weaponIcon {
+  width: 18%;
+  float: right;
+  padding-left: 2px;
+}
+
 ship-select {
   pointer-events: auto !important;
   overflow: hidden !important;
@@ -33480,6 +33493,8 @@ page-game .chatbox {
 
 page-game .username {
   font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
 page-game ion-menu {
