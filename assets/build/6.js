@@ -68,36 +68,43 @@ var CombinePage = (function () {
         this.searchTerm = "";
         this.data = [
             {
+                id: "55",
                 name: "Name",
                 text: "Text",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "657237",
                 name: "Name2",
                 text: "Text2",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "11",
                 name: "Name3",
                 text: "Text3",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "123",
                 name: "Name",
                 text: "Text",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "532324",
                 name: "Name2",
                 text: "Text2",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "523442",
                 name: "Name",
                 text: "Text",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
             },
             {
+                id: "11",
                 name: "Name2",
                 text: "Text2",
                 img: "/assets/imgs/weapons/Black Hole Missile.png"
@@ -109,16 +116,33 @@ var CombinePage = (function () {
         console.log("ionViewDidLoad CombinePage");
     };
     CombinePage.prototype.filterItems = function (searchTerm) {
-        return this.data.filter(function (item) {
+        var result = this.data.filter(function (item) {
+            return item.id.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+        });
+        var result2 = this.data.filter(function (item) {
             return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
         });
+        result = result.concat(result2);
+        function removeDuplicatesBy(keyFn, array) {
+            var mySet = new Set();
+            return array.filter(function (x) {
+                var key = keyFn(x), isNew = !mySet.has(key);
+                if (isNew)
+                    mySet.add(key);
+                return isNew;
+            });
+        }
+        return removeDuplicatesBy(function (x) { return x.id; }, result);
     };
     CombinePage.prototype.setFilteredItems = function () {
         this.items = this.filterItems(this.searchTerm);
     };
+    CombinePage.prototype.reorderItems = function (e) {
+        console.log(e);
+    };
     CombinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-combine",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()">\n    </ion-searchbar>\n    <ion-list>\n      <ion-item *ngFor="let ship of items" class="selectionList">\n        <ion-thumbnail item-start>\n          <img [src]="ship.img">\n        </ion-thumbnail>\n        <h2>{{ship.name}}</h2>\n        <p>{{ship.text}}</p>\n        <button ion-button clear item-end>View</button>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/
+            selector: "page-combine",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()">\n    </ion-searchbar>\n    <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">\n      <ion-item *ngFor="let ship of items" class="selectionList">\n        <ion-thumbnail item-start>\n          <img [src]="ship.img">\n        </ion-thumbnail>\n        <h2>{{ship.id}}</h2>\n        <p>{{ship.name}}</p>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object])
     ], CombinePage);
