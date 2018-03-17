@@ -23,31 +23,31 @@ webpackEmptyAsyncContext.id = 108;
 var map = {
 	"../pages/auctions/auctions.module": [
 		266,
-		3
+		4
 	],
 	"../pages/combine/combine.module": [
 		267,
-		6
+		0
 	],
 	"../pages/game/game.module": [
 		268,
-		5
+		6
 	],
 	"../pages/my-ships/my-ships.module": [
 		269,
-		1
+		2
 	],
 	"../pages/profile/profile.module": [
 		270,
-		0
+		1
 	],
 	"../pages/settings/settings.module": [
 		271,
-		4
+		5
 	],
 	"../pages/ship/ship.module": [
 		272,
-		2
+		3
 	]
 };
 function webpackAsyncContext(req) {
