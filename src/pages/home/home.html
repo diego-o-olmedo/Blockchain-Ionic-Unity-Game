@@ -6,12 +6,23 @@
 
 <ion-content>
   <div class="contentRoom">
-    <p *ngIf="appState.username && !success">Username is: {{appState.username}}</p>
-    <p *ngIf="appState.username && success">
+    <p *ngIf="appState.username && !success" class="abs-center">Username is: {{appState.username}}</p>
+    <p *ngIf="appState.username && success" class="abs-center">
       Registration success for: {{appState.username}}</p>
-    <div *ngIf="!appState.username">
-      <div *ngIf="!appState.account">{{appState.accountStatus}}</div>
-      <form *ngIf="appState.account" (ngSubmit)="register()">
+    <div *ngIf="!appState.username" class="metamask">
+      <div *ngIf="!appState.account">
+        <div *ngIf="appState.accountStatus == 'No MetaMask extension installed'">
+          <a href="https://metamask.io">
+            <img src="https://github.com/MetaMask/faq/raw/master/images/download-metamask-dark.png">
+          </a>
+        </div>
+
+        <div *ngIf="appState.accountStatus != 'No MetaMask extension installed'">
+          {{appState.accountStatus}}
+        </div>
+
+      </div>
+      <form *ngIf="appState.account" (ngSubmit)="register()" class="registration">
         <p>Register your ethereum address</p>
 
         <ion-list>

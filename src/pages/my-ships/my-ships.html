@@ -6,10 +6,11 @@
 
 <ion-content no-padding>
   <ion-grid class="contentRoom">
-    <ion-row>
-      <ion-spinner *ngIf="loading" ion-col col-12>
-      </ion-spinner>
-      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>
+    <ion-spinner *ngIf="!appState.ships && appState.account" class="abs-center">
+    </ion-spinner>
+    <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>
+    <ion-row *ngIf="appState.ships" myMatchHeight="shipWrap">
+      <ship-card *ngFor="let ship of appState.ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>
     </ion-row>
   </ion-grid>
 

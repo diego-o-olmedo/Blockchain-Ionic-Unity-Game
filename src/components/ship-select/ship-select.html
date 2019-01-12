@@ -1,0 +1,33 @@
+<ion-card (click)="selectShip()" tappable>
+  <div class="shipWrap" #wrapper></div>
+  <ion-row no-padding>
+    <ion-col col-12>
+      <div class="weaponWrap">
+        <img class="weaponIcon" [src]="'/assets/imgs/weapons/'+ship.secondaryWeapon+'.png'" [title]="ship.secondaryWeapon">
+        <img class="weaponIcon" [src]="'/assets/imgs/weapons/'+ship.primaryWeapon+'.png'" [title]="ship.primaryWeapon">
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-card-content>
+    <ion-card-title style="text-overflow: ellipsis">
+      {{ship.name ? ship.name : 'Ship '+ship.id}}
+    </ion-card-title>
+    <ion-row no-padding>
+      <ion-col col-12>
+        <span>#{{ship.id}}</span>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row no-padding>
+      <ion-col col-12>
+        <span>Primary Weapon: {{ship.primaryWeapon}}</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding>
+      <ion-col col-12>
+        <span>Secondary Weapon: {{ship.secondaryWeapon}}</span>
+      </ion-col>
+    </ion-row> -->
+  </ion-card-content>
+</ion-card>

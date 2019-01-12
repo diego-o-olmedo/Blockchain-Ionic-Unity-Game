@@ -9,8 +9,8 @@ import { AppState } from "../../app/app.service"
 export class HeaderComponent {
   pages = [
     { title: "Auctions", component: "AuctionsPage", href: "auctions" },
-    { title: "Battle", component: "GamePage", href: "battle" },
-    { title: "MyShips", component: "MyShipsPage", href: "my-ships" }
+    { title: "Game", component: "GamePage", href: "game" },
+    { title: "My Ships", component: "MyShipsPage", href: "my-ships" }
   ]
   constructor(
     public navCtrl: NavController,
@@ -18,9 +18,14 @@ export class HeaderComponent {
     public zone: NgZone
   ) {}
 
-  openPage(page) {
+  ngOnInit() {}
+
+  openPage(e, page) {
+    e.preventDefault()
     // this.nav.setRoot(page.component)
     this.zone.run(() => {
+      console.log(this.appState.activePage)
+      this.appState.activePage = page.href
       if (window.location.pathname.split("/")[1] != page.href) {
         if (window["gameInstance"]) {
           // window["gameInstance"] = null

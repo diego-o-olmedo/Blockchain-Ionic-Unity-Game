@@ -1,16 +1,31 @@
-<ion-header #head>
-  <ion-navbar>
-  </ion-navbar>
-</ion-header>
+<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>
 <header-component></header-component>
 
-<ion-content>
-  <div class="contentRoom">
-    <!-- <svg>
-      <use xlink:href="#ship1"></use>
-    </svg> -->
-    Coming soon
-  </div>
+<ion-content no-padding>
+  <ion-grid class="contentRoom">
+    <ion-row
+      ><ion-icon
+        name="arrow-dropleft"
+        *ngIf="offset > 0"
+        (click)="changeTab(-1)"
+      ></ion-icon
+      >{{ offset + 1 }}
+      <ion-icon name="arrow-dropright" (click)="changeTab(1)"></ion-icon
+    ></ion-row>
+
+    <ion-spinner *ngIf="loading" class="abs-center"> </ion-spinner>
+    <ion-row>
+      <ship-card
+        *ngFor="let ship of ships"
+        ion-col
+        col-12
+        col-xl-3
+        col-lg-4
+        col-md-6
+        [ship]="ship"
+      ></ship-card>
+    </ion-row>
+  </ion-grid>
 
   <footer-component></footer-component>
 </ion-content>

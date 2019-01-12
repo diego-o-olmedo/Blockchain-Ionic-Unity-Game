@@ -1,12 +1,8 @@
-import { Component } from "@angular/core"
-import { IonicPage, NavController, NavParams } from "ionic-angular"
-
-/**
- * Generated class for the AuctionsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { Http } from "@angular/http";
+import "rxjs/add/operator/map";
+declare var io: any;
 
 @IonicPage()
 @Component({
@@ -14,11 +10,79 @@ import { IonicPage, NavController, NavParams } from "ionic-angular"
   templateUrl: "auctions.html"
 })
 export class AuctionsPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log("auction con")
+  ships;
+  loading = true;
+  offset = 0;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private http: Http
+  ) {
+    console.log("auction con");
+    this.request();
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad AuctionsPage")
+    console.log("ionViewDidLoad AuctionsPage");
+  }
+
+  request() {
+    console.log("io auctions//");
+    // io.socket.get("/api/auction", event => {
+    //   console.log(event)
+    //   let result = []
+    //   event.auctions.forEach(record => {
+    //     record.stats["price"] = record.currentPrice
+    //     result.push(record.stats)
+    //   })
+    //   this.ships = result
+    //   this.loading = false
+    // })
+
+    io.socket.get("/api/v1/shipsRandom?offset=" + this.offset * 12, data => {
+      this.loading = false;
+
+      function sortObject(o) {
+        return Object.keys(o)
+          .sort()
+          .reduce((r, k) => ((r[k] = o[k]), r), {});
+      }
+      if (data) {
+        console.log(data);
+        if (data.length > 0) {
+          // data.forEach(ship => {
+          //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+          // })
+
+          data.sort((a, b) => {
+            return a.id - b.id;
+          });
+          this.ships = data;
+          this.loading = false;
+        }
+      } else {
+        console.log("unable to load ships");
+      }
+    });
+  }
+
+  changeTab(ment) {
+    this.offset += ment;
+    this.loading = true;
+    this.ships = null;
+    this.request();
+  }
+
+  parseResult(data) {
+    console.log("got result", data);
+    this.loading = false;
+    console.log(data);
+    if (data.length > 0) {
+      // data.forEach(ship => {
+      //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+      // })
+      this.ships = data;
+    }
+    console.log("done");
   }
 }

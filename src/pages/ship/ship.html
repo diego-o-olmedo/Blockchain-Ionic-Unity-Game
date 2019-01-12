@@ -4,8 +4,50 @@
 </ion-header>
 <header-component></header-component>
 
+<ion-content no-padding>
+  <ion-grid class="contentRoom">
+    <ion-row>
+      <ion-spinner *ngIf="!ship" class="abs-center">
+      </ion-spinner>
+      <div *ngIf="ship">
+        <ship-card ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>
+        <div class="actions">
+          <div *ngIf="amOwner">
+            <button ion-button round (click)="sell.open = true">Sell</button>
+            <button ion-button round>Combine Blueprints</button>
+          </div>
+          <div *ngIf="!amOwner">
+            <button ion-button round (click)="purchase()">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </ion-row>
+    <div *ngIf="sell.open">
+      <form *ngIf="appState.account" (ngSubmit)="createSale()">
+        <ion-list>
+          <ion-item>
+            <ion-label fixed>Start Price</ion-label>
+            <ion-input type="number" [(ngModel)]="sell.priceStart" name="priceStart"></ion-input> Eth
+          </ion-item>
 
+          <ion-item>
+            <ion-label fixed>End Price</ion-label>
+            <ion-input type="number" [(ngModel)]="sell.priceEnd" name="priceEnd"></ion-input> Eth
+          </ion-item>
 
-<ion-content padding>
+          <ion-item>
+            <ion-label fixed>Duration</ion-label>
+            <ion-input type="number" [(ngModel)]="sell.duration" name="duration"></ion-input> Days
+          </ion-item>
+        </ion-list>
+
+        <div padding>
+          <button ion-button color="primary" block type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </ion-grid>
+  <footer-component>
+  </footer-component>
 
 </ion-content>

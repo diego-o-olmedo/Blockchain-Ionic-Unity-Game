@@ -8,12 +8,19 @@ page-game {
   }
   .username {
     font-weight: bold;
-  }
-  .chatwrapper {
-  }
-
+    color: black;
+    text-decoration: none;
+  } // ion-menu {
+  //   ion-content {
+  //     background-color: var(--background) !important;
+  //     color: var(--text) !important;
+  //   }
+  // }
+  // circle {
+  //   stroke: var(--text) !important;
+  // }
   .moveMenu {
-    transform: translate(50px);
+    // transform: translate(50px);
   }
   ion-menu {
     transition: 1s !important;
@@ -38,18 +45,14 @@ page-game {
     background-image: url("../assets/imgs/chat-tab.png");
     z-index: 10 !important;
   }
-
-  #gameContainer {
-  }
+  #gameContainer {}
   #gameContainer,
   .webgl-content,
   canvas {
     width: 100% !important;
     height: 100% !important;
-    position: absolute !important;
-    // z-index: 10000 !important;
+    position: absolute !important; // z-index: 10000 !important;
   }
-
   .load-img {
     position: absolute;
     margin: auto;
@@ -59,10 +62,51 @@ page-game {
     bottom: 0;
     z-index: 100;
   }
-
   .load-pink {
     transition: 1s;
-    transform: translateZ(0);
-    // clip-path: inset(0 24% 0 0);
+    transform: translateZ(0); // clip-path: inset(0 24% 0 0);
+  }
+  .shipSelect {
+    .contentRoom {
+      padding: 8px;
+      height: 94%;
+      ion-grid {
+        flex-direction: column !important;
+        height: 100%;
+      }
+      ion-row {
+        position: relative !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+    }
+    z-index: 222222222222222;
+    background-color: grey;
+    width: 90%;
+    height: 90%;
+    opacity: 0.9;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .select-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0px;
+    width: 100%;
+    background-color: rgba(16, 16, 111, 0.638);
+    height: 6%;
+    border-radius: 0% 0% 20px 20px;
+  }
+  .ship-pagination {
+    .ngx-pagination {
+      padding: 0px !important;
+    }
+    margin: auto;
+    color: var(--text) !important;
+    a {
+      color: var(--text) !important;
+    }
   }
 }

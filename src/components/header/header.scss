@@ -1,4 +1,38 @@
-.headerLinks {
-  padding-left: 8px;
-  padding-right: 8px;
+header-component {
+  color: var(--text);
+  .toolbar-background {
+    background-color: var(--background);
+    // color: var(--text);
+  }
+
+  .headerLinks {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  a {
+    color: var(--text);
+  }
+
+  a:hover {
+    color: var(--accent);
+    opacity: 1 !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .activePage {
+    font-weight: bold;
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+  }
+
+  span {
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+  }
 }

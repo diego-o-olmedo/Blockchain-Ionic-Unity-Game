@@ -10,10 +10,12 @@
           <!-- <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'Auctions'}">Auctions</span>
           <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'My Ships'}">My Ships</span>
           <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'Battle'}">Battle</span> -->
-          <span class="headerLinks" *ngFor="let p of pages" (click)="openPage(p)" tappable [ngClass]="{'selected': page == 'My Ships'}">{{p.title}}</span>
+          <a [href]="'/'+p.href" class="headerLinks" *ngFor="let p of pages" (click)="openPage($event, p)" tappable [ngClass]="{'activePage': p.href == appState.activePage}">{{p.title}}</a>
         </ion-col>
 
-        <ion-col col-3>{{appState.accountStatus}}</ion-col>
+        <ion-col col-3>
+          <span class="ellip">{{appState.accountStatus}}</span>
+        </ion-col>
       </ion-row>
     </ion-grid>
     <!-- <ion-tabs color="dark">

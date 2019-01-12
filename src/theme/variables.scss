@@ -26,21 +26,27 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-
 $colors: (
   primary: #488aff,
   secondary: #32db64,
   danger: #f53d3d,
   light: #f4f4f4,
-  dark: #222
+  dark: #222,
+  main: (base: rgb(3, 8, 16), contrast: #bdb3b6),
+  background: rgb(3, 8, 16),
+  accent: rgb(255, 29, 94)
 );
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 body {
-  pointer-events: auto !important;
+  // pointer-events: auto !important;
+  --background: rgb(3, 8, 16);
+  --text: #bdb3b6;
+  --accent: rgb(255, 29, 94);
 }
+
 ion-tabs {
   max-width: 40%;
 }
