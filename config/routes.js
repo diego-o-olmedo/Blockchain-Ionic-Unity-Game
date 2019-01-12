@@ -44,6 +44,7 @@ module.exports.routes = {
   "post /api/v1/chat/leave": "ChatMessageController.leave",
   "post /api/v1/chat/send": "ChatMessageController.send",
   "get /api/v1/ship": "ShipController.ship",
+  "get /api/v1/shipsRandom": "ShipController.shipsRandom",
   "get /api/v1/ships": "ShipController.ships",
   "r|^/(?!.*api).*|": {
     view: "index",
@@ -58,4 +59,4 @@ module.exports.routes = {
    * for configuration options and examples.                                  *
    *                                                                          *
    ***************************************************************************/
-}
+};

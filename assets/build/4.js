@@ -385,7 +385,7 @@ var AuctionsPage = (function () {
         //   this.ships = result
         //   this.loading = false
         // })
-        io.socket.get("/api/v1/shipsRandom", function (data) {
+        io.socket.get("/api/shipsRandom", function (data) {
             _this.loading = false;
             if (data) {
                 console.log(data);
