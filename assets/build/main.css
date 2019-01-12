@@ -33433,6 +33433,10 @@ ship-card ion-card-title {
   text-overflow: ellipsis !important;
 }
 
+ship-card ion-card {
+  height: 94% !important;
+}
+
 ship-card .shipSVG {
   margin: 4%;
   overflow: visible !important;

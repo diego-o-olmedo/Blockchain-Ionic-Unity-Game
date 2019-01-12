@@ -375,7 +375,7 @@ var ShipPage = (function () {
         // loading = true
         this.id = this.navParams.data.id;
         this.sell = { open: false, priceStart: null, priceEnd: null, duration: null };
-        var address = "/api/ships?id=" + encodeURI(this.id);
+        var address = "/api/v1/ship?id=" + encodeURI(this.id);
         io.socket.get(address, function (data) {
             if (typeof data == "string") {
             }
@@ -410,13 +410,10 @@ var ShipPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: "page-ship",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row>\n      <ion-spinner *ngIf="!ship" class="abs-center">\n      </ion-spinner>\n      <div *ngIf="ship">\n        <ship-card ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n        <div class="actions">\n          <div *ngIf="amOwner">\n            <button ion-button round (click)="sell.open = true">Sell</button>\n            <button ion-button round>Combine Blueprints</button>\n          </div>\n          <div *ngIf="!amOwner">\n            <button ion-button round (click)="purchase()">Buy Now</button>\n          </div>\n        </div>\n      </div>\n    </ion-row>\n    <div *ngIf="sell.open">\n      <form *ngIf="appState.account" (ngSubmit)="createSale()">\n        <ion-list>\n          <ion-item>\n            <ion-label fixed>Start Price</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.priceStart" name="priceStart"></ion-input> Eth\n          </ion-item>\n\n          <ion-item>\n            <ion-label fixed>End Price</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.priceEnd" name="priceEnd"></ion-input> Eth\n          </ion-item>\n\n          <ion-item>\n            <ion-label fixed>Duration</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.duration" name="duration"></ion-input> Days\n          </ion-item>\n        </ion-list>\n\n        <div padding>\n          <button ion-button color="primary" block type="submit">Submit</button>\n        </div>\n      </form>\n    </div>\n  </ion-grid>\n  <footer-component>\n  </footer-component>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
-            __WEBPACK_IMPORTED_MODULE_3__app_web3_service__["a" /* Web3Service */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__app_web3_service__["a" /* Web3Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_web3_service__["a" /* Web3Service */]) === "function" && _e || Object])
     ], ShipPage);
     return ShipPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=ship.js.map
