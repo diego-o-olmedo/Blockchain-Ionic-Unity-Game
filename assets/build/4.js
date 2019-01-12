@@ -366,6 +366,7 @@ var AuctionsPage = (function () {
         this.navParams = navParams;
         this.http = http;
         this.loading = true;
+        this.offset = 0;
         console.log("auction con");
         this.request();
     }
@@ -385,7 +386,7 @@ var AuctionsPage = (function () {
         //   this.ships = result
         //   this.loading = false
         // })
-        io.socket.get("/api/shipsRandom", function (data) {
+        io.socket.get("/api/v1/shipsRandom?offset=" + this.offset, function (data) {
             _this.loading = false;
             if (data) {
                 console.log(data);
@@ -402,6 +403,12 @@ var AuctionsPage = (function () {
             }
         });
     };
+    AuctionsPage.prototype.changeTab = function (ment) {
+        this.offset += ment;
+        this.loading = true;
+        this.ships = null;
+        this.request();
+    };
     AuctionsPage.prototype.parseResult = function (data) {
         console.log("got result", data);
         this.loading = false;
@@ -416,7 +423,7 @@ var AuctionsPage = (function () {
     };
     AuctionsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-row>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
+            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row\n      ><ion-icon\n        name="arrow-dropleft"\n        *ngIf="offset > 0"\n        (click)="changeTab(-1)"\n      ></ion-icon\n      >{{ offset + 1 }}\n      <ion-icon name="arrow-dropright" (click)="changeTab(1)"></ion-icon\n    ></ion-row>\n\n    <ion-spinner *ngIf="loading" class="abs-center"> </ion-spinner>\n    <ion-row>\n      <ship-card\n        *ngFor="let ship of ships"\n        ion-col\n        col-12\n        col-xl-3\n        col-lg-4\n        col-md-6\n        [ship]="ship"\n      ></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
     ], AuctionsPage);
