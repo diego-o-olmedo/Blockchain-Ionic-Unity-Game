@@ -17,7 +17,7 @@ module.exports = {
    ***************************************************************************/
 
   // models: {
-  //   connection: 'someMongodbServer'
+  connection: "remotePostgresLocal",
   // }
   port: 8080
-}
+};

@@ -1,8 +1,8 @@
-declare var Auctions: any
-declare var sails: any
-declare var Ship: any
-declare var Ships: any
-declare var ShipsModel: any
+// declare var Auctions: any
+// declare var sails: any
+// declare var Ship: any
+// declare var Ships: any
+// declare var ShipsModel: any
 
 const RateLimiter = require("limiter").RateLimiter
 const limiter = new RateLimiter(1, 10)
