@@ -28,6 +28,7 @@ export class GamePage {
   loadingStyle = this.sanitizer.bypassSecurityTrustStyle("inset(0 100% 0 0)");
   selectLoad = false;
   showSelect = false;
+  webgl = false;
   ships;
   userName = "TestUser" + Math.random() * 10;
   @ViewChild("chatcontent") chatcontent;
@@ -140,6 +141,7 @@ export class GamePage {
 
   loadGameServices() {
     window["UnityProgress"] = (gameInstance, progress) => {
+      this.webgl = true;
       let calc = 100 - progress * 100;
       if (calc == 0) {
         this.gameLoaded = true;
@@ -182,6 +184,7 @@ export class GamePage {
         { onProgress: window["UnityProgress"] }
       );
       let canvas = document.getElementById("#canvas");
+      // Report the result.
       canvas.tabIndex = 1;
     } else {
       console.log("already loaded");

@@ -1,2 +1,30 @@
 page-auctions {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    ion-icon {
+      padding: 10px;
+      transition: 0.5;
+    }
+    span {
+      text-align: center;
+      min-width: 28px;
+    }
+  }
+  ship-card {
+    opacity: 0;
+    animation: fadeIn 0.2s ease-in forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

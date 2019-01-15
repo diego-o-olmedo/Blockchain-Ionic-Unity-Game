@@ -3,17 +3,22 @@
 
 <ion-content no-padding>
   <ion-grid class="contentRoom">
-    <ion-row
+    <ion-row class="pagination"
       ><ion-icon
-        name="arrow-dropleft"
-        *ngIf="offset > 0"
-        (click)="changeTab(-1)"
+        name="ios-arrow-back"
+        [style.opacity]="offset == 0 ? 0 : 1"
+        (tap)="changeTab(-1)"
+        tappable
       ></ion-icon
-      >{{ offset + 1 }}
-      <ion-icon name="arrow-dropright" (click)="changeTab(1)"></ion-icon
+      ><span *ngIf="!loading">{{ offset + 1 }}</span>
+      <ion-spinner *ngIf="loading"> </ion-spinner>
+      <ion-icon
+        name="ios-arrow-forward"
+        (tap)="changeTab(1)"
+        tappable
+      ></ion-icon
     ></ion-row>
 
-    <ion-spinner *ngIf="loading" class="abs-center"> </ion-spinner>
     <ion-row>
       <ship-card
         *ngFor="let ship of ships"
@@ -22,6 +27,7 @@
         col-xl-3
         col-lg-4
         col-md-6
+        [hidden]="!show"
         [ship]="ship"
       ></ship-card>
     </ion-row>
