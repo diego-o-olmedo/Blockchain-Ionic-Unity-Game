@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <script data-ionic="inject">
+      (function(w) {
+        var i = (w.Ionic = w.Ionic || {});
+        i.version = "3.9.2";
+        i.angular = "5.0.3";
+        i.staticDir = "build/";
+      })(window);
+    </script>
+    <meta charset="UTF-8" />
+    <title>Eth.bid</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-<head>
-  <script data-ionic="inject">
-    (function (w) {
-      var i = w.Ionic = w.Ionic || {};
-      i.version = '3.9.2';
-      i.angular = '5.0.3';
-      i.staticDir = 'build/';
-    })(window);
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4e8ef7" />
 
-  </script>
-  <meta charset="UTF-8">
-  <title>Game</title>
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <!-- un-comment this code to enable service worker
+    <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
@@ -34,12 +35,11 @@
     }
   </script>-->
 
-  <link href="/build/main.css" rel="stylesheet">
-</head>
+    <link href="/build/main.css" rel="stylesheet" />
+  </head>
 
-<body>
-
-  <!--
+  <body>
+    <!--
         Client-side Templates
         ========================
 
@@ -60,12 +60,11 @@
               stringfile before they're served.
     -->
 
-  <!--TEMPLATES-->
-  
-  <!--TEMPLATES END-->
+    <!--TEMPLATES-->
 
+    <!--TEMPLATES END-->
 
-  <!--
+    <!--
 
       Client-side Javascript
       ========================
@@ -87,17 +86,15 @@
           + Use a different preprocessor, like TypeScript
 
     -->
-  <!--SCRIPTS-->
-  <script src="/js/dependencies/sails.io.js"></script>
-  <!--SCRIPTS END-->
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
 
-  <%- body %>
+    <%- body %>
 
-    <div id="canvasfull">
-    </div>
+    <div id="canvasfull"></div>
     <!-- <link href="/game/TemplateData/style.css" rel="stylesheet"> -->
     <!-- <script src="/game/TemplateData/UnityProgress.js"></script> -->
     <script src="/game/Build/UnityLoader.js"></script>
-</body>
-
+  </body>
 </html>

@@ -33373,6 +33373,10 @@ footer-component {
   /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
 
+footer-component .toolbar-title {
+  font-size: 120%;
+}
+
 footer-component .toolbar-content {
   padding: 0px;
 }
@@ -33485,6 +33489,57 @@ ship-select ion-card-title {
 
 ship-select .shipSVG {
   margin: 4%;
+}
+
+page-auctions .pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+page-auctions .pagination ion-icon {
+  padding: 10px;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+page-auctions .pagination span {
+  text-align: center;
+  min-width: 28px;
+}
+
+page-auctions ship-card {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.2s ease-in forwards;
+  animation: fadeIn 0.2s ease-in forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 page-combine .selectionList {

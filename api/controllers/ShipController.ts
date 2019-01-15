@@ -51,37 +51,37 @@ module.exports = {
     // let address = req.query.address;
     // sails.log.debug(address);
     // if (address && address != "undefined") {
-    getUrl("http://api.cryptokitties.co/kitties?offset=" + offset).then(
-      (data: any) => {
-        if (data.kitties.length > 0) {
-          let response = [];
+    getUrl(
+      "http://api.cryptokitties.co/kitties?orderDirection=asc&offset=" + offset
+    ).then((data: any) => {
+      if (data.kitties.length > 0) {
+        let response = [];
 
-          let geneObj = [];
-          data.kitties.forEach(kitty => {
-            Ship.get(kitty.id, kitty.name).then(result => {
-              geneObj.push(result);
-              if (geneObj.length == data.kitties.length) {
-                geneObj.forEach(r => {
-                  r = Ship.stats(r);
-                });
-                res.json(geneObj);
-              }
-            });
-          });
-        } else {
-          let fn = id => {
-            return new Promise((resolve, reject) => {
-              Ship.get(id, "PlaceHolder Ship").then(r => {
-                resolve(Ship.stats(r));
+        let geneObj = [];
+        data.kitties.forEach(kitty => {
+          Ship.get(kitty.id, kitty.name).then(result => {
+            geneObj.push(result);
+            if (geneObj.length == data.kitties.length) {
+              geneObj.forEach(r => {
+                r = Ship.stats(r);
               });
-            });
-          };
-          Promise.all([2, 3, 4].map(fn)).then(data => {
-            res.json(data);
+              res.json(geneObj);
+            }
           });
-        }
+        });
+      } else {
+        let fn = id => {
+          return new Promise((resolve, reject) => {
+            Ship.get(id, "PlaceHolder Ship").then(r => {
+              resolve(Ship.stats(r));
+            });
+          });
+        };
+        Promise.all([2, 3, 4].map(fn)).then(data => {
+          res.json(data);
+        });
       }
-    );
+    });
   },
   ships: function(req, res) {
     sails.log(req.query);

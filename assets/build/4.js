@@ -322,7 +322,7 @@ var ShipCardComponent = (function () {
     ], ShipCardComponent.prototype, "wrapper", void 0);
     ShipCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\'+ship.id" (click)="goToShip($event, ship.id)">\n\n\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!-- <svg #svg class="svgClass">\n          <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n        </svg> -->\n        <!-- <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n        <!-- <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n          Ship Image\n        </object> -->\n      </div>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <div class="weaponWrap">\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\'+ship.secondaryWeapon+\'.png\'" [title]="ship.secondaryWeapon">\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\'+ship.primaryWeapon+\'.png\'" [title]="ship.primaryWeapon">\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-card-title class="ellip">\n        {{ship.name ? ship.name : \'Ship \'+ship.id}}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start title="ship.model">\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ship.id}}\n          </button>\n          <span *ngIf="ship.price">{{ship.price / 1000000000000000000}} Eth</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!-- <ion-row no-padding>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n    </ion-col>\n    <ion-col col-6>\n      <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n    </ion-col>\n  </ion-row> -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\' + ship.id" (click)="goToShip($event, ship.id)">\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!--\n          <svg #svg class="svgClass">\n            <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n          </svg>\n        -->\n        <!--\n          <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n            Ship Image\n          </object>\n        -->\n        <!--\n          <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n            Ship Image\n          </object>\n        -->\n      </div>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <div class="weaponWrap">\n            <img\n              class="weaponIcon"\n              [src]="\'/assets/imgs/weapons/\' + ship.secondaryWeapon + \'.png\'"\n              [title]="ship.secondaryWeapon"\n            />\n            <img\n              class="weaponIcon"\n              [src]="\'/assets/imgs/weapons/\' + ship.primaryWeapon + \'.png\'"\n              [title]="ship.primaryWeapon"\n            />\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-card-title class="ellip">\n        {{ ship.name ? ship.name : "Ship " + ship.id }}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button\n            ion-button\n            clear\n            small\n            color="danger"\n            icon-start\n            title="ship.model"\n          >\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ ship.id }}\n          </button>\n          <span *ngIf="ship.price"\n            >{{ ship.price / 1000000000000000000 }} Eth</span\n          >\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!--\n      <ion-row no-padding>\n        <ion-col col-6>\n          <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n        </ion-col>\n        <ion-col col-6>\n          <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n        </ion-col>\n      </ion-row>\n    -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewEncapsulation */].None
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */],
@@ -367,13 +367,14 @@ var AuctionsPage = (function () {
         this.http = http;
         this.loading = true;
         this.offset = 0;
+        this.show = false;
         console.log("auction con");
-        this.request();
+        this.request(true);
     }
     AuctionsPage.prototype.ionViewDidLoad = function () {
         console.log("ionViewDidLoad AuctionsPage");
     };
-    AuctionsPage.prototype.request = function () {
+    AuctionsPage.prototype.request = function (initial) {
         var _this = this;
         console.log("io auctions//");
         // io.socket.get("/api/auction", event => {
@@ -386,7 +387,7 @@ var AuctionsPage = (function () {
         //   this.ships = result
         //   this.loading = false
         // })
-        io.socket.get("/api/v1/shipsRandom?offset=" + this.offset * 12, function (data) {
+        io.socket.get("/api/v1/shipsRandom?offset=" + (3759 + this.offset * 12), function (data) {
             _this.loading = false;
             function sortObject(o) {
                 return Object.keys(o)
@@ -403,6 +404,11 @@ var AuctionsPage = (function () {
                         return a.id - b.id;
                     });
                     _this.ships = data;
+                    if (initial) {
+                        setTimeout(function () {
+                            _this.show = true;
+                        }, 150);
+                    }
                     _this.loading = false;
                 }
             }
@@ -414,7 +420,7 @@ var AuctionsPage = (function () {
     AuctionsPage.prototype.changeTab = function (ment) {
         this.offset += ment;
         this.loading = true;
-        this.ships = null;
+        // this.ships = null;
         this.request();
     };
     AuctionsPage.prototype.parseResult = function (data) {
@@ -431,7 +437,7 @@ var AuctionsPage = (function () {
     };
     AuctionsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row\n      ><ion-icon\n        name="arrow-dropleft"\n        *ngIf="offset > 0"\n        (click)="changeTab(-1)"\n      ></ion-icon\n      >{{ offset + 1 }}\n      <ion-icon name="arrow-dropright" (click)="changeTab(1)"></ion-icon\n    ></ion-row>\n\n    <ion-spinner *ngIf="loading" class="abs-center"> </ion-spinner>\n    <ion-row>\n      <ship-card\n        *ngFor="let ship of ships"\n        ion-col\n        col-12\n        col-xl-3\n        col-lg-4\n        col-md-6\n        [ship]="ship"\n      ></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
+            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row class="pagination"\n      ><ion-icon\n        name="ios-arrow-back"\n        [style.opacity]="offset == 0 ? 0 : 1"\n        (tap)="changeTab(-1)"\n        tappable\n      ></ion-icon\n      ><span *ngIf="!loading">{{ offset + 1 }}</span>\n      <ion-spinner *ngIf="loading"> </ion-spinner>\n      <ion-icon\n        name="ios-arrow-forward"\n        (tap)="changeTab(1)"\n        tappable\n      ></ion-icon\n    ></ion-row>\n\n    <ion-row>\n      <ship-card\n        *ngFor="let ship of ships"\n        ion-col\n        col-12\n        col-xl-3\n        col-lg-4\n        col-md-6\n        [hidden]="!show"\n        [ship]="ship"\n      ></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
     ], AuctionsPage);
