@@ -33679,6 +33679,15 @@ page-home .metamask {
   margin: auto;
 }
 
+page-home .card-demo {
+  max-width: 800px;
+}
+
+page-home ion-card {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 page-ship .actions button {
   background-color: var(--accent) !important;
   border-width: 2px;

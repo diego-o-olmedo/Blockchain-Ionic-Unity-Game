@@ -109,7 +109,7 @@ module.exports = {
         } else {
           let fn = id => {
             return new Promise((resolve, reject) => {
-              Ship.get(id, "PlaceHolder Ship").then(r => {
+              Ship.get(id, "Placeholder Ship").then(r => {
                 resolve(Ship.stats(r));
               });
             });
@@ -122,12 +122,12 @@ module.exports = {
     } else {
       let fn = id => {
         return new Promise((resolve, reject) => {
-          Ship.get(id, "PlaceHolder Ship").then(r => {
+          Ship.get(id, "Placeholder Ship").then(r => {
             resolve(Ship.stats(r));
           });
         });
       };
-      Promise.all([1, 48, 51].map(fn)).then(data => {
+      Promise.all([1, 5475, 5476].map(fn)).then(data => {
         res.json(data);
       });
     }
@@ -169,9 +169,9 @@ function getDefault() {
       secondaryWeapon: "Homing Missile"
     },
     {
-      id: 51,
+      id: 522222231311,
       name: "Starter ShipB",
-      model: 3,
+      model: 10,
       size: "Small",
       primaryColor: [252, 70, 107],
       secondaryColor: [63, 94, 251],

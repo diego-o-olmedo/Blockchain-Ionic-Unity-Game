@@ -7,11 +7,11 @@ webpackJsonp([1],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(189);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,7 +63,7 @@ Observable_1.Observable.prototype.map = map_1.map;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship_card__ = __webpack_require__(275);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -97,12 +97,11 @@ var ShipCardComponentModule = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipCardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_service__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -117,54 +116,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var ShipCardComponent = (function () {
-    function ShipCardComponent(sanitizer, appState, navCtrl, http) {
-        this.sanitizer = sanitizer;
+    function ShipCardComponent(appState, navCtrl, http) {
         this.appState = appState;
         this.navCtrl = navCtrl;
         this.http = http;
     }
     ShipCardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        // setTimeout(() => {
-        // let shipModel = this.ship.model <= 2 ? 1 : 2
-        // this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-        //   "/assets/imgs/ships/ship" + shipModel + ".svg"
-        // )
-        // console.log(this.ship)
-        // let shipModel = this.ship.model == 1 ? 1 : 2
-        // this.svgUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-        //   "/assets/imgs/ships/ship" + shipModel + ".svg"
-        // )
-        // console.log(this.wrapper)
-        var shipLoad;
-        if (this.appState.shipImages[this.ship.model]) {
-            this.finalizeShip(this.appState.shipImages[this.ship.model]);
+        if (!this.demo) {
+            this.initShip(this.ship.model, false);
+        }
+        else {
+            setInterval(function () {
+                var model = Math.floor(Math.random() * 5);
+                _this.initShip(model, true);
+            }, 700);
+        }
+    };
+    ShipCardComponent.prototype.initShip = function (model, demo) {
+        var _this = this;
+        if (this.appState.shipImages[model]) {
+            this.finalizeShip(this.appState.shipImages[model], demo);
         }
         else {
             this.http
-                .get("/images/ships/" + this.ship.model + "-ship.svg")
+                .get("/images/ships/" + model + "-ship.svg")
                 .map(function (res) { return res.text(); })
                 .subscribe(function (data) {
-                _this.appState.shipImages[_this.ship.model] = data;
-                _this.finalizeShip(data);
+                _this.appState.shipImages[model] = data;
+                _this.finalizeShip(data, demo);
             }, function (err) { return console.log(err); });
         }
-        // if (this.ship.model == 1) {
-        //   shipLoad = this.appState.ship1
-        // } else if (this.ship.model == 2) {
-        //   shipLoad = this.appState.ship2
-        // } else if (this.ship.model == 3) {
-        //   shipLoad = this.appState.ship3
-        // } else if (this.ship.model == 4) {
-        //   shipLoad = this.appState.ship4
-        // } else {
-        //   console.log(this.ship.model)
-        //   shipLoad = this.appState.ship0
-        // }
-        // }, 80)
-        // this.doneLoading()
     };
     ShipCardComponent.prototype.positionEleToCenter = function () {
         var bbox = this.svgNative.getBBox();
@@ -179,24 +162,24 @@ var ShipCardComponent = (function () {
         var matrix = "1 0 0 1 " + x + " " + y;
         this.svgNative.setAttribute("transform", "matrix(" + matrix + ")");
     };
-    ShipCardComponent.prototype.finalizeShip = function (shipLoad) {
+    ShipCardComponent.prototype.finalizeShip = function (shipLoad, demo) {
         shipLoad = shipLoad.slice(0);
         shipLoad = shipLoad.replace("Layer_1", "Layer_1-" + Math.random());
         var data = shipLoad.replace(/ChangeName/g, "id" + this.ship.id);
         data = data.replace(/cls-/g, "id" + this.ship.id + "-");
         this.appState.changedOne = true;
-        data = this.getColors(data);
+        this.original = data;
+        if (demo) {
+            data = this.getColors2(data);
+        }
+        else {
+            data = this.getColors(data);
+        }
         this.wrapper.nativeElement.innerHTML = data;
         this.svgNative = this.wrapper.nativeElement.children[0];
-        if (this.ship.primaryWeapon[0] == "B") {
+        if ((demo && Math.random() > 0.5) ||
+            (!demo && this.ship.primaryWeapon[0] == "B")) {
             this.svgNative.children["CENTER_CANNON"].innerHTML = "";
-            // if (this.ship.primaryWeapon[5] != "F") {
-            //   svgNative.children["WING_CANNON_1"].innerHTML = ""
-            //   let cannon2 = svgNative.children["WING_CANNON_2"]
-            //   if (cannon2) {
-            //     cannon2.innerHTML = ""
-            //   }
-            // }
         }
         else {
             this.svgNative.children["WING_CANNON_1"].innerHTML = "";
@@ -213,6 +196,54 @@ var ShipCardComponent = (function () {
         this.appState.activePage = "/ship";
     };
     ShipCardComponent.prototype.ionViewDidLoad = function () { };
+    ShipCardComponent.prototype.getColors2 = function (data) {
+        // if (Math.random() > 0.5) {
+        // if (this.ship.primaryColor[0] > 255 || this.ship.primaryColor[0] < 0) {
+        this.ship.primaryColor[0] = Math.random() * 255;
+        // }
+        // if (this.ship.primaryColor[1] > 255 || this.ship.primaryColor[1] < 0) {
+        this.ship.primaryColor[1] = Math.random() * 255;
+        // }
+        // if (this.ship.primaryColor[2] > 255 || this.ship.primaryColor[2] < 0) {
+        this.ship.primaryColor[2] = Math.random() * 255;
+        // }
+        // } else {
+        // if (this.ship.secondaryColor[0] > 255 || this.ship.secondaryColor[0] < 0) {
+        this.ship.secondaryColor[0] = Math.random() * 255;
+        // }
+        // if (this.ship.secondaryColor[1] > 255 || this.ship.secondaryColor[1] < 0) {
+        this.ship.secondaryColor[1] = Math.random() * 255;
+        // }
+        // if (this.ship.secondaryColor[2] > 255 || this.ship.secondaryColor[2] < 0) {
+        this.ship.secondaryColor[2] = Math.random() * 255;
+        // }
+        // }
+        var primaryColor = "rgb(" +
+            this.ship.primaryColor[0]++ +
+            "," +
+            this.ship.primaryColor[1]++ +
+            "," +
+            this.ship.primaryColor[2]-- +
+            ")";
+        var secondaryColor = "rgb(" +
+            this.ship.secondaryColor[0]-- +
+            "," +
+            this.ship.secondaryColor[1]-- +
+            "," +
+            this.ship.secondaryColor[2]++ +
+            ")";
+        if (Math.random() > 0.75) {
+            var ind = data.indexOf("fill:#");
+            data = data.replace(data.substring(ind + 5, ind + 12), secondaryColor);
+            data = data.replace(/PrimaryColor/g, primaryColor);
+            data = data.replace(/SecondaryColor/g, primaryColor);
+        }
+        else {
+            data = data.replace(/PrimaryColor/g, primaryColor);
+            data = data.replace(/SecondaryColor/g, secondaryColor);
+        }
+        return data;
+    };
     ShipCardComponent.prototype.getColors = function (data) {
         var primaryColor = "rgb(" +
             this.ship.primaryColor[0] +
@@ -240,81 +271,14 @@ var ShipCardComponent = (function () {
         }
         return data;
     };
-    ShipCardComponent.prototype.doneLoading = function () {
-        console.log("loading");
-        this.svg.nativeElement.style = "--secondary-color: green;";
-        var gradient = this.wrapper.nativeElement.children[0].contentDocument.all[1]
-            .children[1];
-        if (gradient && this.ship.secondaryWeapon) {
-            if (this.ship.secondaryWeapon[0] == "B") {
-                gradient.children[1].attributes[1].value =
-                    "rgb(" +
-                        this.ship.primaryColor[0] +
-                        "," +
-                        this.ship.primaryColor[1] +
-                        "," +
-                        this.ship.primaryColor[2] +
-                        ")";
-                gradient.children[0].attributes[1].value =
-                    "rgb(" +
-                        this.ship.primaryColor[0] +
-                        "," +
-                        this.ship.primaryColor[1] +
-                        "," +
-                        this.ship.primaryColor[2] +
-                        ")";
-                console.log(this.svg.nativeElement.contentDocument.all[1].children[0].sheet);
-                this.svg.nativeElement.contentDocument.all[1].children[0].sheet.rules[0].style.fill =
-                    "rgb(" +
-                        this.ship.secondaryWeapon[0] +
-                        "," +
-                        this.ship.secondaryWeapon[1] +
-                        "," +
-                        this.ship.secondaryWeapon[2] +
-                        ")";
-            }
-            else {
-                gradient.children[1].attributes[1].value =
-                    "rgb(" +
-                        this.ship.primaryColor[0] +
-                        "," +
-                        this.ship.primaryColor[1] +
-                        "," +
-                        this.ship.primaryColor[2] +
-                        ")";
-                gradient.children[0].attributes[1].value =
-                    "rgb(" +
-                        this.ship.secondaryWeapon[0] +
-                        "," +
-                        this.ship.secondaryWeapon[1] +
-                        "," +
-                        this.ship.secondaryWeapon[2] +
-                        ")";
-            }
-            if (this.ship.primaryWeapon[0] == "B") {
-                this.svg.nativeElement.contentDocument.all["CENTER_CANNON"].innerHTML =
-                    "";
-                if (this.ship.primaryWeapon[5] != "F") {
-                    var cannon2 = this.svg.nativeElement.contentDocument.all["WING_CANNON_2"];
-                    if (cannon2) {
-                        cannon2.innerHTML = "";
-                    }
-                }
-            }
-            else {
-                this.svg.nativeElement.contentDocument.all["WING_CANNON_1"].innerHTML =
-                    "";
-                var cannon2 = this.svg.nativeElement.contentDocument.all["WING_CANNON_2"];
-                if (cannon2) {
-                    cannon2.innerHTML = "";
-                }
-            }
-        }
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", Object)
     ], ShipCardComponent.prototype, "ship", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Boolean)
+    ], ShipCardComponent.prototype, "demo", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("svg"),
         __metadata("design:type", Object)
@@ -325,15 +289,13 @@ var ShipCardComponent = (function () {
     ], ShipCardComponent.prototype, "wrapper", void 0);
     ShipCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\' + ship.id" (click)="goToShip($event, ship.id)">\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n        <!-- <img #svg class="shipSVG" src="assets/imgs/ships/ship1.svg" /> -->\n\n        <!--\n          <svg #svg class="svgClass">\n            <use xlink:href="#ship1" id="shiper1" style="--primary-color: #0099cc;"></use>\n          </svg>\n        -->\n        <!--\n          <object #svg type="image/svg+xml" [data]="svgUrl" class="shipSVG" (load)="doneLoading()">\n            Ship Image\n          </object>\n        -->\n        <!--\n          <object #svg type="image/svg+xml" [data]="this.appState.ship1" class="shipSVG" (load)="doneLoading()">\n            Ship Image\n          </object>\n        -->\n      </div>\n      <ion-row no-padding>\n        <ion-col col-12>\n          <div class="weaponWrap">\n            <img\n              class="weaponIcon"\n              [src]="\'/assets/imgs/weapons/\' + ship.secondaryWeapon + \'.png\'"\n              [title]="ship.secondaryWeapon"\n            />\n            <img\n              class="weaponIcon"\n              [src]="\'/assets/imgs/weapons/\' + ship.primaryWeapon + \'.png\'"\n              [title]="ship.primaryWeapon"\n            />\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-card-title class="ellip">\n        {{ ship.name ? ship.name : "Ship " + ship.id }}\n      </ion-card-title>\n      <ion-row no-padding>\n        <ion-col>\n          <button\n            ion-button\n            clear\n            small\n            color="danger"\n            icon-start\n            title="ship.model"\n          >\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ ship.id }}\n          </button>\n          <span *ngIf="ship.price"\n            >{{ ship.price / 1000000000000000000 }} Eth</span\n          >\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n\n    <!--\n      <ion-row no-padding>\n        <ion-col col-6>\n          <span [ngStyle]="{\'color\': \'rgb(\' + ship.color1[0] + \',\' + ship.color1[1] + \',\' + ship.color1[2] +\')\'}">Primary Color</span>\n        </ion-col>\n        <ion-col col-6>\n          <span [ngStyle]="{\'color\': \'rgb(\' + ship.color2[0] + \',\' + ship.color2[1] + \',\' + ship.color2[2] +\')\'}">Secondary Color</span>\n        </ion-col>\n      </ion-row>\n    -->\n  </a>\n</ion-card>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
+            selector: "ship-card",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/'<ion-card>\n  <a [href]="\'/ship/\' + ship.id" (click)="goToShip($event, ship.id)">\n    <ion-card-content>\n      <div class="shipWrap" #wrapper>\n      </div>\n      <ion-row no-padding *ngIf="!demo">\n        <ion-col col-12>\n          <div class="weaponWrap">\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\' + ship.secondaryWeapon + \'.png\'" [title]="ship.secondaryWeapon" />\n            <img class="weaponIcon" [src]="\'/assets/imgs/weapons/\' + ship.primaryWeapon + \'.png\'" [title]="ship.primaryWeapon" />\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-card-title class="ellip" *ngIf="!demo">\n        {{ ship.name ? ship.name : "Ship " + ship.id }}\n      </ion-card-title>\n      <ion-row no-padding *ngIf="!demo">\n        <ion-col>\n          <button ion-button clear small color="danger" icon-start title="ship.model">\n            <!-- <ion-icon name=\'star\'></ion-icon> -->\n            Ship #{{ ship.id }}\n          </button>\n          <span *ngIf="ship.price">{{ ship.price / 1000000000000000000 }} Eth</span>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </a>\n</ion-card>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\components\ship-card\ship-card.html"*/,
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewEncapsulation */].None
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */],
-            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__app_app_service__["a" /* AppState */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_app_service__["a" /* AppState */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _c || Object])
     ], ShipCardComponent);
     return ShipCardComponent;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=ship-card.js.map
@@ -515,14 +477,14 @@ var MyMatchHeightDirective = (function () {
 
 /***/ }),
 
-/***/ 291:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
