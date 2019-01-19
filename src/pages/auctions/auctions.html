@@ -1,35 +1,19 @@
-<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>
+<ion-header #head>
+  <ion-navbar> </ion-navbar>
+</ion-header>
 <header-component></header-component>
 
 <ion-content no-padding>
   <ion-grid class="contentRoom">
-    <ion-row class="pagination"
-      ><ion-icon
-        name="ios-arrow-back"
-        [style.opacity]="offset == 0 ? 0 : 1"
-        (tap)="changeTab(-1)"
-        tappable
-      ></ion-icon
-      ><span *ngIf="!loading">{{ offset + 1 }}</span>
+    <ion-row class="pagination">
+      <ion-icon name="ios-arrow-back" [style.opacity]="offset == 0 ? 0 : 1" (tap)="changeTab(-1)" tappable></ion-icon>
+      <span *ngIf="!loading">{{ offset + 1 }}</span>
       <ion-spinner *ngIf="loading"> </ion-spinner>
-      <ion-icon
-        name="ios-arrow-forward"
-        (tap)="changeTab(1)"
-        tappable
-      ></ion-icon
-    ></ion-row>
+      <ion-icon name="ios-arrow-forward" (tap)="changeTab(1)" tappable></ion-icon>
+    </ion-row>
 
     <ion-row>
-      <ship-card
-        *ngFor="let ship of ships"
-        ion-col
-        col-12
-        col-xl-3
-        col-lg-4
-        col-md-6
-        [hidden]="!show"
-        [ship]="ship"
-      ></ship-card>
+      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [hidden]="!show" [ship]="ship"></ship-card>
     </ion-row>
   </ion-grid>
 

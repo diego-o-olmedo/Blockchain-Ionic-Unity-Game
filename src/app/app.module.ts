@@ -6,12 +6,11 @@ import { AppState } from "./app.service";
 import { Web3Service } from "./web3.service";
 
 import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
 import { ComponentsModule } from "../components/components.module";
 import { NgxPaginationModule } from "ngx-pagination"; // <-- import the module
 
 @NgModule({
-  declarations: [MyApp, HomePage],
+  declarations: [MyApp],
   imports: [
     NgxPaginationModule,
     ComponentsModule,
@@ -22,11 +21,11 @@ import { NgxPaginationModule } from "ngx-pagination"; // <-- import the module
     })
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage],
+  entryComponents: [MyApp],
   providers: [
     AppState,
     Web3Service,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

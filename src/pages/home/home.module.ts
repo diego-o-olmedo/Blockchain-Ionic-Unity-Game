@@ -1,6 +1,6 @@
+import { HomePage } from './home';
 import { NgModule } from "@angular/core"
 import { IonicPageModule } from "ionic-angular"
-import { MyShipsPage } from "./my-ships"
 // import { HeaderComponentModule } from "../../components/header/header"
 import { ShipCardComponentModule } from "../../components/ship-card/ship-card.module"
 import { DirectivesModule } from "../../directives/directives.module"
@@ -8,13 +8,13 @@ import { ComponentsModule } from "../../components/components.module"
 import { NgxPaginationModule } from "ngx-pagination" // <-- import the module
 
 @NgModule({
-  declarations: [MyShipsPage],
+  declarations: [HomePage],
   imports: [
     NgxPaginationModule,
     DirectivesModule,
     ComponentsModule,
     ShipCardComponentModule,
-    IonicPageModule.forChild(MyShipsPage)
+    IonicPageModule.forChild(HomePage)
   ]
 })
-export class MyShipsPageModule { }
+export class HomePageModule { }

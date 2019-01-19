@@ -154,7 +154,6 @@ export class GamePage {
           //  || (this.appState.account && this.appState.account.substring(0, 5))
         );
       }
-      console.log("in ionc=", progress, calc);
       this.loadingStyle = this.sanitizer.bypassSecurityTrustStyle(
         "inset(0 " + calc + "% 0 0)"
       );

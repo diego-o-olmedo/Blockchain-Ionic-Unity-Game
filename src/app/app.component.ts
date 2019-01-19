@@ -8,7 +8,7 @@ import { AppState } from "./app.service";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = "AuctionsPage";
+  rootPage: any = "HomePage";
 
   pages: Array<{ title: string; component: any }>;
 
@@ -24,7 +24,7 @@ export class MyApp {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {});
+    this.platform.ready().then(() => { });
   }
 
   page(selected) {

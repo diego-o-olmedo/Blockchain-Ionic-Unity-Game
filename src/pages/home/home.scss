@@ -7,4 +7,11 @@ page-home {
   .metamask {
     margin: auto;
   }
+
+  .card-demo {
+    max-width: 800px;
+  }
+  ion-card {
+    box-shadow: none !important;
+  }
 }

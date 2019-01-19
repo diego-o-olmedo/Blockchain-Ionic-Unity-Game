@@ -1,9 +1,9 @@
-import { Component } from "@angular/core"
-import { IonicPage, NavController, NavParams, Events } from "ionic-angular"
-import { AppState } from "../../app/app.service"
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams, Events } from "ionic-angular";
+import { AppState } from "../../app/app.service";
 
-import { Http } from "@angular/http"
-import "rxjs/add/operator/map"
+import { Http } from "@angular/http";
+import "rxjs/add/operator/map";
 
 @IonicPage()
 @Component({
@@ -11,9 +11,11 @@ import "rxjs/add/operator/map"
   templateUrl: "my-ships.html"
 })
 export class MyShipsPage {
-  p: number = 1
-  ships
-  noAccount = false
+  p: number = 1;
+  ships;
+  noAccount = false;
+  show = true;
+
   // loading = true
   constructor(
     public navCtrl: NavController,
@@ -22,9 +24,10 @@ export class MyShipsPage {
     public http: Http,
     public events: Events
   ) {
+
     if (this.appState.account && this.appState.account.length > 8) {
     } else {
-      this.noAccount = true
+      this.noAccount = true;
       // this.loading = false
     }
     // this.request()
@@ -75,6 +78,6 @@ export class MyShipsPage {
   // }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad MyShipsPage")
+    console.log("ionViewDidLoad MyShipsPage");
   }
 }

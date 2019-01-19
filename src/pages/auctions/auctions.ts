@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { Http } from "@angular/http";
 import "rxjs/add/operator/map";
 declare var io: any;
 
@@ -17,7 +16,6 @@ export class AuctionsPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private http: Http
   ) {
     console.log("auction con");
     this.request(true);
@@ -45,11 +43,6 @@ export class AuctionsPage {
       data => {
         this.loading = false;
 
-        function sortObject(o) {
-          return Object.keys(o)
-            .sort()
-            .reduce((r, k) => ((r[k] = o[k]), r), {});
-        }
         if (data) {
           console.log(data);
           if (data.length > 0) {
