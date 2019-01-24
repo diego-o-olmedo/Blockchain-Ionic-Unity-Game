@@ -1,16 +1,40 @@
 <ion-header #head>
   <ion-navbar> </ion-navbar>
+
 </ion-header>
-<header-component></header-component>
+
+<header-component>
+
+</header-component>
 
 <ion-content>
+
   <div class="contentRoom">
     <ion-grid>
       <ion-row class="card-demo">
-        <p>Eth.bid is a game based off the the collectible crypto game <a href="https://cryptokitties.co">CryptoKitties</a> and utilizes the CryptoKitties <a href="https://docs.api.cryptokitties.co">API</a> and its <a href="https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d">contract</a> that is on the <a href="https://www.ethereum.org/">Ethereum</a> blockchain. </p>
-        <ship-card *ngFor="let ship of ships" ion-col col-6 [ship]="ship" [demo]="true"></ship-card>
-        <p>Each CryptoKitty DNA is converted into a unique ship with a dynamically generated SVG and also translated into the full 3D game. Different colors, models, sizes, and weapons are uniqiely determined by the genes.</p>
-        <img src="https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1338164.svg"> = <img src="/assets/imgs/ships/tutorial1.svg">
+        <p>Eth.bid is a game based off the the collectible crypto game
+          <a href="https://cryptokitties.co">CryptoKitties</a> and utilizes the CryptoKitties
+          <a href="https://docs.api.cryptokitties.co">API</a> and its
+          <a href="https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d">contract</a> that is on the
+          <a href="https://www.ethereum.org/">Ethereum</a> blockchain. </p>
+        <div ion-col col-6 class="ship-contain">
+          <ship-card [ship]="ships[0]" [demo]="true"></ship-card>
+        </div>
+        <p>Each CryptoKitty DNA is converted into a unique ship with a dynamically generated SVG and also translated into the
+          full 3D game. Different colors, models, sizes, and weapons are uniqiely determined by the genes.</p>
+
+      </ion-row>
+      <ion-row>
+        <img ion-col col-3 src="https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1338164.svg" class="equals-section">
+
+        <div ion-col col-1 class="span-equal">
+          <p>=</p>
+        </div>
+        <img ion-col col-3 src="/assets/imgs/ships/tutorial1.svg" class="equals-section">
+        <div ion-col col-1 class="span-equal">
+          <p>=</p>
+        </div>
+        <img ion-col col-3 src="/assets/imgs/ships/tutorial1.svg" class="equals-section">
       </ion-row>
     </ion-grid>
 
@@ -59,3 +83,6 @@
 
   <footer-component></footer-component>
 </ion-content>
+<a href="https://github.com/ScottMBerger/Blockchain-Ionic-Unity-Game">
+  <img id="github" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub" />
+</a>

@@ -9,15 +9,7 @@
             <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'My Ships'}">My Ships</span>
             <span (click)="page('AuctionsPage')" tappable [ngClass]="{'selected': page == 'Battle'}">Battle</span>
           -->
-          <a
-            [href]="'/' + p.href"
-            class="headerLinks"
-            *ngFor="let p of pages"
-            (click)="openPage($event, p)"
-            tappable
-            [ngClass]="{ activePage: p.href == appState.activePage }"
-            >{{ p.title }}</a
-          >
+          <a [href]="'/' + p.href" class="headerLinks" *ngFor="let p of pages" (click)="openPage($event, p)" tappable [ngClass]="{ activePage: p.href == appState.activePage }">{{ p.title }}</a>
         </ion-col>
 
         <ion-col col-12 col-md-3 text-center>
@@ -31,12 +23,5 @@
         <ion-tab tabTitle="My Ships" [root]="rootPage"></ion-tab>
         <ion-tab tabTitle="Nattle" [root]="rootPage"></ion-tab>
       </ion-tabs>
-    --> </ion-navbar
-  ><a href="https://github.com/ScottMBerger/Blockchain-Ionic-Unity-Game">
-    <img
-      style="position: absolute; top: 0; left: 0; border: 0;"
-      src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"
-      alt="Fork me on GitHub"
-    />
-  </a>
+    --></ion-navbar>
 </ion-header>

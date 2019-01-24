@@ -30,7 +30,7 @@ export class ShipCardComponent {
       this.initShip(this.ship.model, false);
     } else {
       setInterval(() => {
-        let model = Math.floor(Math.random() * 5);
+        let model = Math.floor(Math.random() * 5.599999);
         this.initShip(model, true);
       }, 700);
     }
@@ -78,26 +78,29 @@ export class ShipCardComponent {
     this.appState.changedOne = true;
     this.original = data;
     if (demo) {
-      data = this.getColors2(data);
+      data = this.getColorsDemo(data);
     } else {
       data = this.getColors(data);
     }
+    console.log('before inner')
     this.wrapper.nativeElement.innerHTML = data;
     this.svgNative = this.wrapper.nativeElement.children[0];
 
-    if (
-      (demo && Math.random() > 0.5) ||
-      (!demo && this.ship.primaryWeapon[0] == "B")
-    ) {
-      this.svgNative.children["CENTER_CANNON"].innerHTML = "";
-    } else {
-      this.svgNative.children["WING_CANNON_1"].innerHTML = "";
-      let cannon2 = this.svgNative.children["WING_CANNON_2"];
-      if (cannon2) {
-        cannon2.innerHTML = "";
+    if (this.svgNative.children["CENTER_CANNON"]) {
+      if (
+        (demo && Math.random() > 0.5) ||
+        (!demo && this.ship.primaryWeapon[0] == "B")
+      ) {
+        this.svgNative.children["CENTER_CANNON"].innerHTML = "";
+      } else {
+        this.svgNative.children["WING_CANNON_1"].innerHTML = "";
+        let cannon2 = this.svgNative.children["WING_CANNON_2"];
+        if (cannon2) {
+          cannon2.innerHTML = "";
+        }
       }
     }
-    // this.positionEleToCenter()
+
   }
 
   goToShip(e, id) {
@@ -108,28 +111,14 @@ export class ShipCardComponent {
 
   ionViewDidLoad() { }
 
-  getColors2(data) {
-    // if (Math.random() > 0.5) {
-    // if (this.ship.primaryColor[0] > 255 || this.ship.primaryColor[0] < 0) {
+  getColorsDemo(data) {
     this.ship.primaryColor[0] = Math.random() * 255;
-    // }
-    // if (this.ship.primaryColor[1] > 255 || this.ship.primaryColor[1] < 0) {
     this.ship.primaryColor[1] = Math.random() * 255;
-    // }
-    // if (this.ship.primaryColor[2] > 255 || this.ship.primaryColor[2] < 0) {
     this.ship.primaryColor[2] = Math.random() * 255;
-    // }
-    // } else {
-    // if (this.ship.secondaryColor[0] > 255 || this.ship.secondaryColor[0] < 0) {
     this.ship.secondaryColor[0] = Math.random() * 255;
-    // }
-    // if (this.ship.secondaryColor[1] > 255 || this.ship.secondaryColor[1] < 0) {
     this.ship.secondaryColor[1] = Math.random() * 255;
-    // }
-    // if (this.ship.secondaryColor[2] > 255 || this.ship.secondaryColor[2] < 0) {
     this.ship.secondaryColor[2] = Math.random() * 255;
-    // }
-    // }
+
     let primaryColor =
       "rgb(" +
       this.ship.primaryColor[0]++ +

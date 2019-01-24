@@ -30,7 +30,7 @@ export class GamePage {
   showSelect = false;
   webgl = false;
   ships;
-  userName = "TestUser" + Math.random() * 10;
+  userName = "Anon" + Math.floor(Math.random() * 10);
   @ViewChild("chatcontent") chatcontent;
   @ViewChild(Content) content: Content;
 

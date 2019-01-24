@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { Component, ViewChild } from "@angular/core";
 import { Nav, Platform } from "ionic-angular";
 import { AppState } from "./app.service";
@@ -8,7 +9,7 @@ import { AppState } from "./app.service";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = "HomePage";
+  rootPage: any = HomePage;
 
   pages: Array<{ title: string; component: any }>;
 
@@ -17,7 +18,7 @@ export class MyApp {
 
     this.pages = [
       { title: "Auctions", component: "AuctionsPage" },
-      { title: "Home", component: "HomePage" },
+      { title: "Home", component: HomePage },
       { title: "Battle", component: "GamePage" },
       { title: "MyShips", component: "MyShipsPage" }
     ];

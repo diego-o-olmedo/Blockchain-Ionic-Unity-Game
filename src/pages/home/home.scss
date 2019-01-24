@@ -14,4 +14,33 @@ page-home {
   ion-card {
     box-shadow: none !important;
   }
+
+  .ship-contain {
+     height: 300px;
+  }
+  .contentRoom {
+    ion-row {
+      margin: auto;
+      justify-content: center;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+ .equals-section {
+   max-width: 150px;
+ }
+ .span-equal {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   p {
+     text-align: center;
+     font-weight: 700;
+     font-size: 200%;
+   }
+ }
+ #github {
+   position: absolute; top: 0; left: 0; border: 0; max-width: 23vw; z-index: 100000; width: 130px;
+ }
 }
