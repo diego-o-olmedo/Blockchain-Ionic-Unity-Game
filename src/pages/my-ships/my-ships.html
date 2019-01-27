@@ -1,23 +1,20 @@
-<ion-header #head> <ion-navbar> </ion-navbar> </ion-header>
+<ion-header #head>
+  <ion-navbar> </ion-navbar>
+</ion-header>
 <header-component></header-component>
 
 <ion-content no-padding>
   <ion-grid class="contentRoom">
     <ion-spinner *ngIf="!appState.ships && appState.account" class="abs-center">
     </ion-spinner>
-    <div *ngIf="!appState.account">
-      Ethereum account required to play. {{ appState.accountStatus }}
+    <div *ngIf="!appState.account" class="column-center">
+      <h1>No Ethereum account found. {{ appState.accountStatus }}</h1>
+      <a href="https://metamask.io">
+        <img src="https://github.com/MetaMask/faq/raw/master/images/download-metamask-dark.png" />
+      </a>
     </div>
     <ion-row *ngIf="appState.ships" myMatchHeight="shipWrap">
-      <ship-card
-        *ngFor="let ship of appState.ships"
-        ion-col
-        col-12
-        col-xl-3
-        col-lg-4
-        col-md-6
-        [ship]="ship"
-      ></ship-card>
+      <ship-card *ngFor="let ship of appState.ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>
     </ion-row>
   </ion-grid>
 

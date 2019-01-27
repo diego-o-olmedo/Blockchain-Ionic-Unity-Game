@@ -3,12 +3,18 @@ footer-component {
 
   .toolbar-title {
     font-size: 120%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .toolbar-content {
     // background-color: grey;
     padding: 0px;
   }
-
+  .toolbar {
+    text-align: right;
+  }
   .toolbar-background {
     background-color: lightgray;
   }

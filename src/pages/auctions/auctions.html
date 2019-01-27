@@ -12,8 +12,8 @@
       <ion-icon name="ios-arrow-forward" (tap)="changeTab(1)" tappable></ion-icon>
     </ion-row>
 
-    <ion-row>
-      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [hidden]="!show" [ship]="ship"></ship-card>
+    <ion-row class="ships-row">
+      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 [hidden]="!show" [ship]="ship"></ship-card>
     </ion-row>
   </ion-grid>
 

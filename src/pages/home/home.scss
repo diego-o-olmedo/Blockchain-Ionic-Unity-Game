@@ -1,4 +1,108 @@
 page-home {
+  #part-one {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 56px;
+    margin:  auto;
+    height : 100vh;
+    min-height: 100vh;
+    width: 80vw;
+    @media (min-width: 360px) {
+      align-items: center;
+    }
+    ion-card {
+      overflow: visible;
+    }
+
+    .info-one {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-weight: 800;
+      }
+    }
+    
+    .ship-contain {
+      height: 300px;
+    }
+
+    @media (min-width: 768px) {
+
+      ion-grid, ion-row, ion-col, .col {
+        min-height: 100%;
+        height: 100% !important;
+      }
+
+      .info-one {
+        padding-right: 50px;
+        h1 {
+          margin-top: 30%;
+          font-weight: 800;
+          font-size: 30px;
+        }
+        h3 {
+          padding: 20px 0px 20px 0px;
+        }
+      }
+      
+      .ship-contain {
+        padding-top: 10%;
+      }
+    }
+
+  }
+  #part-two {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 56px;
+    height: 100vh;
+    min-height: 100vh;
+    .row {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .col {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    
+    @media (max-width: 1020px) {
+      margin-top: 70px;
+      height: 140vh;
+      min-height: 140vh;
+      h1 {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 359px) {
+      margin-top: 200px;
+      height: 170vh;
+      min-height: 170vh;
+    }
+  }
+
+  ion-card, .card  {
+    background: transparent !important;
+  }
+  header-component {
+    transition: 1.5s;
+  }
+  .scrollTop {
+    ion-header::after, .toolbar-background {
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
+  ion-content {
+    .scroll-content {
+      margin-top: 0px !important;
+    }
+  }
   .registration {
     margin-top: 10%;
     margin-left: 20%;
@@ -8,16 +112,10 @@ page-home {
     margin: auto;
   }
 
-  .card-demo {
-    max-width: 800px;
-  }
   ion-card {
     box-shadow: none !important;
   }
 
-  .ship-contain {
-     height: 300px;
-  }
   .contentRoom {
     ion-row {
       margin: auto;
@@ -28,19 +126,118 @@ page-home {
     }
   }
  .equals-section {
-   max-width: 150px;
+   img {
+     margin-top: 14px;
+     width: 280px;
+   }
  }
  .span-equal {
    display:flex;
    justify-content: center;
    align-items: center;
    p {
+     margin-top: 14px;
      text-align: center;
      font-weight: 700;
      font-size: 200%;
    }
  }
+
+ //Credit https://github.com/vivensio/fork-me-baby
  #github {
    position: absolute; top: 0; left: 0; border: 0; max-width: 23vw; z-index: 100000; width: 130px;
  }
+
+   .fork-me-baby {
+    position: absolute
+  }
+
+  .fork-me-baby:before {
+    content: "";
+    border-style: solid;
+    position: absolute;
+    pointer-events: none;
+    transition: all .25s ease-in-out
+  }
+
+  .fork-me-baby .github-octicon-mark {
+    fill: #fff
+  }
+
+  @media (min-width:321px) and (max-width:767px) {
+    .fork-me-baby .github-octicon-mark {
+      height: 24px;
+      width: 24px
+    }
+  }
+
+  .fork-me-baby a {
+    position: absolute;
+    top: 15px;
+    height: 32px
+  }
+
+  .fork-me-baby--sticky {
+    position: fixed
+  }
+
+  .fork-me-baby.bottom-left {
+    bottom: 0;
+    left: 0
+  }
+
+  .fork-me-baby.bottom-left:before {
+    border-top-width: 0;
+    border-right-width: 125px;
+    border-bottom-width: 100px;
+    border-left-width: 0;
+    border-color: transparent;
+    border-bottom-color: #333
+  }
+
+  .fork-me-baby.bottom-left:hover:before {
+    border-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+
+  .fork-me-baby.bottom-left:active:before {
+    border-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+
+  .fork-me-baby.bottom-left:before {
+    bottom: 0;
+    left: 0
+  }
+
+  .fork-me-baby.bottom-left a {
+    top: -45px;
+    left: 20px
+  }
+
+  @media (min-width:321px) and (max-width:767px) {
+    .fork-me-baby.bottom-left:before {
+      border-top-width: 0;
+      border-right-width: 75px;
+      border-bottom-width: 60px;
+      border-left-width: 0;
+      border-color: transparent;
+      border-bottom-color: #333
+    }
+
+    .fork-me-baby.bottom-left:hover:before {
+      border-color: transparent;
+      border-bottom-color: var(--accent);
+    }
+
+    .fork-me-baby.bottom-left:active:before {
+      border-color: transparent;
+      border-bottom-color: var(--accent);
+    }
+
+    .fork-me-baby.bottom-left a {
+      top: -32px;
+      left: 7px
+    }
+  }
 }

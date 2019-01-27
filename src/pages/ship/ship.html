@@ -9,8 +9,8 @@
     <ion-row>
       <ion-spinner *ngIf="!ship" class="abs-center">
       </ion-spinner>
-      <div *ngIf="ship">
-        <ship-card ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>
+      <ng-container *ngIf="ship">
+        <ship-card ion-col col-12 [ship]="ship"></ship-card>
         <div class="actions">
           <div *ngIf="amOwner">
             <button ion-button round (click)="sell.open = true">Sell</button>
@@ -20,7 +20,7 @@
             <button ion-button round (click)="purchase()">Buy Now</button>
           </div>
         </div>
-      </div>
+      </ng-container>
     </ion-row>
     <div *ngIf="sell.open">
       <form *ngIf="appState.account" (ngSubmit)="createSale()">

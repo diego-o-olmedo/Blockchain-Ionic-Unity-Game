@@ -61,6 +61,9 @@ export class GamePage {
           // data.forEach(ship => {
           //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
           // })
+          if (data[1].id == 5789) {
+            data[1].primaryWeapon = "Bolt Ice"
+          }
           this.ships = data;
         }
       }

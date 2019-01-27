@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, AlertController } from "ionic-angular";
 import { AppState } from "../../app/app.service";
 import { Web3Service } from "../../app/web3.service";
 import { Http } from "@angular/http";
@@ -25,10 +25,12 @@ export class ShipPage {
     public navParams: NavParams,
     public http: Http,
     public appState: AppState,
-    public web3Service: Web3Service
+    public web3Service: Web3Service,
+    private alert: AlertController
   ) {
     let address = "/api/v1/ship?id=" + encodeURI(this.id);
     io.socket.get(address, data => {
+      console.log(data)
       if (typeof data == "string") {
       } else {
         this.ship = data;
@@ -39,11 +41,12 @@ export class ShipPage {
         }
       }
     });
+    console.log(this.appState)
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  ionViewDidLoad() {}
+  ionViewDidLoad() { }
 
   createSale() {
     if (
@@ -64,7 +67,31 @@ export class ShipPage {
   }
 
   purchase() {
-    this.web3Service.purchase(this.id);
-    console.log(this.sell);
+    let msg;
+    if (!this.appState.account) {
+      msg = 'No Ethereum account found. ' + this.appState.accountStatus
+    }
+    if (!msg) {
+      try {
+        this.web3Service.purchase(this.id);
+      } catch (e) {
+        msg = e
+      }
+    }
+    if (msg) {
+      const alerting = this.alert.create({
+        title: 'Error',
+        message: msg,
+        buttons: [
+          {
+            text: 'Ok',
+            handler: () => {
+              console.log('Buy clicked');
+            }
+          }
+        ]
+      });
+      alerting.present();
+    }
   }
 }

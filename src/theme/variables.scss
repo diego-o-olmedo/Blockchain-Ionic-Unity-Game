@@ -51,6 +51,21 @@ ion-tabs {
   max-width: 40%;
 }
 
+$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$grid-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px,
+  xl: 1240,
+  xxl: 1500
+);
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here

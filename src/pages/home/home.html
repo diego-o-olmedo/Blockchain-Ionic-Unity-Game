@@ -1,44 +1,72 @@
-<ion-header #head>
-  <ion-navbar> </ion-navbar>
-
-</ion-header>
-
-<header-component>
+<header-component [ngClass]="{'scrollTop': scrollTop}">
 
 </header-component>
 
-<ion-content>
+<ion-content (scroll)="onElementScroll($event)">
 
-  <div class="contentRoom">
+  <section id="part-one">
     <ion-grid>
       <ion-row class="card-demo">
-        <p>Eth.bid is a game based off the the collectible crypto game
-          <a href="https://cryptokitties.co">CryptoKitties</a> and utilizes the CryptoKitties
-          <a href="https://docs.api.cryptokitties.co">API</a> and its
-          <a href="https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d">contract</a> that is on the
-          <a href="https://www.ethereum.org/">Ethereum</a> blockchain. </p>
-        <div ion-col col-6 class="ship-contain">
+        <div ion-col col-12 col-md-6 class="info-one">
+          <h1>Welcome to Eth.bid</h1>
+          <h3>
+            Eth.bid is a game based off the collectible crypto game
+            <a href="https://cryptokitties.co">CryptoKitties</a> and utilizes the CryptoKitties
+            <a href="https://docs.api.cryptokitties.co">API</a> and its
+            <a href="https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code">contract</a> that is
+            on
+            the
+            <a href="https://www.ethereum.org/">Ethereum</a> blockchain. </h3>
+
+          <button ion-button round (click)="scrollTo('#part-two')">Learn More</button>
+        </div>
+        <div ion-col col-12 col-md-6 class="ship-contain">
+
           <ship-card [ship]="ships[0]" [demo]="true"></ship-card>
         </div>
-        <p>Each CryptoKitty DNA is converted into a unique ship with a dynamically generated SVG and also translated into the
-          full 3D game. Different colors, models, sizes, and weapons are uniqiely determined by the genes.</p>
-
-      </ion-row>
-      <ion-row>
-        <img ion-col col-3 src="https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1338164.svg" class="equals-section">
-
-        <div ion-col col-1 class="span-equal">
-          <p>=</p>
-        </div>
-        <img ion-col col-3 src="/assets/imgs/ships/tutorial1.svg" class="equals-section">
-        <div ion-col col-1 class="span-equal">
-          <p>=</p>
-        </div>
-        <img ion-col col-3 src="/assets/imgs/ships/tutorial1.svg" class="equals-section">
       </ion-row>
     </ion-grid>
+  </section>
+  <section id="part-two">
+    <ion-grid id="grid-two">
+      <ion-row>
+        <div ion-col col-10>
+          <h1 class="h1text">Each CryptoKitty DNA is converted into a unique ship with a dynamically generated SVG and
+            also translated
+            into the full 3D game. Different colors, models, sizes, and weapons are uniquely determined by the kitties
+            genes. Check out the <a href="/auctions" (click)="navigateTo($event, 'AuctionsPage')">auctions page</a> to
+            see an
+            infinite list of
+            real
+            ships.</h1>
+        </div>
 
-    <!-- <p *ngIf="appState.username && !success" class="abs-center">
+      </ion-row>
+      <ion-row class="equals-section">
+        <div ion-col col-12 col-lg-3><img src="/assets/imgs/ships/tutorial2.svg">
+        </div>
+
+        <div ion-col col-12 col-lg-1 class="span-equal">
+          <p>=</p>
+        </div>
+        <div ion-col col-12 col-lg-3><img src="/assets/imgs/ships/tutorial3.svg">
+        </div>
+        <div ion-col col-12 col-lg-1 class="span-equal">
+          <p>=</p>
+        </div>
+        <div ion-col col-12 col-lg-4>
+          <div class="video-wrap">
+            <video #shipVideo width="400" loop>
+              <source src="/assets/imgs/video.webm" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- <p *ngIf="appState.username && !success" class="abs-center">
       Username is: {{ appState.username }}
     </p>
     <p *ngIf="appState.username && success" class="abs-center">
@@ -79,10 +107,14 @@
         </div>
       </form>
     </div> -->
-  </div>
 
   <footer-component></footer-component>
 </ion-content>
-<a href="https://github.com/ScottMBerger/Blockchain-Ionic-Unity-Game">
-  <img id="github" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub" />
-</a>
+
+<div class="fork-me-baby bottom-left fork-me-baby--sticky">
+  <a title="Fork me on GitHub" target="_blank" href="https://github.com/ScottMBerger/Blockchain-Ionic-Unity-Game"><svg
+      aria-hidden="true" class="github-octicon-mark" height="32" version="1.1" viewBox="0 0 16 16" width="32">
+      <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+  </a>
+</div>

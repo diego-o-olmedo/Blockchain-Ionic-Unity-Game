@@ -82,7 +82,6 @@ export class ShipCardComponent {
     } else {
       data = this.getColors(data);
     }
-    console.log('before inner')
     this.wrapper.nativeElement.innerHTML = data;
     this.svgNative = this.wrapper.nativeElement.children[0];
 

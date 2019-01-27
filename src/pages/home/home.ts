@@ -1,5 +1,5 @@
-import { Component } from "@angular/core"
-import { NavController } from "ionic-angular"
+import { Component, HostListener, ViewChild, ElementRef, NgZone } from "@angular/core"
+import { NavController, Content } from "ionic-angular"
 import { AppState } from "../../app/app.service"
 declare let io: any
 
@@ -36,7 +36,11 @@ export class HomePage {
     secondaryWeapon: "Corkscrew Missile",
     size: "Small"
   }]
-  constructor(public navCtrl: NavController, public appState: AppState) {
+  scrollTop = window.scrollY == 0;
+  @ViewChild(Content) content: Content;
+  @ViewChild('shipVideo', { read: ElementRef }) shipVideo: ElementRef;
+
+  constructor(public navCtrl: NavController, public appState: AppState, private zone: NgZone) {
     // if (this.appState.account) {
     //   io.socket.get("/api/user/" + this.appState.account, res => {
     //     if (typeof res == "string") {
@@ -52,7 +56,22 @@ export class HomePage {
     }, 2)
   }
 
-  ionViewDidLoad() { }
+  ionViewDidLoad() {
+    this.content.ionScroll.subscribe(($event) => { this.scrollTop = $event.scrollTop === 0 });
+    const video: HTMLVideoElement = this.shipVideo.nativeElement;
+
+    video.muted = true;
+    video.play().catch((err) => {
+      alert('video error ' + err);
+    });
+  }
+
+  scrollTo(element) {
+    document.querySelector(element).scrollIntoView({
+      block: "nearest", inline: "start",
+      behavior: 'smooth'
+    });
+  }
 
   register() {
     console.log("clicked register", this.appState.account)
@@ -78,5 +97,19 @@ export class HomePage {
         }
       )
     }
+  }
+
+  navigateTo(e, route) {
+    e.preventDefault();
+    this.zone.run(() => {
+      this.appState.activePage = 'auctions'
+      this.navCtrl.setRoot(route);
+    })
+  }
+
+  @HostListener('scroll', ['$event'])
+  onElementScroll(e) {
+    console.log('scrolly is ', window.scrollY)
+    this.scrollTop = window.scrollY == 0;
   }
 }

@@ -1,4 +1,8 @@
 header-component {
+  .logo {
+    color: var(--accent);
+    font-size: 20px;
+  }
   color: var(--text);
   .toolbar-background {
     background-color: var(--background);
@@ -34,5 +38,8 @@ header-component {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis !important;
+  }
+  p {
+    margin: 0;
   }
 }

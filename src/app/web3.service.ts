@@ -226,8 +226,10 @@ export class Web3Service {
   _state = {}
 
   constructor(public events: Events, private toastCtrl: ToastController) {
-    let KittContract = this.web3.eth.contract(AuctionAbi)
-    this.AuctionContract = KittContract.at(AuctionAddress)
+    if (this.web3) {
+      let KittContract = this.web3.eth.contract(AuctionAbi)
+      this.AuctionContract = KittContract.at(AuctionAddress)
+    }
   }
 
   purchase(id) {
