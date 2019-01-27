@@ -422,7 +422,7 @@ module.exports = {
       rgb2[i] = Math.floor((r.gene[j++] + r.gene[j++]) * 2.5);
     }
     let modelPoint = r.gene.charAt(r.gene.length - 1);
-    let model = Math.floor(modelPoint / 1.81);
+    let model = Math.floor(modelPoint / 1.60950001);
     let weapon1List = [
       "Bolt Basic",
       "Bolt Poison",
@@ -442,7 +442,7 @@ module.exports = {
       "Basic Mine",
       "Schrodinger's Mine",
       "Black Hole Missile",
-      "Corksrew Missile",
+      "Corkscrew Missile",
       "Heavy Water Missile",
       "Remote Detonate Missile",
       "Laser Sun Burst",

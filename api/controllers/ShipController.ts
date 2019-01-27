@@ -3,20 +3,20 @@ declare let Ship: any;
 const axios = require("axios");
 
 function getUrl(url) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     axios
       .get(url)
-      .then(function(response) {
+      .then(function (response) {
         resolve(response.data);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         reject(error);
       });
   });
 }
 
 module.exports = {
-  gameship: function(req, res) {
+  gameship: function (req, res) {
     let id = req.query.id;
     if (id && id.length > 0) {
       Ship.get(id, "").then(stats => {
@@ -27,7 +27,7 @@ module.exports = {
       res.json([]);
     }
   },
-  ship: function(req, res) {
+  ship: function (req, res) {
     let id = req.query.id;
     if (id && id.length > 0) {
       getUrl("http://api.cryptokitties.co/kitties/" + id).then(
@@ -45,7 +45,7 @@ module.exports = {
       res.json([]);
     }
   },
-  shipsRandom: function(req, res) {
+  shipsRandom: function (req, res) {
     sails.log(req.query);
     let offset = req.query.offset || Math.floor(Math.random() * 10000);
     // let address = req.query.address;
@@ -83,7 +83,7 @@ module.exports = {
       }
     });
   },
-  ships: function(req, res) {
+  ships: function (req, res) {
     sails.log(req.query);
     let address = req.query.address;
     sails.log.debug(address);
@@ -122,12 +122,12 @@ module.exports = {
     } else {
       let fn = id => {
         return new Promise((resolve, reject) => {
-          Ship.get(id, "Placeholder Ship").then(r => {
+          Ship.get(id, "Demo Ship").then(r => {
             resolve(Ship.stats(r));
           });
         });
       };
-      Promise.all([1, 5475, 5476].map(fn)).then(data => {
+      Promise.all([5475, 5789].map(fn)).then(data => {
         res.json(data);
       });
     }
@@ -165,8 +165,8 @@ function getDefault() {
       size: "Large",
       primaryColor: [11, 215, 55],
       secondaryColor: [128, 55, 111],
-      primaryWeapon: "Shotgun Blast",
-      secondaryWeapon: "Homing Missile"
+      primaryWeapon: "Bolt Lightning",
+      secondaryWeapon: "Remote Detonate Missile"
     },
     {
       id: 522222231311,
