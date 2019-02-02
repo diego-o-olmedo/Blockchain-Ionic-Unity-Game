@@ -127,7 +127,7 @@ module.exports = {
           });
         });
       };
-      Promise.all([5475, 5789].map(fn)).then(data => {
+      Promise.all([5777, 5789].map(fn)).then(data => {
         res.json(data);
       });
     }

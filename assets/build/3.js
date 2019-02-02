@@ -1,1 +1,161 @@
-webpackJsonp([3],{248:function(l,n,u){"use strict";function t(l){return c._21(0,[(l()(),c.Z(0,0,null,null,2,"ion-spinner",[["class","abs-center"]],[[2,"spinner-paused",null]],null,null,k.b,k.a)),c.Y(1,114688,null,0,w.a,[x.a,c.j,c.z],null,null),(l()(),c._19(-1,null,["\n      "]))],function(l,n){l(n,1,0)},function(l,n){l(n,0,0,c._13(n,1)._paused)})}function a(l){return c._21(0,[(l()(),c.Z(0,0,null,null,9,"div",[],null,null,null,null,null)),(l()(),c._19(-1,null,["\n            "])),(l()(),c.Z(2,0,null,null,2,"button",[["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!=(l.component.sell.open=!0)&&t}return t},z.b,z.a)),c.Y(3,1097728,null,0,P.a,[[8,""],x.a,c.j,c.z],{round:[0,"round"]},null),(l()(),c._19(-1,0,["Sell"])),(l()(),c._19(-1,null,["\n            "])),(l()(),c.Z(6,0,null,null,2,"button",[["ion-button",""],["round",""]],null,null,null,z.b,z.a)),c.Y(7,1097728,null,0,P.a,[[8,""],x.a,c.j,c.z],{round:[0,"round"]},null),(l()(),c._19(-1,0,["Combine Blueprints"])),(l()(),c._19(-1,null,["\n          "]))],function(l,n){l(n,3,0,"");l(n,7,0,"")},null)}function e(l){return c._21(0,[(l()(),c.Z(0,0,null,null,5,"div",[],null,null,null,null,null)),(l()(),c._19(-1,null,["\n            "])),(l()(),c.Z(2,0,null,null,2,"button",[["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.purchase()&&t}return t},z.b,z.a)),c.Y(3,1097728,null,0,P.a,[[8,""],x.a,c.j,c.z],{round:[0,"round"]},null),(l()(),c._19(-1,0,["Buy Now"])),(l()(),c._19(-1,null,["\n          "]))],function(l,n){l(n,3,0,"")},null)}function i(l){return c._21(0,[(l()(),c.Z(0,0,null,null,14,null,null,null,null,null,null,null)),(l()(),c._19(-1,null,["\n        "])),(l()(),c.Z(2,0,null,null,2,"ship-card",[["class","col"],["col-12",""],["ion-col",""]],null,null,null,U.b,U.a)),c.Y(3,114688,null,0,E.a,[d.a,F.a,_.d],{ship:[0,"ship"]},null),c.Y(4,16384,null,0,M.a,[],null,null),(l()(),c._19(-1,null,["\n        "])),(l()(),c.Z(6,0,null,null,7,"div",[["class","actions"]],null,null,null,null,null)),(l()(),c._19(-1,null,["\n          "])),(l()(),c.U(16777216,null,null,1,null,a)),c.Y(9,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n          "])),(l()(),c.U(16777216,null,null,1,null,e)),c.Y(12,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n        "])),(l()(),c._19(-1,null,["\n      "]))],function(l,n){var u=n.component;l(n,3,0,u.ship);l(n,9,0,u.amOwner);l(n,12,0,!u.amOwner)},null)}function o(l){return c._21(0,[(l()(),c.Z(0,0,null,null,70,"form",[["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var t=!0,a=l.component;if("submit"===n){t=!1!==c._13(l,2).onSubmit(u)&&t}if("reset"===n){t=!1!==c._13(l,2).onReset()&&t}if("ngSubmit"===n){t=!1!==a.createSale()&&t}return t},null,null)),c.Y(1,16384,null,0,T.p,[],null,null),c.Y(2,4210688,null,0,T.l,[[8,null],[8,null]],null,{ngSubmit:"ngSubmit"}),c._16(2048,null,T.b,null,[T.l]),c.Y(4,16384,null,0,T.k,[T.b],null,null),(l()(),c._19(-1,null,["\n        "])),(l()(),c.Z(6,0,null,null,56,"ion-list",[],null,null,null,null,null)),c.Y(7,16384,null,0,D.a,[x.a,c.j,c.z,V.a,B.l,q.a],null,null),(l()(),c._19(-1,null,["\n          "])),(l()(),c.Z(9,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),c.Y(10,1097728,null,3,R.a,[A.a,x.a,c.j,c.z,[2,N.a]],null,null),c._17(335544320,1,{contentLabel:0}),c._17(603979776,2,{_buttons:1}),c._17(603979776,3,{_icons:1}),c.Y(14,16384,null,0,K.a,[],null,null),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(16,0,null,1,2,"ion-label",[["fixed",""]],null,null,null,null,null)),c.Y(17,16384,[[1,4]],0,X.a,[x.a,c.j,c.z,[8,null],[8,null],[8,""],[8,null]],null,null),(l()(),c._19(-1,null,["Start Price"])),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(20,0,null,3,4,"ion-input",[["name","priceStart"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var t=!0;if("ngModelChange"===n){t=!1!==(l.component.sell.priceStart=u)&&t}return t},J.b,J.a)),c.Y(21,671744,null,0,T.m,[[2,T.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),c._16(2048,null,T.i,null,[T.m]),c.Y(23,16384,null,0,T.j,[T.i],null,null),c.Y(24,5423104,null,0,W.a,[x.a,V.a,A.a,G.a,c.j,c.z,[2,H.a],[2,R.a],[2,T.i],q.a],{type:[0,"type"]},null),(l()(),c._19(-1,2,[" Eth\n          "])),(l()(),c._19(-1,null,["\n\n          "])),(l()(),c.Z(27,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),c.Y(28,1097728,null,3,R.a,[A.a,x.a,c.j,c.z,[2,N.a]],null,null),c._17(335544320,4,{contentLabel:0}),c._17(603979776,5,{_buttons:1}),c._17(603979776,6,{_icons:1}),c.Y(32,16384,null,0,K.a,[],null,null),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(34,0,null,1,2,"ion-label",[["fixed",""]],null,null,null,null,null)),c.Y(35,16384,[[4,4]],0,X.a,[x.a,c.j,c.z,[8,null],[8,null],[8,""],[8,null]],null,null),(l()(),c._19(-1,null,["End Price"])),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(38,0,null,3,4,"ion-input",[["name","priceEnd"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var t=!0;if("ngModelChange"===n){t=!1!==(l.component.sell.priceEnd=u)&&t}return t},J.b,J.a)),c.Y(39,671744,null,0,T.m,[[2,T.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),c._16(2048,null,T.i,null,[T.m]),c.Y(41,16384,null,0,T.j,[T.i],null,null),c.Y(42,5423104,null,0,W.a,[x.a,V.a,A.a,G.a,c.j,c.z,[2,H.a],[2,R.a],[2,T.i],q.a],{type:[0,"type"]},null),(l()(),c._19(-1,2,[" Eth\n          "])),(l()(),c._19(-1,null,["\n\n          "])),(l()(),c.Z(45,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,L.b,L.a)),c.Y(46,1097728,null,3,R.a,[A.a,x.a,c.j,c.z,[2,N.a]],null,null),c._17(335544320,7,{contentLabel:0}),c._17(603979776,8,{_buttons:1}),c._17(603979776,9,{_icons:1}),c.Y(50,16384,null,0,K.a,[],null,null),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(52,0,null,1,2,"ion-label",[["fixed",""]],null,null,null,null,null)),c.Y(53,16384,[[7,4]],0,X.a,[x.a,c.j,c.z,[8,null],[8,null],[8,""],[8,null]],null,null),(l()(),c._19(-1,null,["Duration"])),(l()(),c._19(-1,2,["\n            "])),(l()(),c.Z(56,0,null,3,4,"ion-input",[["name","duration"],["type","number"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var t=!0;if("ngModelChange"===n){t=!1!==(l.component.sell.duration=u)&&t}return t},J.b,J.a)),c.Y(57,671744,null,0,T.m,[[2,T.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),c._16(2048,null,T.i,null,[T.m]),c.Y(59,16384,null,0,T.j,[T.i],null,null),c.Y(60,5423104,null,0,W.a,[x.a,V.a,A.a,G.a,c.j,c.z,[2,H.a],[2,R.a],[2,T.i],q.a],{type:[0,"type"]},null),(l()(),c._19(-1,2,[" Days\n          "])),(l()(),c._19(-1,null,["\n        "])),(l()(),c._19(-1,null,["\n\n        "])),(l()(),c.Z(64,0,null,null,5,"div",[["padding",""]],null,null,null,null,null)),(l()(),c._19(-1,null,["\n          "])),(l()(),c.Z(66,0,null,null,2,"button",[["block",""],["color","primary"],["ion-button",""],["type","submit"]],null,null,null,z.b,z.a)),c.Y(67,1097728,null,0,P.a,[[8,""],x.a,c.j,c.z],{color:[0,"color"],block:[1,"block"]},null),(l()(),c._19(-1,0,["Submit"])),(l()(),c._19(-1,null,["\n        "])),(l()(),c._19(-1,null,["\n      "]))],function(l,n){var u=n.component;l(n,21,0,"priceStart",u.sell.priceStart);l(n,24,0,"number");l(n,39,0,"priceEnd",u.sell.priceEnd);l(n,42,0,"number");l(n,57,0,"duration",u.sell.duration);l(n,60,0,"number");l(n,67,0,"primary","")},function(l,n){l(n,0,0,c._13(n,4).ngClassUntouched,c._13(n,4).ngClassTouched,c._13(n,4).ngClassPristine,c._13(n,4).ngClassDirty,c._13(n,4).ngClassValid,c._13(n,4).ngClassInvalid,c._13(n,4).ngClassPending);l(n,20,0,c._13(n,23).ngClassUntouched,c._13(n,23).ngClassTouched,c._13(n,23).ngClassPristine,c._13(n,23).ngClassDirty,c._13(n,23).ngClassValid,c._13(n,23).ngClassInvalid,c._13(n,23).ngClassPending);l(n,38,0,c._13(n,41).ngClassUntouched,c._13(n,41).ngClassTouched,c._13(n,41).ngClassPristine,c._13(n,41).ngClassDirty,c._13(n,41).ngClassValid,c._13(n,41).ngClassInvalid,c._13(n,41).ngClassPending);l(n,56,0,c._13(n,59).ngClassUntouched,c._13(n,59).ngClassTouched,c._13(n,59).ngClassPristine,c._13(n,59).ngClassDirty,c._13(n,59).ngClassValid,c._13(n,59).ngClassInvalid,c._13(n,59).ngClassPending)})}function r(l){return c._21(0,[(l()(),c.Z(0,0,null,null,4,"div",[],null,null,null,null,null)),(l()(),c._19(-1,null,["\n      "])),(l()(),c.U(16777216,null,null,1,null,o)),c.Y(3,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n    "]))],function(l,n){l(n,3,0,n.component.appState.account)},null)}function s(l){return c._21(0,[(l()(),c.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),c.Y(1,16384,null,0,Q.a,[x.a,c.j,c.z,[2,$.a]],null,null),(l()(),c._19(-1,null,["\n  "])),(l()(),c.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,ll.b,ll.a)),c.Y(4,49152,null,0,nl.a,[G.a,[2,$.a],[2,F.a],x.a,c.j,c.z],null,null),(l()(),c._19(-1,3,["\n  "])),(l()(),c._19(-1,null,["\n"])),(l()(),c._19(-1,null,["\n"])),(l()(),c.Z(8,0,null,null,1,"header-component",[],null,null,null,ul.b,ul.a)),c.Y(9,114688,null,0,tl.a,[F.a,d.a,c.u],null,null),(l()(),c._19(-1,null,["\n\n"])),(l()(),c.Z(11,0,null,null,23,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,al.b,al.a)),c.Y(12,4374528,null,0,H.a,[x.a,V.a,q.a,c.j,c.z,G.a,el.a,c.u,[2,$.a],[2,F.a]],null,null),(l()(),c._19(-1,1,["\n  "])),(l()(),c.Z(14,0,null,1,15,"ion-grid",[["class","contentRoom grid"]],null,null,null,null,null)),c.Y(15,16384,null,0,il.a,[],null,null),(l()(),c._19(-1,null,["\n    "])),(l()(),c.Z(17,0,null,null,8,"ion-row",[["class","row"]],null,null,null,null,null)),c.Y(18,16384,null,0,ol.a,[],null,null),(l()(),c._19(-1,null,["\n      "])),(l()(),c.U(16777216,null,null,1,null,t)),c.Y(21,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n      "])),(l()(),c.U(16777216,null,null,1,null,i)),c.Y(24,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n    "])),(l()(),c._19(-1,null,["\n    "])),(l()(),c.U(16777216,null,null,1,null,r)),c.Y(28,16384,null,0,O.i,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._19(-1,null,["\n  "])),(l()(),c._19(-1,1,["\n  "])),(l()(),c.Z(31,0,null,1,2,"footer-component",[],null,null,null,rl.b,rl.a)),c.Y(32,49152,null,0,sl.a,[],null,null),(l()(),c._19(-1,null,["\n  "])),(l()(),c._19(-1,1,["\n\n"]))],function(l,n){var u=n.component;l(n,9,0);l(n,21,0,!u.ship);l(n,24,0,u.ship);l(n,28,0,u.sell.open)},function(l,n){l(n,3,0,c._13(n,4)._hidden,c._13(n,4)._sbPadding);l(n,11,0,c._13(n,12).statusbarPadding,c._13(n,12)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var c=u(0),d=(u(5),u(23),u(21)),p=u(127),_=u(44),g=(u(205),function(){function l(l,n,u,t,a,e){var i=this;this.navCtrl=l,this.navParams=n,this.http=u,this.appState=t,this.web3Service=a,this.alert=e,this.id=this.navParams.data.id,this.sell={open:!1,priceStart:null,priceEnd:null,duration:null};var o="/api/v1/ship?id="+encodeURI(this.id);io.socket.get(o,function(l){console.log(l),"string"==typeof l||(i.ship=l,i.appState.ships&&(i.amOwner=i.appState.ships.some(function(l){return l.id===i.id})))}),console.log(this.appState)}return l.prototype.ngOnInit=function(){},l.prototype.ionViewDidLoad=function(){},l.prototype.createSale=function(){this.id&&this.sell.priceStart&&this.sell.priceEnd&&this.sell.duration?this.web3Service.sell(this.id,this.sell.priceStart,this.sell.priceEnd,this.sell.duration):console.log("createSale failed, missing data")},l.prototype.purchase=function(){var l;if(this.appState.account||(l="No Ethereum account found. "+this.appState.accountStatus),!l)try{this.web3Service.purchase(this.id)}catch(n){l=n}if(l){this.alert.create({title:"Error",message:l,buttons:[{text:"Ok",handler:function(){console.log("Buy clicked")}}]}).present()}},l}()),f=u(120),b=u(121),m=function(){return function(){}}(),h=u(191),v=u(192),Y=u(193),y=u(194),I=u(195),C=u(196),Z=u(197),S=u(198),j=u(199),k=u(203),w=u(57),x=u(1),z=u(29),P=u(16),U=u(207),E=u(80),F=u(13),M=u(45),O=u(10),T=u(18),D=u(58),V=u(3),B=u(7),q=u(9),L=u(206),R=u(19),A=u(15),N=u(47),K=u(79),X=u(48),J=u(249),W=u(123),G=u(8),H=u(22),Q=u(77),$=u(4),ll=u(200),nl=u(24),ul=u(201),tl=u(76),al=u(202),el=u(28),il=u(56),ol=u(46),rl=u(204),sl=u(78),cl=u(11),dl=u(82),pl=c.X({encapsulation:2,styles:[],data:{}}),_l=c.V("page-ship",g,function(l){return c._21(0,[(l()(),c.Z(0,0,null,null,1,"page-ship",[],null,null,null,s,pl)),c.Y(1,114688,null,0,g,[F.a,cl.a,_.d,d.a,p.a,dl.a],null,null)],function(l,n){l(n,1,0)},null)},{},{},[]),gl=u(122),fl=u(40);u.d(n,"ShipPageModuleNgFactory",function(){return bl});var bl=c.W(m,[],function(l){return c._10([c._11(512,c.i,c.S,[[8,[h.a,v.a,Y.a,y.a,I.a,C.a,Z.a,S.a,j.a,_l]],[3,c.i],c.s]),c._11(4608,O.k,O.j,[c.r,[2,O.s]]),c._11(4608,T.q,T.q,[]),c._11(4608,T.d,T.d,[]),c._11(512,O.b,O.b,[]),c._11(512,T.o,T.o,[]),c._11(512,T.g,T.g,[]),c._11(512,T.n,T.n,[]),c._11(512,gl.a,gl.a,[]),c._11(512,b.a,b.a,[]),c._11(512,f.a,f.a,[]),c._11(512,gl.b,gl.b,[]),c._11(512,m,m,[]),c._11(256,fl.a,g,[])])})},249:function(l,n,u){"use strict";function t(l){return r._21(0,[(l()(),r.Z(0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,a=l.component;if("input"===n){t=!1!==a.onInput(u)&&t}if("blur"===n){t=!1!==a.onBlur(u)&&t}if("focus"===n){t=!1!==a.onFocus(u)&&t}if("keydown"===n){t=!1!==a.onKeydown(u)&&t}return t},null,null)),r.Y(1,278528,null,0,s.g,[r.p,r.q,r.j,r.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function a(l){return r._21(0,[(l()(),r.Z(0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,a=l.component;if("input"===n){t=!1!==a.onInput(u)&&t}if("blur"===n){t=!1!==a.onBlur(u)&&t}if("focus"===n){t=!1!==a.onFocus(u)&&t}if("keydown"===n){t=!1!==a.onKeydown(u)&&t}return t},null,null)),r.Y(1,278528,null,0,s.g,[r.p,r.q,r.j,r.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function e(l){return r._21(0,[(l()(),r.Z(0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var t=!0,a=l.component;if("click"===n){t=!1!==a.clearTextInput(u)&&t}if("mousedown"===n){t=!1!==a.clearTextInput(u)&&t}return t},c.b,c.a)),r.Y(1,1097728,null,0,d.a,[[8,""],p.a,r.j,r.z],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function i(l){return r._21(0,[(l()(),r.Z(0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var t=!0,a=l.component;if("touchstart"===n){t=!1!==a._pointerStart(u)&&t}if("touchend"===n){t=!1!==a._pointerEnd(u)&&t}if("mousedown"===n){t=!1!==a._pointerStart(u)&&t}if("mouseup"===n){t=!1!==a._pointerEnd(u)&&t}return t},null,null))],null,null)}function o(l){return r._21(2,[r._17(671088640,1,{_native:0}),(l()(),r.U(16777216,null,null,1,null,t)),r.Y(2,16384,null,0,s.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.U(16777216,null,null,1,null,a)),r.Y(4,16384,null,0,s.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.U(16777216,null,null,1,null,e)),r.Y(6,16384,null,0,s.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(l()(),r.U(16777216,null,null,1,null,i)),r.Y(8,16384,null,0,s.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}u.d(n,"a",function(){return _}),n.b=o;var r=u(0),s=u(10),c=u(29),d=u(16),p=u(1),_=(u(3),u(15),u(9),r.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([3],{
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShipPageModule", function() { return ShipPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ship__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__ = __webpack_require__(193);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var ShipPageModule = (function () {
+    function ShipPageModule() {
+    }
+    ShipPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__ship__["a" /* ShipPage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ship__["a" /* ShipPage */])
+            ]
+        })
+    ], ShipPageModule);
+    return ShipPageModule;
+}());
+
+//# sourceMappingURL=ship.module.js.map
+
+/***/ }),
+
+/***/ 293:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShipPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_web3_service__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var ShipPage = (function () {
+    function ShipPage(navCtrl, navParams, http, appState, web3Service, alert) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.appState = appState;
+        this.web3Service = web3Service;
+        this.alert = alert;
+        // loading = true
+        this.id = this.navParams.data.id;
+        this.sell = { open: false, priceStart: null, priceEnd: null, duration: null };
+        var address = "/api/v1/ship?id=" + encodeURI(this.id);
+        io.socket.get(address, function (data) {
+            console.log(data);
+            if (typeof data == "string") {
+            }
+            else {
+                _this.ship = data;
+                if (_this.appState.ships) {
+                    _this.amOwner = _this.appState.ships.some(function (item) {
+                        return item.id === _this.id;
+                    });
+                }
+            }
+        });
+        console.log(this.appState);
+    }
+    ShipPage.prototype.ngOnInit = function () { };
+    ShipPage.prototype.ionViewDidLoad = function () { };
+    ShipPage.prototype.createSale = function () {
+        if (this.id &&
+            this.sell.priceStart &&
+            this.sell.priceEnd &&
+            this.sell.duration) {
+            this.web3Service.sell(this.id, this.sell.priceStart, this.sell.priceEnd, this.sell.duration);
+        }
+        else {
+            console.log("createSale failed, missing data");
+        }
+    };
+    ShipPage.prototype.purchase = function () {
+        var msg;
+        if (!this.appState.account) {
+            msg = 'No Ethereum account found. ' + this.appState.accountStatus;
+        }
+        if (!msg) {
+            try {
+                this.web3Service.purchase(this.id);
+            }
+            catch (e) {
+                msg = e;
+            }
+        }
+        if (msg) {
+            var alerting = this.alert.create({
+                title: 'Error',
+                message: msg,
+                buttons: [
+                    {
+                        text: 'Ok',
+                        handler: function () {
+                            console.log('Buy clicked');
+                        }
+                    }
+                ]
+            });
+            alerting.present();
+        }
+    };
+    ShipPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-ship",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row>\n      <ion-spinner *ngIf="!ship" class="abs-center">\n      </ion-spinner>\n      <ng-container *ngIf="ship">\n        <ship-card ion-col col-12 [ship]="ship"></ship-card>\n        <div class="actions">\n          <div *ngIf="amOwner">\n            <button ion-button round (click)="sell.open = true">Sell</button>\n            <button ion-button round>Combine Blueprints</button>\n          </div>\n          <div *ngIf="!amOwner">\n            <button ion-button round (click)="purchase()">Buy Now</button>\n          </div>\n        </div>\n      </ng-container>\n    </ion-row>\n    <div *ngIf="sell.open">\n      <form *ngIf="appState.account" (ngSubmit)="createSale()">\n        <ion-list>\n          <ion-item>\n            <ion-label fixed>Start Price</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.priceStart" name="priceStart"></ion-input> Eth\n          </ion-item>\n\n          <ion-item>\n            <ion-label fixed>End Price</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.priceEnd" name="priceEnd"></ion-input> Eth\n          </ion-item>\n\n          <ion-item>\n            <ion-label fixed>Duration</ion-label>\n            <ion-input type="number" [(ngModel)]="sell.duration" name="duration"></ion-input> Days\n          </ion-item>\n        </ion-list>\n\n        <div padding>\n          <button ion-button color="primary" block type="submit">Submit</button>\n        </div>\n      </form>\n    </div>\n  </ion-grid>\n  <footer-component>\n  </footer-component>\n\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\ship\ship.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_3__app_web3_service__["a" /* Web3Service */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], ShipPage);
+    return ShipPage;
+}());
+
+//# sourceMappingURL=ship.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=3.js.map

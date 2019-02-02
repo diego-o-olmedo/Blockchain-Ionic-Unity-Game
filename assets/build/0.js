@@ -1,1 +1,732 @@
-webpackJsonp([0],{243:function(n,l,e){"use strict";function t(n){return s._21(0,[s._17(402653184,1,{_searchbarInput:0}),s._17(402653184,2,{_searchbarIcon:0}),s._17(402653184,3,{_cancelButton:0}),(n()(),s.Z(3,0,null,null,8,"div",[["class","searchbar-input-container"]],null,null,null,null,null)),(n()(),s.Z(4,0,null,null,3,"button",[["class","searchbar-md-cancel"],["clear",""],["color","dark"],["ion-button",""],["mode","md"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.cancelSearchbar(e)&&t}if("mousedown"===l){t=!1!==u.cancelSearchbar(e)&&t}return t},$.b,$.a)),s.Y(5,1097728,null,0,E.a,[[8,""],I.a,s.j,s.z],{color:[0,"color"],mode:[1,"mode"],clear:[2,"clear"]},null),(n()(),s.Z(6,0,null,0,1,"ion-icon",[["name","md-arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),s.Y(7,147456,null,0,X.a,[I.a,s.j,s.z],{name:[0,"name"]},null),(n()(),s.Z(8,0,[[2,0],["searchbarIcon",1]],null,0,"div",[["class","searchbar-search-icon"]],null,null,null,null,null)),(n()(),s.Z(9,0,[[1,0],["searchbarInput",1]],null,0,"input",[["class","searchbar-input"],["dir","auto"]],[[1,"placeholder",0],[1,"type",0],[1,"autocomplete",0],[1,"autocorrect",0],[1,"spellcheck",0]],[[null,"input"],[null,"blur"],[null,"focus"]],function(n,l,e){var t=!0,u=n.component;if("input"===l){t=!1!==u.inputChanged(e)&&t}if("blur"===l){t=!1!==u.inputBlurred()&&t}if("focus"===l){t=!1!==u.inputFocused()&&t}return t},null,null)),(n()(),s.Z(10,0,null,null,1,"button",[["class","searchbar-clear-icon"],["clear",""],["ion-button",""],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.clearInput(e)&&t}if("mousedown"===l){t=!1!==u.clearInput(e)&&t}return t},$.b,$.a)),s.Y(11,1097728,null,0,E.a,[[8,""],I.a,s.j,s.z],{mode:[0,"mode"],clear:[1,"clear"]},null),(n()(),s.Z(12,0,[[3,0]],null,2,"button",[["class","searchbar-ios-cancel"],["clear",""],["ion-button",""],["mode","ios"],["type","button"]],[[8,"tabIndex",0]],[[null,"click"],[null,"mousedown"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.cancelSearchbar(e)&&t}if("mousedown"===l){t=!1!==u.cancelSearchbar(e)&&t}return t},$.b,$.a)),s.Y(13,1097728,[["cancelButton",4]],0,E.a,[[8,""],I.a,s.j,s.z],{mode:[0,"mode"],clear:[1,"clear"]},null),(n()(),s._19(14,0,["",""]))],function(n,l){var e=l.component;n(l,5,0,"dark","md","");n(l,7,0,"md-arrow-back");n(l,11,0,e._mode,"");n(l,13,0,"ios","")},function(n,l){var e=l.component;n(l,6,0,s._13(l,7)._hidden);n(l,9,0,e.placeholder,e.type,e._autocomplete,e._autocorrect,e._spellcheck);n(l,12,0,e._isActive?1:-1);n(l,14,0,e.cancelButtonText)})}function u(n){return s._21(0,[(n()(),s.Z(0,0,null,null,2,"ion-spinner",[["class","abs-center"]],[[2,"spinner-paused",null]],null,null,w.b,w.a)),s.Y(1,114688,null,0,x.a,[I.a,s.j,s.z],null,null),(n()(),s._19(-1,null,["\n    "]))],function(n,l){n(l,1,0)},function(n,l){n(l,0,0,s._13(l,1)._paused)})}function i(n){return s._21(0,[(n()(),s.Z(0,0,null,null,18,"ion-item",[["class","selectionList item item-block"]],null,null,null,k.b,k.a)),s.Y(1,1097728,null,3,C.a,[T.a,I.a,s.j,s.z,[2,Y.a]],null,null),s._17(335544320,1,{contentLabel:0}),s._17(603979776,2,{_buttons:1}),s._17(603979776,3,{_icons:1}),s.Y(5,16384,null,0,Z.a,[],null,null),(n()(),s._19(-1,2,["\n        "])),(n()(),s.Z(7,0,null,0,4,"ion-thumbnail",[["item-start",""]],null,null,null,null,null)),s.Y(8,16384,null,0,A.a,[],null,null),(n()(),s._19(-1,null,["\n          "])),(n()(),s.Z(10,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(n()(),s._19(-1,null,["\n        "])),(n()(),s._19(-1,2,["\n        "])),(n()(),s.Z(13,0,null,2,1,"h2",[],null,null,null,null,null)),(n()(),s._19(14,null,["",""])),(n()(),s._19(-1,2,["\n        "])),(n()(),s.Z(16,0,null,2,1,"p",[],null,null,null,null,null)),(n()(),s._19(17,null,["",""])),(n()(),s._19(-1,2,["\n      "]))],null,function(n,l){n(l,10,0,l.context.$implicit.img);n(l,14,0,l.context.$implicit.id);n(l,17,0,l.context.$implicit.name)})}function a(n){return s._21(0,[(n()(),s.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),s.Y(1,16384,null,0,S.a,[I.a,s.j,s.z,[2,j.a]],null,null),(n()(),s._19(-1,null,["\n  "])),(n()(),s.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,z.b,z.a)),s.Y(4,49152,null,0,B.a,[M.a,[2,j.a],[2,V.a],I.a,s.j,s.z],null,null),(n()(),s._19(-1,3,["\n  "])),(n()(),s._19(-1,null,["\n"])),(n()(),s._19(-1,null,["\n"])),(n()(),s.Z(8,0,null,null,1,"header-component",[],null,null,null,N.b,N.a)),s.Y(9,114688,null,0,F.a,[V.a,D.a,s.u],null,null),(n()(),s._19(-1,null,["\n\n\n"])),(n()(),s.Z(11,0,null,null,27,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),s.Y(12,4374528,null,0,P.a,[I.a,R.a,H.a,s.j,s.z,M.a,O.a,s.u,[2,j.a],[2,V.a]],null,null),(n()(),s._19(-1,1,["\n  "])),(n()(),s.Z(14,0,null,1,20,"ion-grid",[["class","contentRoom grid"]],null,null,null,null,null)),s.Y(15,16384,null,0,q.a,[],null,null),(n()(),s._19(-1,null,["\n    "])),(n()(),s.U(16777216,null,null,1,null,u)),s.Y(18,16384,null,0,U.i,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(n()(),s._19(-1,null,["\n    "])),(n()(),s.Z(20,0,null,null,5,"ion-searchbar",[],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.searchTerm=e)&&t}return t},t,W)),s.Y(21,540672,null,0,o.f,[[8,null],[8,null],[8,null]],{form:[0,"form"],model:[1,"model"]},{update:"ngModelChange"}),s._16(2048,null,o.i,null,[o.f]),s.Y(23,16384,null,0,o.j,[o.i],null,null),s.Y(24,1294336,null,0,J.a,[I.a,R.a,s.j,s.z,[2,o.i]],null,null),(n()(),s._19(-1,null,["\n    "])),(n()(),s._19(-1,null,["\n    "])),(n()(),s.Z(27,0,null,null,6,"ion-list",[["reorder","true"]],[[2,"reorder-enabled",null],[2,"reorder-visible",null],[2,"reorder-side-start",null]],[[null,"ionItemReorder"]],function(n,l,e){var t=!0;if("ionItemReorder"===l){t=!1!==n.component.reorderItems(e)&&t}return t},null,null)),s.Y(28,147456,null,0,Y.a,[R.a,H.a,s.j,s.z,s.u,[2,P.a]],{reorder:[0,"reorder"]},{ionItemReorder:"ionItemReorder"}),s.Y(29,16384,null,0,G.a,[I.a,s.j,s.z,R.a,K.l,H.a],null,null),(n()(),s._19(-1,null,["\n      "])),(n()(),s.U(16777216,null,null,1,null,i)),s.Y(32,802816,null,0,U.h,[s.I,s.F,s.p],{ngForOf:[0,"ngForOf"]},null),(n()(),s._19(-1,null,["\n    "])),(n()(),s._19(-1,null,["\n  "])),(n()(),s._19(-1,1,["\n\n\n  "])),(n()(),s.Z(36,0,null,1,1,"footer-component",[],null,null,null,Q.b,Q.a)),s.Y(37,49152,null,0,nn.a,[],null,null),(n()(),s._19(-1,1,["\n"])),(n()(),s._19(-1,null,["\n"]))],function(n,l){var e=l.component;n(l,9,0);n(l,18,0,e.loading);n(l,21,0,e.searchControl,e.searchTerm),n(l,24,0);n(l,28,0,"true");n(l,32,0,e.items)},function(n,l){n(l,3,0,s._13(l,4)._hidden,s._13(l,4)._sbPadding);n(l,11,0,s._13(l,12).statusbarPadding,s._13(l,12)._hasRefresher);n(l,20,1,[s._13(l,23).ngClassUntouched,s._13(l,23).ngClassTouched,s._13(l,23).ngClassPristine,s._13(l,23).ngClassDirty,s._13(l,23).ngClassValid,s._13(l,23).ngClassInvalid,s._13(l,23).ngClassPending,s._13(l,24)._animated,s._13(l,24)._value,s._13(l,24)._isActive,s._13(l,24)._showCancelButton,s._13(l,24)._shouldAlignLeft,s._13(l,24)._isFocus]);n(l,27,0,s._13(l,28)._enableReorder,s._13(l,28)._visibleReorder,s._13(l,28)._isStart)})}Object.defineProperty(l,"__esModule",{value:!0});var s=e(0),o=(e(5),e(23),e(18)),r=(e(253),function(){function n(n,l){var e=this;this.navCtrl=n,this.navParams=l,this.loading=!1,this.searchTerm="",this.data=[{id:"55",name:"Name",text:"Text",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"657237",name:"Name2",text:"Text2",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"11",name:"Name3",text:"Text3",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"123",name:"Name",text:"Text",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"532324",name:"Name2",text:"Text2",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"523442",name:"Name",text:"Text",img:"/assets/imgs/weapons/Black Hole Missile.png"},{id:"11",name:"Name2",text:"Text2",img:"/assets/imgs/weapons/Black Hole Missile.png"}],this.searchControl=new o.e,this.setFilteredItems(),this.searchControl.valueChanges.debounceTime(700).subscribe(function(n){e.setFilteredItems()})}return n.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad CombinePage")},n.prototype.filterItems=function(n){var l=this.data.filter(function(l){return l.id.toLowerCase().indexOf(n.toLowerCase())>-1}),e=this.data.filter(function(l){return l.name.toLowerCase().indexOf(n.toLowerCase())>-1});return l=l.concat(e),function(n,l){var e=new Set;return l.filter(function(l){var t=n(l),u=!e.has(t);return u&&e.add(t),u})}(function(n){return n.id},l)},n.prototype.setFilteredItems=function(){this.items=this.filterItems(this.searchTerm)},n.prototype.reorderItems=function(n){console.log(n)},n}()),c=e(120),d=function(){return function(){}}(),h=e(191),p=e(192),f=e(193),m=e(194),_=e(195),b=e(196),g=e(197),v=e(198),y=e(199),w=e(203),x=e(57),I=e(1),k=e(206),C=e(19),T=e(15),Y=e(47),Z=e(79),A=e(128),S=e(77),j=e(4),z=e(200),B=e(24),M=e(8),V=e(13),N=e(201),F=e(76),D=e(21),L=e(202),P=e(22),R=e(3),H=e(9),O=e(28),q=e(56),U=e(10),$=e(29),E=e(16),X=e(41),J=e(126),W=s.X({encapsulation:2,styles:[],data:{}}),G=e(58),K=e(7),Q=e(204),nn=e(78),ln=e(11),en=s.X({encapsulation:2,styles:[],data:{}}),tn=s.V("page-combine",r,function(n){return s._21(0,[(n()(),s.Z(0,0,null,null,1,"page-combine",[],null,null,null,a,en)),s.Y(1,49152,null,0,r,[V.a,ln.a],null,null)],null,null)},{},{},[]),un=e(122),an=e(40);e.d(l,"CombinePageModuleNgFactory",function(){return sn});var sn=s.W(d,[],function(n){return s._10([s._11(512,s.i,s.S,[[8,[h.a,p.a,f.a,m.a,_.a,b.a,g.a,v.a,y.a,tn]],[3,s.i],s.s]),s._11(4608,U.k,U.j,[s.r,[2,U.s]]),s._11(4608,o.q,o.q,[]),s._11(4608,o.d,o.d,[]),s._11(512,U.b,U.b,[]),s._11(512,o.o,o.o,[]),s._11(512,o.g,o.g,[]),s._11(512,o.n,o.n,[]),s._11(512,un.a,un.a,[]),s._11(512,c.a,c.a,[]),s._11(512,un.b,un.b,[]),s._11(512,d,d,[]),s._11(256,an.a,r,[])])})},252:function(n,l,e){"use strict";var t=e(255),u=e(257);l.async=new u.AsyncScheduler(t.AsyncAction)},253:function(n,l,e){"use strict";var t=e(20),u=e(254);t.Observable.prototype.debounceTime=u.debounceTime},254:function(n,l,e){"use strict";var t=e(252),u=e(259);l.debounceTime=function(n,l){return void 0===l&&(l=t.async),u.debounceTime(n,l)(this)}},255:function(n,l,e){"use strict";var t=e(5).__extends,u=e(42),i=e(256);l.AsyncAction=function(n){function l(l,e){n.call(this,l,e),this.scheduler=l,this.work=e,this.pending=!1}return t(l,n),l.prototype.schedule=function(n,l){if(void 0===l&&(l=0),this.closed)return this;this.state=n,this.pending=!0;var e=this.id,t=this.scheduler;return null!=e&&(this.id=this.recycleAsyncId(t,e,l)),this.delay=l,this.id=this.id||this.requestAsyncId(t,this.id,l),this},l.prototype.requestAsyncId=function(n,l,e){return void 0===e&&(e=0),u.root.setInterval(n.flush.bind(n,this),e)},l.prototype.recycleAsyncId=function(n,l,e){if(void 0===e&&(e=0),null!==e&&this.delay===e&&!1===this.pending)return l;u.root.clearInterval(l)},l.prototype.execute=function(n,l){if(this.closed)return new Error("executing a cancelled action");this.pending=!1;var e=this._execute(n,l);if(e)return e;!1===this.pending&&null!=this.id&&(this.id=this.recycleAsyncId(this.scheduler,this.id,null))},l.prototype._execute=function(n,l){var e=!1,t=void 0;try{this.work(n)}catch(n){e=!0,t=!!n&&n||new Error(n)}if(e)return this.unsubscribe(),t},l.prototype._unsubscribe=function(){var n=this.id,l=this.scheduler,e=l.actions,t=e.indexOf(this);this.work=null,this.state=null,this.pending=!1,this.scheduler=null,-1!==t&&e.splice(t,1),null!=n&&(this.id=this.recycleAsyncId(l,n,null)),this.delay=null},l}(i.Action)},256:function(n,l,e){"use strict";var t=e(5).__extends,u=e(59);l.Action=function(n){function l(l,e){n.call(this)}return t(l,n),l.prototype.schedule=function(n,l){return void 0===l&&(l=0),this},l}(u.Subscription)},257:function(n,l,e){"use strict";var t=e(5).__extends,u=e(258);l.AsyncScheduler=function(n){function l(){n.apply(this,arguments),this.actions=[],this.active=!1,this.scheduled=void 0}return t(l,n),l.prototype.flush=function(n){var l=this.actions;if(this.active)l.push(n);else{var e;this.active=!0;do{if(e=n.execute(n.state,n.delay))break}while(n=l.shift());if(this.active=!1,e){for(;n=l.shift();)n.unsubscribe();throw e}}},l}(u.Scheduler)},258:function(n,l,e){"use strict";l.Scheduler=function(){function n(l,e){void 0===e&&(e=n.now),this.SchedulerAction=l,this.now=e}return n.prototype.schedule=function(n,l,e){return void 0===l&&(l=0),new this.SchedulerAction(this,n).schedule(e,l)},n.now=Date.now?Date.now:function(){return+new Date},n}()},259:function(n,l,e){"use strict";function t(n){n.debouncedNext()}var u=e(5).__extends,i=e(37),a=e(252);l.debounceTime=function(n,l){return void 0===l&&(l=a.async),function(e){return e.lift(new s(n,l))}};var s=function(){function n(n,l){this.dueTime=n,this.scheduler=l}return n.prototype.call=function(n,l){return l.subscribe(new o(n,this.dueTime,this.scheduler))},n}(),o=function(n){function l(l,e,t){n.call(this,l),this.dueTime=e,this.scheduler=t,this.debouncedSubscription=null,this.lastValue=null,this.hasValue=!1}return u(l,n),l.prototype._next=function(n){this.clearDebounce(),this.lastValue=n,this.hasValue=!0,this.add(this.debouncedSubscription=this.scheduler.schedule(t,this.dueTime,this))},l.prototype._complete=function(){this.debouncedNext(),this.destination.complete()},l.prototype.debouncedNext=function(){this.clearDebounce(),this.hasValue&&(this.destination.next(this.lastValue),this.lastValue=null,this.hasValue=!1)},l.prototype.clearDebounce=function(){var n=this.debouncedSubscription;null!==n&&(this.remove(n),n.unsubscribe(),this.debouncedSubscription=null)},l}(i.Subscriber)}});
+webpackJsonp([0],{
+
+/***/ 270:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CombinePageModule", function() { return CombinePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__combine__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(192);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var CombinePageModule = (function () {
+    function CombinePageModule() {
+    }
+    CombinePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__combine__["a" /* CombinePage */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__combine__["a" /* CombinePage */])]
+        })
+    ], CombinePageModule);
+    return CombinePageModule;
+}());
+
+//# sourceMappingURL=combine.module.js.map
+
+/***/ }),
+
+/***/ 279:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var AsyncAction_1 = __webpack_require__(284);
+var AsyncScheduler_1 = __webpack_require__(286);
+/**
+ *
+ * Async Scheduler
+ *
+ * <span class="informal">Schedule task as if you used setTimeout(task, duration)</span>
+ *
+ * `async` scheduler schedules tasks asynchronously, by putting them on the JavaScript
+ * event loop queue. It is best used to delay tasks in time or to schedule tasks repeating
+ * in intervals.
+ *
+ * If you just want to "defer" task, that is to perform it right after currently
+ * executing synchronous code ends (commonly achieved by `setTimeout(deferredTask, 0)`),
+ * better choice will be the {@link asap} scheduler.
+ *
+ * @example <caption>Use async scheduler to delay task</caption>
+ * const task = () => console.log('it works!');
+ *
+ * Rx.Scheduler.async.schedule(task, 2000);
+ *
+ * // After 2 seconds logs:
+ * // "it works!"
+ *
+ *
+ * @example <caption>Use async scheduler to repeat task in intervals</caption>
+ * function task(state) {
+ *   console.log(state);
+ *   this.schedule(state + 1, 1000); // `this` references currently executing Action,
+ *                                   // which we reschedule with new state and delay
+ * }
+ *
+ * Rx.Scheduler.async.schedule(task, 3000, 0);
+ *
+ * // Logs:
+ * // 0 after 3s
+ * // 1 after 4s
+ * // 2 after 5s
+ * // 3 after 6s
+ *
+ * @static true
+ * @name async
+ * @owner Scheduler
+ */
+exports.async = new AsyncScheduler_1.AsyncScheduler(AsyncAction_1.AsyncAction);
+//# sourceMappingURL=async.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CombinePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the CombinePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CombinePage = (function () {
+    function CombinePage(navCtrl, navParams) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.loading = false;
+        this.searchTerm = "";
+        this.data = [
+            {
+                id: "55",
+                name: "Name",
+                text: "Text",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "657237",
+                name: "Name2",
+                text: "Text2",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "11",
+                name: "Name3",
+                text: "Text3",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "123",
+                name: "Name",
+                text: "Text",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "532324",
+                name: "Name2",
+                text: "Text2",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "523442",
+                name: "Name",
+                text: "Text",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            },
+            {
+                id: "11",
+                name: "Name2",
+                text: "Text2",
+                img: "/assets/imgs/weapons/Black Hole Missile.png"
+            }
+        ];
+        this.searchControl = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]();
+        this.setFilteredItems();
+        this.searchControl.valueChanges.debounceTime(700).subscribe(function (search) {
+            _this.setFilteredItems();
+        });
+    }
+    CombinePage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad CombinePage");
+    };
+    CombinePage.prototype.filterItems = function (searchTerm) {
+        var result = this.data.filter(function (item) {
+            return item.id.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+        });
+        var result2 = this.data.filter(function (item) {
+            return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+        });
+        result = result.concat(result2);
+        function removeDuplicatesBy(keyFn, array) {
+            var mySet = new Set();
+            return array.filter(function (x) {
+                var key = keyFn(x), isNew = !mySet.has(key);
+                if (isNew)
+                    mySet.add(key);
+                return isNew;
+            });
+        }
+        return removeDuplicatesBy(function (x) { return x.id; }, result);
+    };
+    CombinePage.prototype.setFilteredItems = function () {
+        this.items = this.filterItems(this.searchTerm);
+    };
+    CombinePage.prototype.reorderItems = function (e) {
+        console.log(e);
+    };
+    CombinePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-combine",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="loading" class="abs-center">\n    </ion-spinner>\n    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl">\n    </ion-searchbar>\n    <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">\n      <ion-item *ngFor="let ship of items" class="selectionList">\n        <ion-thumbnail item-start>\n          <img [src]="ship.img">\n        </ion-thumbnail>\n        <h2>{{ship.id}}</h2>\n        <p>{{ship.name}}</p>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n\n\n  <footer-component></footer-component>\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\combine\combine.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], CombinePage);
+    return CombinePage;
+}());
+
+//# sourceMappingURL=combine.js.map
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(11);
+var debounceTime_1 = __webpack_require__(283);
+Observable_1.Observable.prototype.debounceTime = debounceTime_1.debounceTime;
+//# sourceMappingURL=debounceTime.js.map
+
+/***/ }),
+
+/***/ 283:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var async_1 = __webpack_require__(279);
+var debounceTime_1 = __webpack_require__(288);
+/**
+ * Emits a value from the source Observable only after a particular time span
+ * has passed without another source emission.
+ *
+ * <span class="informal">It's like {@link delay}, but passes only the most
+ * recent value from each burst of emissions.</span>
+ *
+ * <img src="./img/debounceTime.png" width="100%">
+ *
+ * `debounceTime` delays values emitted by the source Observable, but drops
+ * previous pending delayed emissions if a new value arrives on the source
+ * Observable. This operator keeps track of the most recent value from the
+ * source Observable, and emits that only when `dueTime` enough time has passed
+ * without any other value appearing on the source Observable. If a new value
+ * appears before `dueTime` silence occurs, the previous value will be dropped
+ * and will not be emitted on the output Observable.
+ *
+ * This is a rate-limiting operator, because it is impossible for more than one
+ * value to be emitted in any time window of duration `dueTime`, but it is also
+ * a delay-like operator since output emissions do not occur at the same time as
+ * they did on the source Observable. Optionally takes a {@link IScheduler} for
+ * managing timers.
+ *
+ * @example <caption>Emit the most recent click after a burst of clicks</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.debounceTime(1000);
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link auditTime}
+ * @see {@link debounce}
+ * @see {@link delay}
+ * @see {@link sampleTime}
+ * @see {@link throttleTime}
+ *
+ * @param {number} dueTime The timeout duration in milliseconds (or the time
+ * unit determined internally by the optional `scheduler`) for the window of
+ * time required to wait for emission silence before emitting the most recent
+ * source value.
+ * @param {Scheduler} [scheduler=async] The {@link IScheduler} to use for
+ * managing the timers that handle the timeout for each value.
+ * @return {Observable} An Observable that delays the emissions of the source
+ * Observable by the specified `dueTime`, and may drop some values if they occur
+ * too frequently.
+ * @method debounceTime
+ * @owner Observable
+ */
+function debounceTime(dueTime, scheduler) {
+    if (scheduler === void 0) { scheduler = async_1.async; }
+    return debounceTime_1.debounceTime(dueTime, scheduler)(this);
+}
+exports.debounceTime = debounceTime;
+//# sourceMappingURL=debounceTime.js.map
+
+/***/ }),
+
+/***/ 284:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var root_1 = __webpack_require__(31);
+var Action_1 = __webpack_require__(285);
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var AsyncAction = (function (_super) {
+    __extends(AsyncAction, _super);
+    function AsyncAction(scheduler, work) {
+        _super.call(this, scheduler, work);
+        this.scheduler = scheduler;
+        this.work = work;
+        this.pending = false;
+    }
+    AsyncAction.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (this.closed) {
+            return this;
+        }
+        // Always replace the current state with the new state.
+        this.state = state;
+        // Set the pending flag indicating that this action has been scheduled, or
+        // has recursively rescheduled itself.
+        this.pending = true;
+        var id = this.id;
+        var scheduler = this.scheduler;
+        //
+        // Important implementation note:
+        //
+        // Actions only execute once by default, unless rescheduled from within the
+        // scheduled callback. This allows us to implement single and repeat
+        // actions via the same code path, without adding API surface area, as well
+        // as mimic traditional recursion but across asynchronous boundaries.
+        //
+        // However, JS runtimes and timers distinguish between intervals achieved by
+        // serial `setTimeout` calls vs. a single `setInterval` call. An interval of
+        // serial `setTimeout` calls can be individually delayed, which delays
+        // scheduling the next `setTimeout`, and so on. `setInterval` attempts to
+        // guarantee the interval callback will be invoked more precisely to the
+        // interval period, regardless of load.
+        //
+        // Therefore, we use `setInterval` to schedule single and repeat actions.
+        // If the action reschedules itself with the same delay, the interval is not
+        // canceled. If the action doesn't reschedule, or reschedules with a
+        // different delay, the interval will be canceled after scheduled callback
+        // execution.
+        //
+        if (id != null) {
+            this.id = this.recycleAsyncId(scheduler, id, delay);
+        }
+        this.delay = delay;
+        // If this action has already an async Id, don't request a new one.
+        this.id = this.id || this.requestAsyncId(scheduler, this.id, delay);
+        return this;
+    };
+    AsyncAction.prototype.requestAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        return root_1.root.setInterval(scheduler.flush.bind(scheduler, this), delay);
+    };
+    AsyncAction.prototype.recycleAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        // If this action is rescheduled with the same delay time, don't clear the interval id.
+        if (delay !== null && this.delay === delay && this.pending === false) {
+            return id;
+        }
+        // Otherwise, if the action's delay time is different from the current delay,
+        // or the action has been rescheduled before it's executed, clear the interval id
+        return root_1.root.clearInterval(id) && undefined || undefined;
+    };
+    /**
+     * Immediately executes this action and the `work` it contains.
+     * @return {any}
+     */
+    AsyncAction.prototype.execute = function (state, delay) {
+        if (this.closed) {
+            return new Error('executing a cancelled action');
+        }
+        this.pending = false;
+        var error = this._execute(state, delay);
+        if (error) {
+            return error;
+        }
+        else if (this.pending === false && this.id != null) {
+            // Dequeue if the action didn't reschedule itself. Don't call
+            // unsubscribe(), because the action could reschedule later.
+            // For example:
+            // ```
+            // scheduler.schedule(function doWork(counter) {
+            //   /* ... I'm a busy worker bee ... */
+            //   var originalAction = this;
+            //   /* wait 100ms before rescheduling the action */
+            //   setTimeout(function () {
+            //     originalAction.schedule(counter + 1);
+            //   }, 100);
+            // }, 1000);
+            // ```
+            this.id = this.recycleAsyncId(this.scheduler, this.id, null);
+        }
+    };
+    AsyncAction.prototype._execute = function (state, delay) {
+        var errored = false;
+        var errorValue = undefined;
+        try {
+            this.work(state);
+        }
+        catch (e) {
+            errored = true;
+            errorValue = !!e && e || new Error(e);
+        }
+        if (errored) {
+            this.unsubscribe();
+            return errorValue;
+        }
+    };
+    AsyncAction.prototype._unsubscribe = function () {
+        var id = this.id;
+        var scheduler = this.scheduler;
+        var actions = scheduler.actions;
+        var index = actions.indexOf(this);
+        this.work = null;
+        this.state = null;
+        this.pending = false;
+        this.scheduler = null;
+        if (index !== -1) {
+            actions.splice(index, 1);
+        }
+        if (id != null) {
+            this.id = this.recycleAsyncId(scheduler, id, null);
+        }
+        this.delay = null;
+    };
+    return AsyncAction;
+}(Action_1.Action));
+exports.AsyncAction = AsyncAction;
+//# sourceMappingURL=AsyncAction.js.map
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscription_1 = __webpack_require__(41);
+/**
+ * A unit of work to be executed in a {@link Scheduler}. An action is typically
+ * created from within a Scheduler and an RxJS user does not need to concern
+ * themselves about creating and manipulating an Action.
+ *
+ * ```ts
+ * class Action<T> extends Subscription {
+ *   new (scheduler: Scheduler, work: (state?: T) => void);
+ *   schedule(state?: T, delay: number = 0): Subscription;
+ * }
+ * ```
+ *
+ * @class Action<T>
+ */
+var Action = (function (_super) {
+    __extends(Action, _super);
+    function Action(scheduler, work) {
+        _super.call(this);
+    }
+    /**
+     * Schedules this action on its parent Scheduler for execution. May be passed
+     * some context object, `state`. May happen at some point in the future,
+     * according to the `delay` parameter, if specified.
+     * @param {T} [state] Some contextual data that the `work` function uses when
+     * called by the Scheduler.
+     * @param {number} [delay] Time to wait before executing the work, where the
+     * time unit is implicit and defined by the Scheduler.
+     * @return {void}
+     */
+    Action.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        return this;
+    };
+    return Action;
+}(Subscription_1.Subscription));
+exports.Action = Action;
+//# sourceMappingURL=Action.js.map
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Scheduler_1 = __webpack_require__(287);
+var AsyncScheduler = (function (_super) {
+    __extends(AsyncScheduler, _super);
+    function AsyncScheduler() {
+        _super.apply(this, arguments);
+        this.actions = [];
+        /**
+         * A flag to indicate whether the Scheduler is currently executing a batch of
+         * queued actions.
+         * @type {boolean}
+         */
+        this.active = false;
+        /**
+         * An internal ID used to track the latest asynchronous task such as those
+         * coming from `setTimeout`, `setInterval`, `requestAnimationFrame`, and
+         * others.
+         * @type {any}
+         */
+        this.scheduled = undefined;
+    }
+    AsyncScheduler.prototype.flush = function (action) {
+        var actions = this.actions;
+        if (this.active) {
+            actions.push(action);
+            return;
+        }
+        var error;
+        this.active = true;
+        do {
+            if (error = action.execute(action.state, action.delay)) {
+                break;
+            }
+        } while (action = actions.shift()); // exhaust the scheduler queue
+        this.active = false;
+        if (error) {
+            while (action = actions.shift()) {
+                action.unsubscribe();
+            }
+            throw error;
+        }
+    };
+    return AsyncScheduler;
+}(Scheduler_1.Scheduler));
+exports.AsyncScheduler = AsyncScheduler;
+//# sourceMappingURL=AsyncScheduler.js.map
+
+/***/ }),
+
+/***/ 287:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * An execution context and a data structure to order tasks and schedule their
+ * execution. Provides a notion of (potentially virtual) time, through the
+ * `now()` getter method.
+ *
+ * Each unit of work in a Scheduler is called an {@link Action}.
+ *
+ * ```ts
+ * class Scheduler {
+ *   now(): number;
+ *   schedule(work, delay?, state?): Subscription;
+ * }
+ * ```
+ *
+ * @class Scheduler
+ */
+var Scheduler = (function () {
+    function Scheduler(SchedulerAction, now) {
+        if (now === void 0) { now = Scheduler.now; }
+        this.SchedulerAction = SchedulerAction;
+        this.now = now;
+    }
+    /**
+     * Schedules a function, `work`, for execution. May happen at some point in
+     * the future, according to the `delay` parameter, if specified. May be passed
+     * some context object, `state`, which will be passed to the `work` function.
+     *
+     * The given arguments will be processed an stored as an Action object in a
+     * queue of actions.
+     *
+     * @param {function(state: ?T): ?Subscription} work A function representing a
+     * task, or some unit of work to be executed by the Scheduler.
+     * @param {number} [delay] Time to wait before executing the work, where the
+     * time unit is implicit and defined by the Scheduler itself.
+     * @param {T} [state] Some contextual data that the `work` function uses when
+     * called by the Scheduler.
+     * @return {Subscription} A subscription in order to be able to unsubscribe
+     * the scheduled work.
+     */
+    Scheduler.prototype.schedule = function (work, delay, state) {
+        if (delay === void 0) { delay = 0; }
+        return new this.SchedulerAction(this, work).schedule(state, delay);
+    };
+    Scheduler.now = Date.now ? Date.now : function () { return +new Date(); };
+    return Scheduler;
+}());
+exports.Scheduler = Scheduler;
+//# sourceMappingURL=Scheduler.js.map
+
+/***/ }),
+
+/***/ 288:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__(26);
+var async_1 = __webpack_require__(279);
+/**
+ * Emits a value from the source Observable only after a particular time span
+ * has passed without another source emission.
+ *
+ * <span class="informal">It's like {@link delay}, but passes only the most
+ * recent value from each burst of emissions.</span>
+ *
+ * <img src="./img/debounceTime.png" width="100%">
+ *
+ * `debounceTime` delays values emitted by the source Observable, but drops
+ * previous pending delayed emissions if a new value arrives on the source
+ * Observable. This operator keeps track of the most recent value from the
+ * source Observable, and emits that only when `dueTime` enough time has passed
+ * without any other value appearing on the source Observable. If a new value
+ * appears before `dueTime` silence occurs, the previous value will be dropped
+ * and will not be emitted on the output Observable.
+ *
+ * This is a rate-limiting operator, because it is impossible for more than one
+ * value to be emitted in any time window of duration `dueTime`, but it is also
+ * a delay-like operator since output emissions do not occur at the same time as
+ * they did on the source Observable. Optionally takes a {@link IScheduler} for
+ * managing timers.
+ *
+ * @example <caption>Emit the most recent click after a burst of clicks</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.debounceTime(1000);
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link auditTime}
+ * @see {@link debounce}
+ * @see {@link delay}
+ * @see {@link sampleTime}
+ * @see {@link throttleTime}
+ *
+ * @param {number} dueTime The timeout duration in milliseconds (or the time
+ * unit determined internally by the optional `scheduler`) for the window of
+ * time required to wait for emission silence before emitting the most recent
+ * source value.
+ * @param {Scheduler} [scheduler=async] The {@link IScheduler} to use for
+ * managing the timers that handle the timeout for each value.
+ * @return {Observable} An Observable that delays the emissions of the source
+ * Observable by the specified `dueTime`, and may drop some values if they occur
+ * too frequently.
+ * @method debounceTime
+ * @owner Observable
+ */
+function debounceTime(dueTime, scheduler) {
+    if (scheduler === void 0) { scheduler = async_1.async; }
+    return function (source) { return source.lift(new DebounceTimeOperator(dueTime, scheduler)); };
+}
+exports.debounceTime = debounceTime;
+var DebounceTimeOperator = (function () {
+    function DebounceTimeOperator(dueTime, scheduler) {
+        this.dueTime = dueTime;
+        this.scheduler = scheduler;
+    }
+    DebounceTimeOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new DebounceTimeSubscriber(subscriber, this.dueTime, this.scheduler));
+    };
+    return DebounceTimeOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var DebounceTimeSubscriber = (function (_super) {
+    __extends(DebounceTimeSubscriber, _super);
+    function DebounceTimeSubscriber(destination, dueTime, scheduler) {
+        _super.call(this, destination);
+        this.dueTime = dueTime;
+        this.scheduler = scheduler;
+        this.debouncedSubscription = null;
+        this.lastValue = null;
+        this.hasValue = false;
+    }
+    DebounceTimeSubscriber.prototype._next = function (value) {
+        this.clearDebounce();
+        this.lastValue = value;
+        this.hasValue = true;
+        this.add(this.debouncedSubscription = this.scheduler.schedule(dispatchNext, this.dueTime, this));
+    };
+    DebounceTimeSubscriber.prototype._complete = function () {
+        this.debouncedNext();
+        this.destination.complete();
+    };
+    DebounceTimeSubscriber.prototype.debouncedNext = function () {
+        this.clearDebounce();
+        if (this.hasValue) {
+            this.destination.next(this.lastValue);
+            this.lastValue = null;
+            this.hasValue = false;
+        }
+    };
+    DebounceTimeSubscriber.prototype.clearDebounce = function () {
+        var debouncedSubscription = this.debouncedSubscription;
+        if (debouncedSubscription !== null) {
+            this.remove(debouncedSubscription);
+            debouncedSubscription.unsubscribe();
+            this.debouncedSubscription = null;
+        }
+    };
+    return DebounceTimeSubscriber;
+}(Subscriber_1.Subscriber));
+function dispatchNext(subscriber) {
+    subscriber.debouncedNext();
+}
+//# sourceMappingURL=debounceTime.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=0.js.map

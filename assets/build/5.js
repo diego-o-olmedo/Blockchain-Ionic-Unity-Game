@@ -1,1 +1,309 @@
-webpackJsonp([5],{244:function(l,n,u){"use strict";function e(l){return F._21(0,[F._17(402653184,1,{svg:0}),F._17(402653184,2,{wrapper:0}),(l()(),F.Z(2,0,null,null,39,"ion-card",[["tappable",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.selectShip()&&e}return e},null,null)),F.Y(3,16384,null,0,D.a,[G.a,F.j,F.z],null,null),(l()(),F._19(-1,null,["\n  "])),(l()(),F.Z(5,0,[[2,0],["wrapper",1]],null,0,"div",[["class","shipWrap"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n  "])),(l()(),F.Z(7,0,null,null,13,"ion-row",[["class","row"],["no-padding",""]],null,null,null,null,null)),F.Y(8,16384,null,0,H.a,[],null,null),(l()(),F._19(-1,null,["\n    "])),(l()(),F.Z(10,0,null,null,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),F.Y(11,16384,null,0,X.a,[],null,null),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(13,0,null,null,5,"div",[["class","weaponWrap"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(15,0,null,null,0,"img",[["class","weaponIcon"]],[[8,"src",4],[8,"title",0]],null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(17,0,null,null,0,"img",[["class","weaponIcon"]],[[8,"src",4],[8,"title",0]],null,null,null,null)),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,null,["\n  "])),(l()(),F._19(-1,null,["\n\n  "])),(l()(),F.Z(22,0,null,null,18,"ion-card-content",[],null,null,null,null,null)),F.Y(23,16384,null,0,K.a,[G.a,F.j,F.z],null,null),(l()(),F._19(-1,null,["\n    "])),(l()(),F.Z(25,0,null,null,2,"ion-card-title",[["style","text-overflow: ellipsis"]],null,null,null,null,null)),F.Y(26,16384,null,0,J.a,[G.a,F.j,F.z],null,null),(l()(),F._19(27,null,["\n      ","\n    "])),(l()(),F._19(-1,null,["\n    "])),(l()(),F.Z(29,0,null,null,9,"ion-row",[["class","row"],["no-padding",""]],null,null,null,null,null)),F.Y(30,16384,null,0,H.a,[],null,null),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(32,0,null,null,5,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),F.Y(33,16384,null,0,X.a,[],null,null),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(35,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),F._19(36,null,["#",""])),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,null,["\n  "])),(l()(),F._19(-1,null,["\n"])),(l()(),F._19(-1,null,["\n"]))],null,function(l,n){var u=n.component;l(n,15,0,"/assets/imgs/weapons/"+u.ship.secondaryWeapon+".png",u.ship.secondaryWeapon);l(n,17,0,"/assets/imgs/weapons/"+u.ship.primaryWeapon+".png",u.ship.primaryWeapon);l(n,27,0,u.ship.name?u.ship.name:"Ship "+u.ship.id);l(n,36,0,u.ship.id)})}function t(l){return F._21(0,[(l()(),F.Z(0,0,null,null,4,"a",[["tabindex","0"]],[[1,"aria-label",0]],[[null,"keyup.enter"],[null,"click"]],function(l,n,u){var e=!0;if("keyup.enter"===n){e=!1!==F._13(l.parent.parent.parent,2).previous()&&e}if("click"===n){e=!1!==F._13(l.parent.parent.parent,2).previous()&&e}return e},null,null)),(l()(),F._19(1,null,["\n                "," "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,["",""])),(l()(),F._19(-1,null,["\n            "]))],null,function(l,n){var u=n.component;l(n,0,0,u.previousLabel+" "+u.screenReaderPageLabel);l(n,1,0,u.previousLabel);l(n,3,0,u.screenReaderPageLabel)})}function a(l){return F._21(0,[(l()(),F.Z(0,0,null,null,4,"span",[],null,null,null,null,null)),(l()(),F._19(1,null,["\n                "," "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,["",""])),(l()(),F._19(-1,null,["\n            "]))],null,function(l,n){var u=n.component;l(n,1,0,u.previousLabel);l(n,3,0,u.screenReaderPageLabel)})}function o(l){return F._21(0,[(l()(),F.Z(0,0,null,null,7,"li",[["class","pagination-previous"]],[[2,"disabled",null]],null,null,null,null)),(l()(),F._19(-1,null,[" \n            "])),(l()(),F.U(16777216,null,null,1,null,t)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,1,null,a)),F.Y(6,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n        "]))],function(l,n){l(n,3,0,1<F._13(n.parent.parent,2).getCurrent());l(n,6,0,F._13(n.parent.parent,2).isFirstPage())},function(l,n){l(n,0,0,F._13(n.parent.parent,2).isFirstPage())})}function i(l){return F._21(0,[(l()(),F.Z(0,0,null,null,7,"a",[["tabindex","0"]],null,[[null,"keyup.enter"],[null,"click"]],function(l,n,u){var e=!0;if("keyup.enter"===n){e=!1!==F._13(l.parent.parent.parent,2).setCurrent(l.parent.context.$implicit.value)&&e}if("click"===n){e=!1!==F._13(l.parent.parent.parent,2).setCurrent(l.parent.context.$implicit.value)&&e}return e},null,null)),(l()(),F._19(-1,null,["\n                "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,[""," "])),(l()(),F._19(-1,null,["\n                "])),(l()(),F.Z(5,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),F._19(6,null,["",""])),(l()(),F._19(-1,null,["\n            "]))],null,function(l,n){l(n,3,0,n.component.screenReaderPageLabel);l(n,6,0,n.parent.context.$implicit.label)})}function s(l){return F._21(0,[(l()(),F.Z(0,0,null,null,7,null,null,null,null,null,null,null)),(l()(),F._19(-1,null,["\n                "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,[""," "])),(l()(),F._19(-1,null,["\n                "])),(l()(),F.Z(5,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),F._19(6,null,["",""])),(l()(),F._19(-1,null,[" \n            "]))],null,function(l,n){l(n,3,0,n.component.screenReaderCurrentLabel);l(n,6,0,n.parent.context.$implicit.label)})}function r(l){return F._21(0,[(l()(),F.Z(0,0,null,null,7,"li",[],[[2,"current",null]],null,null,null,null)),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,1,null,i)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,1,null,s)),F.Y(6,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n        "]))],function(l,n){l(n,3,0,F._13(n.parent.parent,2).getCurrent()!==n.context.$implicit.value);l(n,6,0,F._13(n.parent.parent,2).getCurrent()===n.context.$implicit.value)},function(l,n){l(n,0,0,F._13(n.parent.parent,2).getCurrent()===n.context.$implicit.value)})}function c(l){return F._21(0,[(l()(),F.Z(0,0,null,null,4,"a",[["tabindex","0"]],[[1,"aria-label",0]],[[null,"keyup.enter"],[null,"click"]],function(l,n,u){var e=!0;if("keyup.enter"===n){e=!1!==F._13(l.parent.parent.parent,2).next()&&e}if("click"===n){e=!1!==F._13(l.parent.parent.parent,2).next()&&e}return e},null,null)),(l()(),F._19(1,null,["\n                 "," "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,["",""])),(l()(),F._19(-1,null,["\n            "]))],null,function(l,n){var u=n.component;l(n,0,0,u.nextLabel+" "+u.screenReaderPageLabel);l(n,1,0,u.nextLabel);l(n,3,0,u.screenReaderPageLabel)})}function p(l){return F._21(0,[(l()(),F.Z(0,0,null,null,4,"span",[],null,null,null,null,null)),(l()(),F._19(1,null,["\n                 "," "])),(l()(),F.Z(2,0,null,null,1,"span",[["class","show-for-sr"]],null,null,null,null,null)),(l()(),F._19(3,null,["",""])),(l()(),F._19(-1,null,["\n            "]))],null,function(l,n){var u=n.component;l(n,1,0,u.nextLabel);l(n,3,0,u.screenReaderPageLabel)})}function g(l){return F._21(0,[(l()(),F.Z(0,0,null,null,7,"li",[["class","pagination-next"]],[[2,"disabled",null]],null,null,null,null)),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,1,null,c)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,1,null,p)),F.Y(6,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n        "]))],function(l,n){l(n,3,0,!F._13(n.parent.parent,2).isLastPage());l(n,6,0,F._13(n.parent.parent,2).isLastPage())},function(l,n){l(n,0,0,F._13(n.parent.parent,2).isLastPage())})}function d(l){return F._21(0,[(l()(),F.Z(0,0,null,null,10,"ul",[["class","ngx-pagination"],["role","navigation"]],[[1,"aria-label",0]],null,null,null,null)),(l()(),F._19(-1,null,["\n\n        "])),(l()(),F.U(16777216,null,null,1,null,o)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n\n        "])),(l()(),F.U(16777216,null,null,1,null,r)),F.Y(6,802816,null,0,O.h,[F.I,F.F,F.p],{ngForOf:[0,"ngForOf"]},null),(l()(),F._19(-1,null,["\n\n        "])),(l()(),F.U(16777216,null,null,1,null,g)),F.Y(9,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n\n    "]))],function(l,n){var u=n.component;l(n,3,0,u.directionLinks);l(n,6,0,F._13(n.parent,2).pages);l(n,9,0,u.directionLinks)},function(l,n){l(n,0,0,n.component.screenReaderPaginationLabel)})}function _(l){return F._21(2,[(l()(),F._19(-1,null,["\n    "])),(l()(),F.Z(1,0,null,null,5,"pagination-template",[],null,[[null,"pageChange"]],function(l,n,u){var e=!0;if("pageChange"===n){e=!1!==l.component.pageChange.emit(u)&&e}return e},null,null)),F.Y(2,737280,[["p",4]],0,U.d,[U.e,F.g],{id:[0,"id"],maxSize:[1,"maxSize"]},{pageChange:"pageChange"}),(l()(),F._19(-1,null,["\n    "])),(l()(),F.U(16777216,null,null,1,null,d)),F.Y(5,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,null,["\n    "]))],function(l,n){var u=n.component;l(n,2,0,u.id,u.maxSize);l(n,5,0,!(u.autoHide&&F._13(n,2).pages.length<=1))},null)}function f(l){return F._21(2,[F._17(402653184,1,{backdrop:0}),(l()(),F.Z(1,0,null,null,1,"div",[["class","menu-inner"]],null,null,null,null,null)),F._12(null,0),(l()(),F.Z(3,0,null,null,1,"ion-backdrop",[["disable-activated",""],["role","presentation"],["tappable",""]],null,null,null,null,null)),F.Y(4,16384,[[1,4]],0,xl.a,[F.j,F.z],null,null)],null,null)}function m(l){return F._21(0,[(l()(),F.Z(0,0,null,null,0,"div",[["class","chatbutton"],["tappable",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.toggleChat()&&e}return e},null,null))],null,null)}function h(l){return F._21(0,[(l()(),F.Z(0,0,null,null,5,"div",[],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(2,0,null,null,0,"img",[["class","load-img load-grey"],["src","/assets/imgs/loading-grey.png"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(4,0,null,null,0,"img",[["class","load-img load-pink"],["src","/assets/imgs/loading-pink.png"]],[[4,"clip-path",null]],null,null,null,null)),(l()(),F._19(-1,null,["\n      "]))],null,function(l,n){l(n,4,0,n.component.loadingStyle)})}function b(l){return F._21(0,[(l()(),F.Z(0,0,null,null,21,"div",[],null,null,null,null,null)),(l()(),F._19(-1,null,["\n      "])),(l()(),F.U(16777216,null,null,1,null,m)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n\n      "])),(l()(),F.U(16777216,null,null,1,null,h)),F.Y(6,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n\n      "])),(l()(),F.Z(8,0,null,null,11,"div",[["id","canvaswindow"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(10,0,null,null,8,"div",[["class","webgl-content"],["id","canvaswrapper"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(12,0,null,null,0,"div",[["id","gameContainer"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(14,0,null,null,3,"div",[["class","footer"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n            "])),(l()(),F.Z(16,0,null,null,0,"div",[["class","fullscreen"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.goFull()&&e}return e},null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F._19(-1,null,["\n        "])),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n    "]))],function(l,n){var u=n.component;l(n,3,0,u.mouseVisible()&&u.gameLoaded);l(n,6,0,!u.gameLoaded&&u.webgl)},null)}function v(l){return F._21(0,[(l()(),F.Z(0,0,null,null,2,"ion-spinner",[["class","abs-center"]],[[2,"spinner-paused",null]],null,null,V.b,V.a)),F.Y(1,114688,null,0,A.a,[G.a,F.j,F.z],null,null),(l()(),F._19(-1,null,[" "]))],function(l,n){l(n,1,0)},function(l,n){l(n,0,0,F._13(n,1)._paused)})}function I(l){return F._21(0,[(l()(),F.Z(0,0,null,null,2,"ship-select",[["class","col"],["col-12",""],["col-lg-3",""],["col-md-4",""],["col-sm-6",""],["col-xl-3",""],["ion-col",""]],null,null,null,e,nl)),F.Y(1,114688,null,0,Q.a,[L.c,S.a,ll.a],{ship:[0,"ship"]},null),F.Y(2,16384,null,0,X.a,[],null,null)],function(l,n){l(n,1,0,n.context.$implicit)},null)}function w(l){return F._21(0,[(l()(),F.Z(0,0,null,null,1,"pagination-controls",[["class","ship-pagination"],["nextLabel",""],["previousLabel",""]],null,[[null,"pageChange"]],function(l,n,u){var e=!0;if("pageChange"===n){e=!1!==(l.component.p=u)&&e}return e},_,ul)),F.Y(1,49152,null,0,U.c,[],{previousLabel:[0,"previousLabel"],nextLabel:[1,"nextLabel"]},{pageChange:"pageChange"})],function(l,n){l(n,1,0,"","")},null)}function y(l){return F._21(0,[(l()(),F.Z(0,0,null,null,28,"div",[["class","shipSelect abs-center"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n      "])),(l()(),F.U(16777216,null,null,1,null,v)),F.Y(3,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(5,0,null,null,14,"div",[["class","contentRoom"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(7,0,null,null,11,"ion-grid",[["class","grid"]],null,null,null,null,null)),F.Y(8,16384,null,0,el.a,[],null,null),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(10,0,null,null,7,"ion-row",[["class","row"],["justify-content-center",""]],null,null,null,null,null)),F.Y(11,16384,null,0,H.a,[],null,null),(l()(),F._19(-1,null,["\n            "])),(l()(),F.U(16777216,null,null,3,null,I)),F.Y(14,802816,null,0,O.h,[F.I,F.F,F.p],{ngForOf:[0,"ngForOf"]},null),F._15(15,{itemsPerPage:0,currentPage:1}),F._14(0,U.b,[U.e]),(l()(),F._19(-1,null,["\n          "])),(l()(),F._19(-1,null,["\n        "])),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(21,0,null,null,6,"ion-row",[["class","select-footer col row"],["col-12",""],["ion-col",""]],null,null,null,null,null)),F.Y(22,16384,null,0,X.a,[],null,null),F.Y(23,16384,null,0,H.a,[],null,null),(l()(),F._19(-1,null,["\n        "])),(l()(),F.U(16777216,null,null,1,null,w)),F.Y(26,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,null,["\n      "])),(l()(),F._19(-1,null,["\n    "]))],function(l,n){var u=n.component;l(n,3,0,!u.ships);l(n,14,0,F._20(n,14,0,F._13(n,16).transform(u.ships,l(n,15,0,8,u.p))));l(n,26,0,u.ships)},null)}function Z(l){return F._21(0,[(l()(),F.Z(0,0,null,null,25,"ion-row",[["class","row"]],null,null,null,null,null)),F.Y(1,16384,null,0,H.a,[],null,null),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(3,0,null,null,5,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),F.Y(4,16384,null,0,X.a,[],null,null),(l()(),F._19(-1,null,[" "])),(l()(),F.Z(6,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),F._19(-1,null,["Waiting to join a game lobby"])),(l()(),F._19(-1,null,[" "])),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(10,0,null,null,3,"ion-spinner",[["class","col"],["col-12",""],["ion-col",""]],[[2,"spinner-paused",null]],null,null,V.b,V.a)),F.Y(11,16384,null,0,X.a,[],null,null),F.Y(12,114688,null,0,A.a,[G.a,F.j,F.z],null,null),(l()(),F._19(-1,null,[" "])),(l()(),F._19(-1,null,["\n        "])),(l()(),F.Z(15,0,null,null,9,"div",[["class","swapping-squares-spinner"],["style","spinnerStyle"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(17,0,null,null,0,"div",[["class","square"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(19,0,null,null,0,"div",[["class","square"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(21,0,null,null,0,"div",[["class","square"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n          "])),(l()(),F.Z(23,0,null,null,0,"div",[["class","square"]],null,null,null,null,null)),(l()(),F._19(-1,null,["\n        "])),(l()(),F._19(-1,null,["\n      "]))],function(l,n){l(n,12,0)},function(l,n){l(n,10,0,F._13(n,12)._paused)})}function x(l){return F._21(0,[(l()(),F.Z(0,0,null,null,1,"a",[["class","username"],["target","_blank"]],[[8,"href",4]],null,null,null,null)),(l()(),F._19(1,null,["",":"]))],null,function(l,n){l(n,0,0,"/profile/"+n.parent.context.$implicit.account);l(n,1,0,n.parent.context.$implicit.username)})}function Y(l){return F._21(0,[(l()(),F.Z(0,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,tl.b,tl.a)),F.Y(1,1097728,null,3,al.a,[ol.a,G.a,F.j,F.z,[2,il.a]],null,null),F._17(335544320,6,{contentLabel:0}),F._17(603979776,7,{_buttons:1}),F._17(603979776,8,{_icons:1}),F.Y(5,16384,null,0,sl.a,[],null,null),(l()(),F._19(-1,2,["\n          "])),(l()(),F.U(16777216,null,2,1,null,x)),F.Y(8,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,2,["\n          "])),(l()(),F.Z(10,0,null,2,3,"span",[["class","message"]],null,null,null,null,null)),F.Y(11,278528,null,0,O.g,[F.p,F.q,F.j,F.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),F._15(12,{boldChat:0}),(l()(),F._19(13,null,["",""])),(l()(),F._19(-1,2,["\n        "]))],function(l,n){l(n,8,0,n.context.$implicit.username);l(n,11,0,"message",l(n,12,0,!n.context.$implicit.username))},function(l,n){l(n,13,0,n.context.$implicit.text)})}function k(l){return F._21(0,[(l()(),F.Z(0,0,null,null,5,"ion-list",[["class","chatbox"],["no-lines",""]],null,null,null,null,null)),F.Y(1,16384,null,0,rl.a,[G.a,F.j,F.z,cl.a,pl.l,gl.a],null,null),(l()(),F._19(-1,null,["\n        "])),(l()(),F.U(16777216,null,null,1,null,Y)),F.Y(4,802816,null,0,O.h,[F.I,F.F,F.p],{ngForOf:[0,"ngForOf"]},null),(l()(),F._19(-1,null,["\n      "]))],function(l,n){l(n,4,0,n.component.msgs)},null)}function C(l){return F._21(0,[F._17(402653184,1,{chatcontent:0}),F._17(402653184,2,{content:0}),(l()(),F.Z(2,0,null,null,67,"ion-split-pane",[],null,null,null,null,null)),F.Y(3,4341760,null,1,dl.b,[F.u,cl.a,G.a,F.j,F.z],{when:[0,"when"]},null),F._17(603979776,3,{_setchildren:1}),F._16(2048,[[3,4]],dl.a,null,[dl.b]),(l()(),F._19(-1,null,["\n  "])),(l()(),F.Z(7,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),F.Y(8,16384,null,0,_l.a,[G.a,F.j,F.z,[2,fl.a]],null,null),(l()(),F._19(-1,null,[" "])),(l()(),F.Z(10,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,ml.b,ml.a)),F.Y(11,49152,null,0,hl.a,[bl.a,[2,fl.a],[2,ll.a],G.a,F.j,F.z],null,null),(l()(),F._19(-1,3,[" "])),(l()(),F._19(-1,null,[" "])),(l()(),F._19(-1,null,["\n  "])),(l()(),F.Z(15,0,null,null,1,"header-component",[],null,null,null,vl.b,vl.a)),F.Y(16,114688,null,0,Il.a,[ll.a,S.a,F.u],null,null),(l()(),F._19(-1,null,["\n  "])),(l()(),F.Z(18,0,null,null,9,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,wl.b,wl.a)),F.Y(19,4374528,[[2,4],["content",4]],0,yl.a,[G.a,cl.a,gl.a,F.j,F.z,bl.a,Zl.a,F.u,[2,fl.a],[2,ll.a]],null,null),(l()(),F._19(-1,1,["\n    "])),(l()(),F._19(-1,1,["\n    "])),(l()(),F.U(16777216,null,1,1,null,b)),F.Y(23,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,1,["\n\n    "])),(l()(),F.U(16777216,null,1,1,null,y)),F.Y(26,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,1,["\n  "])),(l()(),F._19(-1,null,["\n\n  "])),(l()(),F.Z(29,0,null,null,39,"ion-menu",[["role","navigation"],["side","right"],["type","push"]],null,null,null,f,Cl)),F.Y(30,278528,null,0,O.g,[F.p,F.q,F.j,F.A],{ngClass:[0,"ngClass"]},null),F._15(31,{moveMenu:0}),F.Y(32,245760,null,2,Yl.a,[kl.a,F.j,G.a,cl.a,F.z,Zl.a,pl.l,gl.a,bl.a],{content:[0,"content"],type:[1,"type"],side:[2,"side"]},null),F._17(335544320,4,{menuContent:0}),F._17(335544320,5,{menuNav:0}),F._16(2048,[[3,4]],dl.a,null,[Yl.a]),(l()(),F._19(-1,0,["\n    "])),(l()(),F.Z(37,0,null,0,10,"ion-header",[],null,null,null,null,null)),F.Y(38,16384,null,0,_l.a,[G.a,F.j,F.z,[2,fl.a]],null,null),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(40,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,Fl.b,Fl.a)),F.Y(41,49152,null,0,Ll.a,[G.a,F.j,F.z],null,null),(l()(),F._19(-1,3,[" "])),(l()(),F.Z(43,0,null,3,2,"ion-title",[],null,null,null,Sl.b,Sl.a)),F.Y(44,49152,null,0,jl.a,[G.a,F.j,F.z,[2,Ll.a],[2,hl.a]],null,null),(l()(),F._19(-1,0,["Menu"])),(l()(),F._19(-1,3,[" "])),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,0,["\n\n    "])),(l()(),F.Z(49,0,null,0,8,"ion-footer",[],null,null,null,null,null)),F.Y(50,16384,null,0,Ul.a,[G.a,F.j,F.z,[2,fl.a]],null,null),(l()(),F._19(-1,null,["\n      "])),(l()(),F.Z(52,0,null,null,4,"ion-input",[["placeholder","Send a message"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keypress"]],function(l,n,u){var e=!0,t=l.component;if("ngModelChange"===n){e=!1!==(t.msg=u)&&e}if("keypress"===n){e=!1!==t.send(u.keyCode)&&e}return e},Pl.b,Pl.a)),F.Y(53,671744,null,0,zl.m,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),F._16(2048,null,zl.i,null,[zl.m]),F.Y(55,16384,null,0,zl.j,[zl.i],null,null),F.Y(56,5423104,null,0,Rl.a,[G.a,cl.a,ol.a,bl.a,F.j,F.z,[2,yl.a],[2,al.a],[2,zl.i],gl.a],{placeholder:[0,"placeholder"]},null),(l()(),F._19(-1,null,["\n    "])),(l()(),F._19(-1,0,["\n\n    "])),(l()(),F.Z(59,0,null,0,8,"ion-content",[["ion-scroll",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,wl.b,wl.a)),F.Y(60,4374528,[[4,4],[2,4],[1,4],["chatcontent",4]],0,yl.a,[G.a,cl.a,gl.a,F.j,F.z,bl.a,Zl.a,F.u,[2,fl.a],[2,ll.a]],null,null),(l()(),F._19(-1,1,["\n      "])),(l()(),F.U(16777216,null,1,1,null,Z)),F.Y(63,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,1,["\n      "])),(l()(),F.U(16777216,null,1,1,null,k)),F.Y(66,16384,null,0,O.i,[F.I,F.F],{ngIf:[0,"ngIf"]},null),(l()(),F._19(-1,1,["\n    "])),(l()(),F._19(-1,0,["\n  "])),(l()(),F._19(-1,null,["\n"])),(l()(),F._19(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,3,0,u.showChat),l(n,16,0);l(n,23,0,u.appState);l(n,26,0,u.showSelect);l(n,30,0,l(n,31,0,"showChat"));l(n,32,0,F._13(n,19),"push","right");l(n,53,0,u.msg);l(n,56,0,"Send a message");l(n,63,0,!u.chatConnected);l(n,66,0,u.chatConnected)},function(l,n){l(n,10,0,F._13(n,11)._hidden,F._13(n,11)._sbPadding);l(n,18,0,F._13(n,19).statusbarPadding,F._13(n,19)._hasRefresher);l(n,40,0,F._13(n,41)._sbPadding);l(n,52,0,F._13(n,55).ngClassUntouched,F._13(n,55).ngClassTouched,F._13(n,55).ngClassPristine,F._13(n,55).ngClassDirty,F._13(n,55).ngClassValid,F._13(n,55).ngClassInvalid,F._13(n,55).ngClassPending);l(n,59,0,F._13(n,60).statusbarPadding,F._13(n,60)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var F=u(0),L=(u(5),u(23),u(25)),S=u(21),j=function(){function l(l,n,u,e,t,a){this.navCtrl=l,this.navParams=n,this.appState=u,this.menuCtrl=e,this.events=t,this.sanitizer=a,this.gameLoaded=!1,this.msgs=[],this.noAccount=!1,this.showChat=!1,this.chatConnected=!1,this.loadingStyle=this.sanitizer.bypassSecurityTrustStyle("inset(0 100% 0 0)"),this.selectLoad=!1,this.showSelect=!1,this.webgl=!1,this.userName="Anon"+Math.floor(10*Math.random()),this.isFullscreen=!1,this.getShips()}return l.prototype.getShips=function(){var l=this;this.selectLoad=!0,console.log("getting io"),io.socket.get("/api/v1/ships?address="+encodeURI(this.appState.account),{},function(n){console.log(n),l.selectLoad=!1,n.length>0&&(5789==n[1].id&&(n[1].primaryWeapon="Bolt Ice"),l.ships=n)})},l.prototype.shipSelect=function(){},l.prototype.mouseVisible=function(){return!document.pointerLockElement},l.prototype.ionViewDidLoad=function(){var l=this;console.log("ionViewDidLoad GamePage"),this.loadGame(),this.events.subscribe("account:changed",function(n){setTimeout(function(){l.loadGame()},0)})},l.prototype.leaveRoom=function(){var l=this;io.socket.post("/api/v1/chat/leave",{room:this.room},function(){l.room=null,l.chatConnected=!1})},l.prototype.joinRoom=function(l){var n=this;console.log("join room000"),io.socket.post("/api/v1/chat/join",{room:l},function(){console.log("joined room "+l),n.room=l,n.chatConnected=!0,n.msgs.push({text:n.userName+" connected to chat"}),n.listening||(n.listening=!0,io.socket.on("message",function(l){l?(console.log("gotmsg",l),n.msgs.push(l)):console.log("why")}))})},l.prototype.ionViewDidEnter=function(){console.log(this.appState.account),this.chatcontent.scrollToBottom(1e3)},l.prototype.ionViewWillLeave=function(){console.log("view leaving")},l.prototype.ionViewWillUnload=function(){console.log("view unloaded")},l.prototype.loadGameServices=function(){var l=this;window.UnityProgress=function(n,u){l.webgl=!0;var e=100-100*u;0==e&&(l.gameLoaded=!0,window.gameInstance.SendMessage("Web3(Clone)","SetDisplayName",l.appState.username||l.userName)),l.loadingStyle=l.sanitizer.bypassSecurityTrustStyle("inset(0 "+e+"% 0 0)")},window.addEventListener("room",function(n){n.detail.join?l.joinRoom(n.detail.room):l.room&&l.leaveRoom()}),window.addEventListener("show-select",function(n){l.showSelect=n.detail})},l.prototype.loadGame=function(){if(window.gameInstance)console.log("already loaded");else{this.loadGameServices(),window.gameInstance=window.UnityLoader.instantiate("gameContainer","/game/Build/unitywebDemo.json",{onProgress:window.UnityProgress});document.getElementById("#canvas").tabIndex=1}},l.prototype.send=function(l){var n=this;if(13==l)if(this.chatConnected&&this.room){var u={username:this.appState.username||this.userName,account:this.appState.account,text:this.msg};io.socket.post("/api/v1/chat/send",{data:u,room:this.room}),this.msg="",setTimeout(function(){n.chatcontent.scrollToBottom(300)},50)}else this.msg=""},l.prototype.goFull=function(l){void 0===l&&(l=!0);for(var n=document.getElementById("canvaswindow"),u=document.getElementById("canvasfull");n.childNodes.length>0;)u.appendChild(n.childNodes[0]);if(window.gameInstance.SetFullscreen(1),l){this.isFullscreen=!0;var e=setInterval(function(){if(console.log(1>=outerHeight-innerHeight),1<outerHeight-innerHeight){for(;u.childNodes.length>0;)n.appendChild(u.childNodes[0]);clearInterval(e)}},100)}},l.prototype.toggleChat=function(){this.showChat=!this.showChat,this.content.resize()},l}(),U=u(124),P=u(120),z=function(){return function(){}}(),R=u(191),$=u(192),W=u(193),q=u(194),N=u(195),T=u(196),M=u(197),B=u(198),E=u(199),O=u(10),V=u(203),A=u(57),G=u(1),D=u(83),H=u(46),X=u(45),K=u(84),J=u(85),Q=u(208),ll=u(13),nl=F.X({encapsulation:2,styles:[],data:{}}),ul=F.X({encapsulation:2,styles:["\n.ngx-pagination {\n  margin-left: 0;\n  margin-bottom: 1rem; }\n  .ngx-pagination::before, .ngx-pagination::after {\n    content: ' ';\n    display: table; }\n  .ngx-pagination::after {\n    clear: both; }\n  .ngx-pagination li {\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    -ms-user-select: none;\n    margin-right: 0.0625rem;\n    border-radius: 0; }\n  .ngx-pagination li {\n    display: inline-block; }\n  .ngx-pagination a,\n  .ngx-pagination button {\n    color: #0a0a0a; \n    display: block;\n    padding: 0.1875rem 0.625rem;\n    border-radius: 0; }\n    .ngx-pagination a:hover,\n    .ngx-pagination button:hover {\n      background: #e6e6e6; }\n  .ngx-pagination .current {\n    padding: 0.1875rem 0.625rem;\n    background: #2199e8;\n    color: #fefefe;\n    cursor: default; }\n  .ngx-pagination .disabled {\n    padding: 0.1875rem 0.625rem;\n    color: #cacaca;\n    cursor: default; } \n    .ngx-pagination .disabled:hover {\n      background: transparent; }\n  .ngx-pagination .ellipsis::after {\n    content: '…';\n    padding: 0.1875rem 0.625rem;\n    color: #0a0a0a; }\n  .ngx-pagination a, .ngx-pagination button {\n    cursor: pointer; }\n\n.ngx-pagination .pagination-previous a::before,\n.ngx-pagination .pagination-previous.disabled::before { \n  content: '«';\n  display: inline-block;\n  margin-right: 0.5rem; }\n\n.ngx-pagination .pagination-next a::after,\n.ngx-pagination .pagination-next.disabled::after {\n  content: '»';\n  display: inline-block;\n  margin-left: 0.5rem; }\n\n.ngx-pagination .show-for-sr {\n  position: absolute !important;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0); }"],data:{}}),el=u(56),tl=u(206),al=u(19),ol=u(15),il=u(47),sl=u(79),rl=u(58),cl=u(3),pl=u(7),gl=u(9),dl=u(36),_l=u(77),fl=u(4),ml=u(200),hl=u(24),bl=u(8),vl=u(201),Il=u(76),wl=u(202),yl=u(22),Zl=u(28),xl=u(26),Yl=u(125),kl=u(30),Cl=F.X({encapsulation:2,styles:[],data:{}}),Fl=u(209),Ll=u(38),Sl=u(210),jl=u(60),Ul=u(129),Pl=u(249),zl=u(18),Rl=u(123),$l=u(11),Wl=u(81),ql=F.X({encapsulation:2,styles:[],data:{}}),Nl=F.V("page-game",j,function(l){return F._21(0,[(l()(),F.Z(0,0,null,null,1,"page-game",[],null,null,null,C,ql)),F.Y(1,49152,null,0,j,[ll.a,$l.a,S.a,kl.a,Wl.a,L.c],null,null)],null,null)},{},{},[]),Tl=u(122),Ml=u(40);u.d(n,"GamePageModuleNgFactory",function(){return Bl});var Bl=F.W(z,[],function(l){return F._10([F._11(512,F.i,F.S,[[8,[R.a,$.a,W.a,q.a,N.a,T.a,M.a,B.a,E.a,Nl]],[3,F.i],F.s]),F._11(4608,O.k,O.j,[F.r,[2,O.s]]),F._11(4608,U.e,U.e,[]),F._11(4608,zl.q,zl.q,[]),F._11(4608,zl.d,zl.d,[]),F._11(512,O.b,O.b,[]),F._11(512,U.a,U.a,[]),F._11(512,zl.o,zl.o,[]),F._11(512,zl.g,zl.g,[]),F._11(512,zl.n,zl.n,[]),F._11(512,Tl.a,Tl.a,[]),F._11(512,P.a,P.a,[]),F._11(512,Tl.b,Tl.b,[]),F._11(512,z,z,[]),F._11(256,Ml.a,j,[])])})},249:function(l,n,u){"use strict";function e(l){return s._21(0,[(l()(),s.Z(0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),s.Y(1,278528,null,0,r.g,[s.p,s.q,s.j,s.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function t(l){return s._21(0,[(l()(),s.Z(0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),s.Y(1,278528,null,0,r.g,[s.p,s.q,s.j,s.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function a(l){return s._21(0,[(l()(),s.Z(0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.clearTextInput(u)&&e}if("mousedown"===n){e=!1!==t.clearTextInput(u)&&e}return e},c.b,c.a)),s.Y(1,1097728,null,0,p.a,[[8,""],g.a,s.j,s.z],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function o(l){return s._21(0,[(l()(),s.Z(0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var e=!0,t=l.component;if("touchstart"===n){e=!1!==t._pointerStart(u)&&e}if("touchend"===n){e=!1!==t._pointerEnd(u)&&e}if("mousedown"===n){e=!1!==t._pointerStart(u)&&e}if("mouseup"===n){e=!1!==t._pointerEnd(u)&&e}return e},null,null))],null,null)}function i(l){return s._21(2,[s._17(671088640,1,{_native:0}),(l()(),s.U(16777216,null,null,1,null,e)),s.Y(2,16384,null,0,r.i,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.U(16777216,null,null,1,null,t)),s.Y(4,16384,null,0,r.i,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.U(16777216,null,null,1,null,a)),s.Y(6,16384,null,0,r.i,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.U(16777216,null,null,1,null,o)),s.Y(8,16384,null,0,r.i,[s.I,s.F],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}u.d(n,"a",function(){return d}),n.b=i;var s=u(0),r=u(10),c=u(29),p=u(16),g=u(1),d=(u(3),u(15),u(9),s.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([5],{
+
+/***/ 273:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GamePageModule", function() { return GamePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_pagination__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(192);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+ // <-- import the module
+
+var GamePageModule = (function () {
+    function GamePageModule() {
+    }
+    GamePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__game__["a" /* GamePage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3_ngx_pagination__["a" /* NgxPaginationModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__game__["a" /* GamePage */])
+            ]
+        })
+    ], GamePageModule);
+    return GamePageModule;
+}());
+
+//# sourceMappingURL=game.module.js.map
+
+/***/ }),
+
+/***/ 291:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_service__ = __webpack_require__(30);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var GamePage = (function () {
+    function GamePage(navCtrl, navParams, appState, menuCtrl, events, sanitizer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.appState = appState;
+        this.menuCtrl = menuCtrl;
+        this.events = events;
+        this.sanitizer = sanitizer;
+        this.gameLoaded = false;
+        this.msgs = [];
+        this.noAccount = false;
+        this.showChat = false;
+        this.chatConnected = false;
+        this.loadingStyle = this.sanitizer.bypassSecurityTrustStyle("inset(0 100% 0 0)");
+        this.selectLoad = false;
+        this.showSelect = false;
+        this.webgl = false;
+        this.userName = "Anon" + Math.floor(Math.random() * 10);
+        this.isFullscreen = false;
+        // io.socket.on("chatmessage", msg => {
+        //   this.msgs.push(msg.data)
+        // })
+        this.getShips();
+    }
+    GamePage.prototype.getShips = function () {
+        var _this = this;
+        this.selectLoad = true;
+        console.log("getting io");
+        io.socket.get("/api/v1/ships?address=" + encodeURI(this.appState.account), {}, function (data) {
+            console.log(data);
+            _this.selectLoad = false;
+            if (data.length > 0) {
+                // data.forEach(ship => {
+                //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                // })
+                if (data[1].id == 5789) {
+                    data[1].primaryWeapon = "Bolt Ice";
+                }
+                _this.ships = data;
+            }
+        });
+    };
+    GamePage.prototype.shipSelect = function () {
+        // return window["ShowSelect"]
+    };
+    GamePage.prototype.mouseVisible = function () {
+        return !document.pointerLockElement;
+    };
+    GamePage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        console.log("ionViewDidLoad GamePage");
+        this.loadGame();
+        this.events.subscribe("account:changed", function (account) {
+            setTimeout(function () {
+                _this.loadGame();
+            }, 0);
+        });
+    };
+    // public loadingStyle() {
+    //   return this.sanitizer.bypassSecurityTrustStyle("inset(0 74% 0 0)")
+    // }
+    GamePage.prototype.leaveRoom = function () {
+        var _this = this;
+        io.socket.post("/api/v1/chat/leave", { room: this.room }, function () {
+            _this.room = null;
+            _this.chatConnected = false;
+        });
+    };
+    GamePage.prototype.joinRoom = function (room) {
+        var _this = this;
+        console.log("join room000");
+        io.socket.post("/api/v1/chat/join", { room: room }, function () {
+            console.log("joined room " + room);
+            _this.room = room;
+            _this.chatConnected = true;
+            _this.msgs.push({
+                text: 
+                // (this.appState.username || this.appState.account.substring(0, 5)) +
+                _this.userName + " connected to chat"
+            });
+            if (!_this.listening) {
+                _this.listening = true;
+                io.socket.on("message", function (message) {
+                    if (message) {
+                        console.log("gotmsg", message);
+                        _this.msgs.push(message);
+                    }
+                    else {
+                        console.log("why");
+                    }
+                });
+            }
+        });
+    };
+    GamePage.prototype.ionViewDidEnter = function () {
+        console.log(this.appState.account);
+        this.chatcontent.scrollToBottom(1000); //300ms animation speed
+        // io.socket.get("/api/chatMessage", body => {
+        //   this.msgs = body
+        // })
+    };
+    GamePage.prototype.ionViewWillLeave = function () {
+        console.log("view leaving");
+        // this.goFull(false)
+    };
+    GamePage.prototype.ionViewWillUnload = function () {
+        console.log("view unloaded");
+    };
+    GamePage.prototype.loadGameServices = function () {
+        var _this = this;
+        window["UnityProgress"] = function (gameInstance, progress) {
+            _this.webgl = true;
+            var calc = 100 - progress * 100;
+            if (calc == 0) {
+                _this.gameLoaded = true;
+                // console.log("NAME: " + this.appState.username || this.appState.account);
+                // console.log(this.appState.username);
+                window["gameInstance"].SendMessage("Web3(Clone)", "SetDisplayName", _this.appState.username || _this.userName
+                //  || (this.appState.account && this.appState.account.substring(0, 5))
+                );
+            }
+            _this.loadingStyle = _this.sanitizer.bypassSecurityTrustStyle("inset(0 " + calc + "% 0 0)");
+        };
+        window.addEventListener("room", function (e) {
+            if (e.detail.join) {
+                _this.joinRoom(e.detail.room);
+            }
+            else {
+                if (_this.room) {
+                    _this.leaveRoom();
+                }
+            }
+        });
+        window.addEventListener("show-select", function (e) {
+            _this.showSelect = e.detail;
+        });
+    };
+    GamePage.prototype.loadGame = function () {
+        // console.log(document.getElementById("gameContainer"))
+        if (!window["gameInstance"]) {
+            this.loadGameServices();
+            window["gameInstance"] = window["UnityLoader"].instantiate("gameContainer", "/game/Build/unitywebDemo.json", { onProgress: window["UnityProgress"] });
+            var canvas = document.getElementById("#canvas");
+            // Report the result.
+            canvas.tabIndex = 1;
+        }
+        else {
+            console.log("already loaded");
+        }
+    };
+    GamePage.prototype.send = function (key) {
+        var _this = this;
+        if (key == 13) {
+            if (this.chatConnected && this.room) {
+                // console.log("msg: ", this.msg)
+                var msg = {
+                    username: this.appState.username || this.userName,
+                    // || this.appState.account.substring(0, 5),
+                    account: this.appState.account,
+                    text: this.msg
+                };
+                // this.msgs.push(msg)
+                // io.socket.post("/api/chatMessage", msg, res => {})
+                io.socket.post("/api/v1/chat/send", { data: msg, room: this.room });
+                this.msg = "";
+                setTimeout(function () {
+                    _this.chatcontent.scrollToBottom(300); //300ms animation speed
+                }, 50);
+            }
+            else {
+                this.msg = "";
+            }
+        }
+    };
+    GamePage.prototype.goFull = function (shouldRevert) {
+        if (shouldRevert === void 0) { shouldRevert = true; }
+        var canvaswindow = document.getElementById("canvaswindow");
+        var canvasfull = document.getElementById("canvasfull");
+        while (canvaswindow.childNodes.length > 0) {
+            canvasfull.appendChild(canvaswindow.childNodes[0]);
+        }
+        // document.getElementsByName("canvas")[0].webkitRequestFullScreen()
+        window["gameInstance"].SetFullscreen(1);
+        if (shouldRevert) {
+            this.isFullscreen = true;
+            var inter_1 = setInterval(function () {
+                console.log(1 >= outerHeight - innerHeight);
+                if (1 < outerHeight - innerHeight) {
+                    while (canvasfull.childNodes.length > 0) {
+                        canvaswindow.appendChild(canvasfull.childNodes[0]);
+                    }
+                    clearInterval(inter_1);
+                }
+            }, 100);
+        }
+    };
+    GamePage.prototype.toggleChat = function () {
+        this.showChat = !this.showChat;
+        this.content.resize();
+        // if (this.msgs.length > 0) {
+        //   setTimeout(() => {
+        //     let m = this.msgs.pop() //hack to fix chat width
+        //     setTimeout(() => {
+        //       this.msgs.push(m)
+        //     }, 0)
+        //   }, 20)
+        // } else {
+        //   // setTimeout(() => {
+        //   //   this.msgs.push({ username: "", text: "" }) //hack to fix chat width
+        //   //   setTimeout(() => {
+        //   //     this.msgs.pop()
+        //   //   }, 0)
+        //   // }, 20)
+        // }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("chatcontent"),
+        __metadata("design:type", Object)
+    ], GamePage.prototype, "chatcontent", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */])
+    ], GamePage.prototype, "content", void 0);
+    GamePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-game",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/'<ion-split-pane [when]="showChat">\n  <ion-header #head> <ion-navbar> </ion-navbar> </ion-header>\n  <header-component></header-component>\n  <ion-content no-padding #content>\n    <!--\n      <div *ngIf="!appState.account">Ethereum account required to play. {{appState.accountStatus}}</div>\n    -->\n    <div *ngIf="appState">\n      <div\n        class="chatbutton"\n        (click)="toggleChat()"\n        *ngIf="mouseVisible() && gameLoaded"\n        tappable\n      ></div>\n\n      <div *ngIf="!gameLoaded && webgl">\n        <img src="/assets/imgs/loading-grey.png" class="load-img load-grey" />\n        <img\n          src="/assets/imgs/loading-pink.png"\n          class="load-img load-pink"\n          [style.clip-path]="loadingStyle"\n        />\n      </div>\n\n      <div id="canvaswindow">\n        <div class="webgl-content" id="canvaswrapper">\n          <div id="gameContainer"></div>\n          <div class="footer">\n            <div class="fullscreen" (click)="goFull()"></div>\n          </div>\n        </div>\n      </div>\n      <!--\n        <ion-grid>\n          <ion-row>\n            <ion-col col-4>\n            </ion-col>\n            <ion-col col-4>\n            </ion-col>\n            <ion-col col-4>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      -->\n    </div>\n\n    <div class="shipSelect abs-center" *ngIf="showSelect">\n      <ion-spinner *ngIf="!ships" class="abs-center"> </ion-spinner>\n      <div class="contentRoom">\n        <ion-grid>\n          <ion-row justify-content-center>\n            <ship-select\n              *ngFor="\n                let ship of (ships\n                  | paginate: { itemsPerPage: 8, currentPage: p })\n              "\n              ion-col\n              col-12\n              col-xl-3\n              col-lg-3\n              col-md-4\n              col-sm-6\n              [ship]="ship"\n            ></ship-select>\n          </ion-row>\n        </ion-grid>\n      </div>\n      <ion-row ion-col col-12 class="select-footer">\n        <pagination-controls\n          *ngIf="ships"\n          previousLabel=""\n          nextLabel=""\n          class="ship-pagination"\n          (pageChange)="p = $event"\n        ></pagination-controls>\n      </ion-row>\n    </div>\n  </ion-content>\n\n  <ion-menu\n    side="right"\n    type="push"\n    [content]="content"\n    [ngClass]="{ moveMenu: \'showChat\' }"\n  >\n    <ion-header>\n      <ion-toolbar> <ion-title>Menu</ion-title> </ion-toolbar>\n    </ion-header>\n\n    <ion-footer>\n      <ion-input\n        placeholder="Send a message"\n        [(ngModel)]="msg"\n        (keypress)="send($event.keyCode)"\n      ></ion-input>\n    </ion-footer>\n\n    <ion-content #chatcontent ion-scroll>\n      <ion-row *ngIf="!chatConnected">\n        <ion-col col-12> <p>Waiting to join a game lobby</p> </ion-col>\n        <ion-spinner ion-col col-12> </ion-spinner>\n        <div class="swapping-squares-spinner" :style="spinnerStyle">\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n          <div class="square"></div>\n        </div>\n      </ion-row>\n      <ion-list no-lines class="chatbox" *ngIf="chatConnected">\n        <ion-item *ngFor="let msg of msgs">\n          <a\n            [href]="\'/profile/\' + msg.account"\n            target="_blank"\n            class="username"\n            *ngIf="msg.username"\n            >{{ msg.username }}:</a\n          >\n          <span class="message" [ngClass]="{ boldChat: !msg.username }">{{\n            msg.text\n          }}</span>\n        </ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n</ion-split-pane>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\game\game.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], GamePage);
+    return GamePage;
+}());
+
+//# sourceMappingURL=game.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map

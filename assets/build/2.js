@@ -1,1 +1,332 @@
-webpackJsonp([2],{245:function(n,l,u){"use strict";function t(n){return r._21(0,[(n()(),r.Z(0,0,null,null,2,"ion-spinner",[["class","abs-center"]],[[2,"spinner-paused",null]],null,null,M.b,M.a)),r.Y(1,114688,null,0,z.a,[H.a,r.j,r.z],null,null),(n()(),r._19(-1,null,["\n    "]))],function(n,l){n(l,1,0)},function(n,l){n(l,0,0,r._13(l,1)._paused)})}function a(n){return r._21(0,[(n()(),r.Z(0,0,null,null,9,"div",[["class","column-center"]],null,null,null,null,null)),(n()(),r._19(-1,null,["\n      "])),(n()(),r.Z(2,0,null,null,1,"h1",[],null,null,null,null,null)),(n()(),r._19(3,null,["No Ethereum account found. ",""])),(n()(),r._19(-1,null,["\n      "])),(n()(),r.Z(5,0,null,null,3,"a",[["href","https://metamask.io"]],null,null,null,null,null)),(n()(),r._19(-1,null,["\n        "])),(n()(),r.Z(7,0,null,null,0,"img",[["src","https://github.com/MetaMask/faq/raw/master/images/download-metamask-dark.png"]],null,null,null,null,null)),(n()(),r._19(-1,null,["\n      "])),(n()(),r._19(-1,null,["\n    "]))],null,function(n,l){n(l,3,0,l.component.appState.accountStatus)})}function e(n){return r._21(0,[(n()(),r.Z(0,0,null,null,2,"ship-card",[["class","col"],["col-12",""],["col-lg-4",""],["col-md-6",""],["col-xl-3",""],["ion-col",""]],null,null,null,j.b,j.a)),r.Y(1,114688,null,0,F.a,[c.a,k.a,s.d],{ship:[0,"ship"]},null),r.Y(2,16384,null,0,A.a,[],null,null)],function(n,l){n(l,1,0,l.context.$implicit)},null)}function i(n){return r._21(0,[(n()(),r.Z(0,0,null,null,6,"ion-row",[["class","row"],["myMatchHeight","shipWrap"]],null,[["window","resize"]],function(n,l,u){var t=!0;if("window:resize"===l){t=!1!==r._13(n,1).onResize()&&t}return t},null,null)),r.Y(1,4210688,null,0,E.a,[r.j],{myMatchHeight:[0,"myMatchHeight"]},null),r.Y(2,16384,null,0,P.a,[],null,null),(n()(),r._19(-1,null,["\n      "])),(n()(),r.U(16777216,null,null,1,null,e)),r.Y(5,802816,null,0,R.h,[r.I,r.F,r.p],{ngForOf:[0,"ngForOf"]},null),(n()(),r._19(-1,null,["\n    "]))],function(n,l){var u=l.component;n(l,1,0,"shipWrap");n(l,5,0,u.appState.ships)},null)}function o(n){return r._21(0,[(n()(),r.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),r.Y(1,16384,null,0,U.a,[H.a,r.j,r.z,[2,V.a]],null,null),(n()(),r._19(-1,null,["\n  "])),(n()(),r.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,q.b,q.a)),r.Y(4,49152,null,0,x.a,[C.a,[2,V.a],[2,k.a],H.a,r.j,r.z],null,null),(n()(),r._19(-1,3,[" "])),(n()(),r._19(-1,null,["\n"])),(n()(),r._19(-1,null,["\n"])),(n()(),r.Z(8,0,null,null,1,"header-component",[],null,null,null,N.b,N.a)),r.Y(9,114688,null,0,O.a,[k.a,c.a,r.u],null,null),(n()(),r._19(-1,null,["\n\n"])),(n()(),r.Z(11,0,null,null,18,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,W.b,W.a)),r.Y(12,4374528,null,0,B.a,[H.a,D.a,L.a,r.j,r.z,C.a,J.a,r.u,[2,V.a],[2,k.a]],null,null),(n()(),r._19(-1,1,["\n  "])),(n()(),r.Z(14,0,null,1,11,"ion-grid",[["class","contentRoom grid"]],null,null,null,null,null)),r.Y(15,16384,null,0,T.a,[],null,null),(n()(),r._19(-1,null,["\n    "])),(n()(),r.U(16777216,null,null,1,null,t)),r.Y(18,16384,null,0,R.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(n()(),r._19(-1,null,["\n    "])),(n()(),r.U(16777216,null,null,1,null,a)),r.Y(21,16384,null,0,R.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(n()(),r._19(-1,null,["\n    "])),(n()(),r.U(16777216,null,null,1,null,i)),r.Y(24,16384,null,0,R.i,[r.I,r.F],{ngIf:[0,"ngIf"]},null),(n()(),r._19(-1,null,["\n  "])),(n()(),r._19(-1,1,["\n\n  "])),(n()(),r.Z(27,0,null,1,1,"footer-component",[],null,null,null,X.b,X.a)),r.Y(28,49152,null,0,$.a,[],null,null),(n()(),r._19(-1,1,["\n"]))],function(n,l){var u=l.component;n(l,9,0);n(l,18,0,!u.appState.ships&&u.appState.account);n(l,21,0,!u.appState.account);n(l,24,0,u.appState.ships)},function(n,l){n(l,3,0,r._13(l,4)._hidden,r._13(l,4)._sbPadding);n(l,11,0,r._13(l,12).statusbarPadding,r._13(l,12)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var r=u(0),c=(u(5),u(23),u(21)),s=u(44),h=(u(205),function(){function n(n,l,u,t,a){this.navCtrl=n,this.navParams=l,this.appState=u,this.http=t,this.events=a,this.p=1,this.noAccount=!1,this.show=!0,this.appState.account&&this.appState.account.length>8||(this.noAccount=!0)}return n.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad MyShipsPage")},n}()),p=u(121),f=u(250),_=u(120),d=u(124),g=function(){return function(){}}(),m=u(191),y=u(192),b=u(193),v=u(194),Y=u(195),Z=u(196),w=u(197),S=u(198),I=u(199),M=u(203),z=u(57),H=u(1),j=u(207),F=u(80),k=u(13),A=u(45),E=u(251),P=u(46),R=u(10),U=u(77),V=u(4),q=u(200),x=u(24),C=u(8),N=u(201),O=u(76),W=u(202),B=u(22),D=u(3),L=u(9),J=u(28),T=u(56),X=u(204),$=u(78),G=u(11),K=u(81),Q=r.X({encapsulation:2,styles:[],data:{}}),nn=r.V("page-my-ships",h,function(n){return r._21(0,[(n()(),r.Z(0,0,null,null,1,"page-my-ships",[],null,null,null,o,Q)),r.Y(1,49152,null,0,h,[k.a,G.a,c.a,s.d,K.a],null,null)],null,null)},{},{},[]),ln=u(18),un=u(122),tn=u(40);u.d(l,"MyShipsPageModuleNgFactory",function(){return an});var an=r.W(g,[],function(n){return r._10([r._11(512,r.i,r.S,[[8,[m.a,y.a,b.a,v.a,Y.a,Z.a,w.a,S.a,I.a,nn]],[3,r.i],r.s]),r._11(4608,R.k,R.j,[r.r,[2,R.s]]),r._11(4608,d.e,d.e,[]),r._11(4608,ln.q,ln.q,[]),r._11(4608,ln.d,ln.d,[]),r._11(512,R.b,R.b,[]),r._11(512,d.a,d.a,[]),r._11(512,f.a,f.a,[]),r._11(512,ln.o,ln.o,[]),r._11(512,ln.g,ln.g,[]),r._11(512,ln.n,ln.n,[]),r._11(512,un.a,un.a,[]),r._11(512,_.a,_.a,[]),r._11(512,p.a,p.a,[]),r._11(512,un.b,un.b,[]),r._11(512,g,g,[]),r._11(256,tn.a,h,[])])})},250:function(n,l,u){"use strict";u(5),u(0),u(251);u.d(l,"a",function(){return t});var t=function(){return function(){}}()},251:function(n,l,u){"use strict";u.d(l,"a",function(){return t});u(5);var t=function(){function n(n){this.el=n,console.log("in match")}return n.prototype.ngAfterViewInit=function(){var n=this;setTimeout(function(){n.matchHeight(n.el.nativeElement,n.myMatchHeight)},50)},n.prototype.onResize=function(){this.matchHeight(this.el.nativeElement,this.myMatchHeight)},n.prototype.matchHeight=function(n,l){if(console.log("match",n),n){var u=n.getElementsByClassName(l);if(u){Array.from(u).forEach(function(n){n.style.height="initial"});var t=Array.from(u).map(function(n){return n.getBoundingClientRect().height}).reduce(function(n,l){return l>n?l:n},0);Array.from(u).forEach(function(n){return n.style.height=t+"px"})}}},n}()}});
+webpackJsonp([2],{
+
+/***/ 271:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyShipsPageModule", function() { return MyShipsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_ships__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_pagination__ = __webpack_require__(195);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+// import { HeaderComponentModule } from "../../components/header/header"
+
+
+
+ // <-- import the module
+var MyShipsPageModule = (function () {
+    function MyShipsPageModule() {
+    }
+    MyShipsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__my_ships__["a" /* MyShipsPage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_6_ngx_pagination__["a" /* NgxPaginationModule */],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* DirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_ships__["a" /* MyShipsPage */])
+            ]
+        })
+    ], MyShipsPageModule);
+    return MyShipsPageModule;
+}());
+
+//# sourceMappingURL=my-ships.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectivesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__ = __webpack_require__(278);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DirectivesModule = (function () {
+    function DirectivesModule() {
+    }
+    DirectivesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */],
+                __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__["a" /* MyMatchHeightDirective */]],
+            imports: [],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */],
+                __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__["a" /* MyMatchHeightDirective */]]
+        })
+    ], DirectivesModule);
+    return DirectivesModule;
+}());
+
+//# sourceMappingURL=directives.module.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HideHeaderDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the HideHeaderDirective directive.
+ *
+ * See https://angular.io/docs/ts/latest/api/core/index/DirectiveMetadata-class.html
+ * for more info on Angular Directives.
+ */
+var HideHeaderDirective = (function () {
+    function HideHeaderDirective(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        console.log("Hello HideHeaderDirective Directive", this.header);
+    }
+    HideHeaderDirective.prototype.ngOnInit = function () {
+        this.headerHeight = this.header.clientHeight;
+        this.renderer.setElementStyle(this.header, "webkitTransition", "top 700ms");
+        this.scrollContent = this.element.nativeElement.getElementsByClassName("scroll-content")[0];
+        this.renderer.setElementStyle(this.scrollContent, "webkitTransition", "margin-top 700ms");
+    };
+    HideHeaderDirective.prototype.onContentScroll = function (event) {
+        if (event.scrollTop > 56) {
+            this.renderer.setElementStyle(this.header, "top", "-56px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "0px");
+        }
+        else {
+            this.renderer.setElementStyle(this.header, "top", "0px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "56px");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])("header"),
+        __metadata("design:type", HTMLElement)
+    ], HideHeaderDirective.prototype, "header", void 0);
+    HideHeaderDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: "[hide-header]",
+            host: {
+                "(ionScroll)": "onContentScroll($event)"
+            }
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+    ], HideHeaderDirective);
+    return HideHeaderDirective;
+}());
+
+//# sourceMappingURL=hide-header.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyMatchHeightDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MyMatchHeightDirective = (function () {
+    function MyMatchHeightDirective(el) {
+        this.el = el;
+        console.log("in match");
+    }
+    MyMatchHeightDirective.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.matchHeight(_this.el.nativeElement, _this.myMatchHeight);
+        }, 50);
+    };
+    MyMatchHeightDirective.prototype.onResize = function () {
+        // call our matchHeight function here
+        this.matchHeight(this.el.nativeElement, this.myMatchHeight);
+    };
+    MyMatchHeightDirective.prototype.matchHeight = function (parent, className) {
+        // match height logic here
+        console.log("match", parent);
+        if (!parent)
+            return;
+        // step 1: find all the child elements with the selected class name
+        var children = parent.getElementsByClassName(className);
+        if (!children)
+            return;
+        Array.from(children).forEach(function (x) {
+            x.style.height = "initial";
+        });
+        // step 2a: get all the child elements heights
+        var itemHeights = Array.from(children).map(function (x) { return x.getBoundingClientRect().height; });
+        // step 2b: find out the tallest
+        var maxHeight = itemHeights.reduce(function (prev, curr) {
+            return curr > prev ? curr : prev;
+        }, 0);
+        // step 3: update all the child elements to the tallest height
+        Array.from(children).forEach(function (x) { return (x.style.height = maxHeight + "px"); });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], MyMatchHeightDirective.prototype, "myMatchHeight", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])("window:resize"),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], MyMatchHeightDirective.prototype, "onResize", null);
+    MyMatchHeightDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: "[myMatchHeight]" // Attribute selector
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
+    ], MyMatchHeightDirective);
+    return MyMatchHeightDirective;
+}());
+
+//# sourceMappingURL=my-match-height.js.map
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyShipsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyShipsPage = (function () {
+    // loading = true
+    function MyShipsPage(navCtrl, navParams, appState, http, events) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.appState = appState;
+        this.http = http;
+        this.events = events;
+        this.p = 1;
+        this.noAccount = false;
+        this.show = true;
+        if (this.appState.account && this.appState.account.length > 8) {
+        }
+        else {
+            this.noAccount = true;
+            // this.loading = false
+        }
+        // this.request()
+        // events.subscribe("account:changed", account => {
+        //   this.changeAccount()
+        // })
+    }
+    // request() {
+    //   if (this.appState.account && this.appState.account.length > 8) {
+    //     let url =
+    //       "https://api.eth.bid/api/v1/ships?address=" +
+    //       // "http://localhost:8080/api/v1/ships?address=" +
+    //       encodeURI(this.appState.account)
+    //     console.log(url)
+    //     this.http
+    //       .get(url)
+    //       .map(res => res.json())
+    //       .subscribe(
+    //         data => this.parseResult(data),
+    //         err => console.log(err),
+    //         () => console.log("Complete")
+    //       )
+    //   } else {
+    //     this.noAccount = true
+    //     this.loading = false
+    //   }
+    // }
+    // parseResult(data) {
+    //   console.log("got result", data)
+    //   this.loading = false
+    //   console.log(data)
+    //   if (data.length > 0) {
+    //     // data.forEach(ship => {
+    //     //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+    //     // })
+    //     this.ships = data
+    //   }
+    //   console.log("done")
+    // }
+    // changeAccount() {
+    //   this.loading = true
+    //   this.ships = []
+    //   this.request()
+    // }
+    MyShipsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad MyShipsPage");
+    };
+    MyShipsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-my-ships",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/'<ion-header #head>\n  <ion-navbar> </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-spinner *ngIf="!appState.ships && appState.account" class="abs-center">\n    </ion-spinner>\n    <div *ngIf="!appState.account" class="column-center">\n      <h1>No Ethereum account found. {{ appState.accountStatus }}</h1>\n      <a href="https://metamask.io">\n        <img src="https://github.com/MetaMask/faq/raw/master/images/download-metamask-dark.png" />\n      </a>\n    </div>\n    <ion-row *ngIf="appState.ships" myMatchHeight="shipWrap">\n      <ship-card *ngFor="let ship of appState.ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\my-ships\my-ships.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__app_app_service__["a" /* AppState */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
+    ], MyShipsPage);
+    return MyShipsPage;
+}());
+
+//# sourceMappingURL=my-ships.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=2.js.map

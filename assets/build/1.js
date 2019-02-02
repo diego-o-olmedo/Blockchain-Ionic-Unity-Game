@@ -1,1 +1,290 @@
-webpackJsonp([1],{246:function(n,l,u){"use strict";function t(n){return e._21(0,[(n()(),e.Z(0,0,null,null,3,"ion-spinner",[["class","col"],["col-12",""],["ion-col",""]],[[2,"spinner-paused",null]],null,null,P.b,P.a)),e.Y(1,16384,null,0,Z.a,[],null,null),e.Y(2,114688,null,0,w.a,[z.a,e.j,e.z],null,null),(n()(),e._19(-1,null,["\n      "]))],function(n,l){n(l,2,0)},function(n,l){n(l,0,0,e._13(l,2)._paused)})}function a(n){return e._21(0,[(n()(),e.Z(0,0,null,null,2,"ship-card",[["class","col"],["col-12",""],["col-lg-4",""],["col-md-6",""],["col-xl-3",""],["ion-col",""]],null,null,null,H.b,H.a)),e.Y(1,114688,null,0,j.a,[M.a,I.a,o.d],{ship:[0,"ship"]},null),e.Y(2,16384,null,0,Z.a,[],null,null)],function(n,l){n(l,1,0,l.context.$implicit)},null)}function i(n){return e._21(0,[(n()(),e.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),e.Y(1,16384,null,0,E.a,[z.a,e.j,e.z,[2,F.a]],null,null),(n()(),e._19(-1,null,["\n  "])),(n()(),e.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,R.b,R.a)),e.Y(4,49152,null,0,A.a,[k.a,[2,F.a],[2,I.a],z.a,e.j,e.z],null,null),(n()(),e._19(-1,3,["\n  "])),(n()(),e._19(-1,null,["\n"])),(n()(),e._19(-1,null,["\n"])),(n()(),e.Z(8,0,null,null,1,"header-component",[],null,null,null,x.b,x.a)),e.Y(9,114688,null,0,C.a,[I.a,M.a,e.u],null,null),(n()(),e._19(-1,null,["\n\n"])),(n()(),e.Z(11,0,null,null,17,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,O.b,O.a)),e.Y(12,4374528,null,0,U.a,[z.a,q.a,B.a,e.j,e.z,k.a,N.a,e.u,[2,F.a],[2,I.a]],null,null),(n()(),e._19(-1,1,["\n  "])),(n()(),e.Z(14,0,null,1,13,"ion-grid",[["class","grid"]],null,null,null,null,null)),e.Y(15,16384,null,0,V.a,[],null,null),(n()(),e._19(-1,null,["\n    "])),(n()(),e.Z(17,0,null,null,9,"ion-row",[["class","row"],["myMatchHeight","ship-card"]],null,[["window","resize"]],function(n,l,u){var t=!0;if("window:resize"===l){t=!1!==e._13(n,18).onResize()&&t}return t},null,null)),e.Y(18,4210688,null,0,J.a,[e.j],{myMatchHeight:[0,"myMatchHeight"]},null),e.Y(19,16384,null,0,S.a,[],null,null),(n()(),e._19(-1,null,["\n      "])),(n()(),e.U(16777216,null,null,1,null,t)),e.Y(22,16384,null,0,T.i,[e.I,e.F],{ngIf:[0,"ngIf"]},null),(n()(),e._19(-1,null,["\n      "])),(n()(),e.U(16777216,null,null,1,null,a)),e.Y(25,802816,null,0,T.h,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(n()(),e._19(-1,null,["\n    "])),(n()(),e._19(-1,null,["\n  "])),(n()(),e._19(-1,1,["\n\n"])),(n()(),e._19(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,9,0);n(l,18,0,"ship-card");n(l,22,0,u.loading);n(l,25,0,u.ships)},function(n,l){n(l,3,0,e._13(l,4)._hidden,e._13(l,4)._sbPadding);n(l,11,0,e._13(l,12).statusbarPadding,e._13(l,12)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var e=u(0),o=(u(5),u(23),u(44)),r=(u(205),function(){function n(n,l,u){this.navCtrl=n,this.navParams=l,this.http=u,this.ships=[],this.loading=!0,this.address=this.navParams.data.address,this.address&&this.address.length>8?this.getProfile():this.loading=!1}return n.prototype.getProfile=function(){var n=this;io.socket.get("/api/v1/ships?address="+encodeURI(this.address),function(l){n.loading=!1,console.log(l),l.length>0&&(n.ships=l)})},n}()),s=u(121),c=u(250),h=u(120),d=function(){return function(){}}(),f=u(191),_=u(192),g=u(193),p=u(194),m=u(195),v=u(196),y=u(197),b=u(198),Y=u(199),P=u(203),Z=u(45),w=u(57),z=u(1),H=u(207),j=u(80),M=u(21),I=u(13),E=u(77),F=u(4),R=u(200),A=u(24),k=u(8),x=u(201),C=u(76),O=u(202),U=u(22),q=u(3),B=u(9),N=u(28),V=u(56),J=u(251),S=u(46),T=u(10),W=u(11),X=e.X({encapsulation:2,styles:[],data:{}}),$=e.V("page-profile",r,function(n){return e._21(0,[(n()(),e.Z(0,0,null,null,1,"page-profile",[],null,null,null,i,X)),e.Y(1,49152,null,0,r,[I.a,W.a,o.d],null,null)],null,null)},{},{},[]),D=u(18),G=u(122),K=u(40);u.d(l,"ProfilePageModuleNgFactory",function(){return L});var L=e.W(d,[],function(n){return e._10([e._11(512,e.i,e.S,[[8,[f.a,_.a,g.a,p.a,m.a,v.a,y.a,b.a,Y.a,$]],[3,e.i],e.s]),e._11(4608,T.k,T.j,[e.r,[2,T.s]]),e._11(4608,D.q,D.q,[]),e._11(4608,D.d,D.d,[]),e._11(512,T.b,T.b,[]),e._11(512,D.o,D.o,[]),e._11(512,D.g,D.g,[]),e._11(512,D.n,D.n,[]),e._11(512,G.a,G.a,[]),e._11(512,h.a,h.a,[]),e._11(512,c.a,c.a,[]),e._11(512,s.a,s.a,[]),e._11(512,G.b,G.b,[]),e._11(512,d,d,[]),e._11(256,K.a,r,[])])})},250:function(n,l,u){"use strict";u(5),u(0),u(251);u.d(l,"a",function(){return t});var t=function(){return function(){}}()},251:function(n,l,u){"use strict";u.d(l,"a",function(){return t});u(5);var t=function(){function n(n){this.el=n,console.log("in match")}return n.prototype.ngAfterViewInit=function(){var n=this;setTimeout(function(){n.matchHeight(n.el.nativeElement,n.myMatchHeight)},50)},n.prototype.onResize=function(){this.matchHeight(this.el.nativeElement,this.myMatchHeight)},n.prototype.matchHeight=function(n,l){if(console.log("match",n),n){var u=n.getElementsByClassName(l);if(u){Array.from(u).forEach(function(n){n.style.height="initial"});var t=Array.from(u).map(function(n){return n.getBoundingClientRect().height}).reduce(function(n,l){return l>n?l:n},0);Array.from(u).forEach(function(n){return n.style.height=t+"px"})}}},n}()}});
+webpackJsonp([1],{
+
+/***/ 272:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(192);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var ProfilePageModule = (function () {
+    function ProfilePageModule() {
+    }
+    ProfilePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* DirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */])
+            ]
+        })
+    ], ProfilePageModule);
+    return ProfilePageModule;
+}());
+
+//# sourceMappingURL=profile.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DirectivesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__ = __webpack_require__(278);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DirectivesModule = (function () {
+    function DirectivesModule() {
+    }
+    DirectivesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */],
+                __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__["a" /* MyMatchHeightDirective */]],
+            imports: [],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__hide_header_hide_header__["a" /* HideHeaderDirective */],
+                __WEBPACK_IMPORTED_MODULE_2__my_match_height_my_match_height__["a" /* MyMatchHeightDirective */]]
+        })
+    ], DirectivesModule);
+    return DirectivesModule;
+}());
+
+//# sourceMappingURL=directives.module.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HideHeaderDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the HideHeaderDirective directive.
+ *
+ * See https://angular.io/docs/ts/latest/api/core/index/DirectiveMetadata-class.html
+ * for more info on Angular Directives.
+ */
+var HideHeaderDirective = (function () {
+    function HideHeaderDirective(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        console.log("Hello HideHeaderDirective Directive", this.header);
+    }
+    HideHeaderDirective.prototype.ngOnInit = function () {
+        this.headerHeight = this.header.clientHeight;
+        this.renderer.setElementStyle(this.header, "webkitTransition", "top 700ms");
+        this.scrollContent = this.element.nativeElement.getElementsByClassName("scroll-content")[0];
+        this.renderer.setElementStyle(this.scrollContent, "webkitTransition", "margin-top 700ms");
+    };
+    HideHeaderDirective.prototype.onContentScroll = function (event) {
+        if (event.scrollTop > 56) {
+            this.renderer.setElementStyle(this.header, "top", "-56px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "0px");
+        }
+        else {
+            this.renderer.setElementStyle(this.header, "top", "0px");
+            this.renderer.setElementStyle(this.scrollContent, "margin-top", "56px");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])("header"),
+        __metadata("design:type", HTMLElement)
+    ], HideHeaderDirective.prototype, "header", void 0);
+    HideHeaderDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: "[hide-header]",
+            host: {
+                "(ionScroll)": "onContentScroll($event)"
+            }
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+    ], HideHeaderDirective);
+    return HideHeaderDirective;
+}());
+
+//# sourceMappingURL=hide-header.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyMatchHeightDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MyMatchHeightDirective = (function () {
+    function MyMatchHeightDirective(el) {
+        this.el = el;
+        console.log("in match");
+    }
+    MyMatchHeightDirective.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.matchHeight(_this.el.nativeElement, _this.myMatchHeight);
+        }, 50);
+    };
+    MyMatchHeightDirective.prototype.onResize = function () {
+        // call our matchHeight function here
+        this.matchHeight(this.el.nativeElement, this.myMatchHeight);
+    };
+    MyMatchHeightDirective.prototype.matchHeight = function (parent, className) {
+        // match height logic here
+        console.log("match", parent);
+        if (!parent)
+            return;
+        // step 1: find all the child elements with the selected class name
+        var children = parent.getElementsByClassName(className);
+        if (!children)
+            return;
+        Array.from(children).forEach(function (x) {
+            x.style.height = "initial";
+        });
+        // step 2a: get all the child elements heights
+        var itemHeights = Array.from(children).map(function (x) { return x.getBoundingClientRect().height; });
+        // step 2b: find out the tallest
+        var maxHeight = itemHeights.reduce(function (prev, curr) {
+            return curr > prev ? curr : prev;
+        }, 0);
+        // step 3: update all the child elements to the tallest height
+        Array.from(children).forEach(function (x) { return (x.style.height = maxHeight + "px"); });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], MyMatchHeightDirective.prototype, "myMatchHeight", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])("window:resize"),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], MyMatchHeightDirective.prototype, "onResize", null);
+    MyMatchHeightDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+            selector: "[myMatchHeight]" // Attribute selector
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
+    ], MyMatchHeightDirective);
+    return MyMatchHeightDirective;
+}());
+
+//# sourceMappingURL=my-match-height.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ProfilePage = (function () {
+    function ProfilePage(navCtrl, navParams, http) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.ships = [];
+        this.loading = true;
+        this.address = this.navParams.data.address;
+        if (this.address && this.address.length > 8) {
+            this.getProfile();
+        }
+        else {
+            this.loading = false;
+        }
+    }
+    ProfilePage.prototype.getProfile = function () {
+        var _this = this;
+        io.socket.get("/api/v1/ships?address=" + encodeURI(this.address), function (data) {
+            _this.loading = false;
+            console.log(data);
+            if (data.length > 0) {
+                // data.forEach(ship => {
+                //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                // })
+                _this.ships = data;
+            }
+        });
+    };
+    ProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-profile",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\profile\profile.html"*/'<ion-header #head>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid>\n    <ion-row myMatchHeight="ship-card">\n      <ion-spinner *ngIf="loading" ion-col col-12>\n      </ion-spinner>\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xl-3 col-lg-4 col-md-6 [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\profile\profile.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
+    ], ProfilePage);
+    return ProfilePage;
+}());
+
+//# sourceMappingURL=profile.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=1.js.map

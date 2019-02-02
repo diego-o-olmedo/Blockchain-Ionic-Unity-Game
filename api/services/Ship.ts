@@ -385,7 +385,7 @@ function listenToEvent() {
 sails.log("created auction");
 
 module.exports = {
-  AuctionEvent: function(result, isPast = false) {
+  AuctionEvent: function (result, isPast = false) {
     let res = result.returnValues;
     if (result.event == "AuctionCreated") {
       Auctions.create({
@@ -396,7 +396,7 @@ module.exports = {
         currentPrice: res.startingPrice,
         duration: res.duration,
         end: parseInt(res.duration) + Math.ceil(new Date().getTime() / 1000)
-      }).exec(function(err, newAuction) {
+      }).exec(function (err, newAuction) {
         if (err) {
           console.log("create has error");
         } else {
@@ -405,13 +405,13 @@ module.exports = {
       });
     } else if (result.event == "AuctionCancelled") {
       console.log("destroy ", res.tokenId);
-      Auctions.destroy({ id: res.tokenId }).exec(function(err) {});
+      Auctions.destroy({ id: res.tokenId }).exec(function (err) { });
     } else if (result.event == "AuctionSuccessful") {
       console.log("destroy ", res.tokenId);
-      Auctions.destroy({ id: res.tokenId }).exec(function(err) {});
+      Auctions.destroy({ id: res.tokenId }).exec(function (err) { });
     }
   },
-  stats: function(r, raw = false) {
+  stats: function (r, raw = false) {
     let rgb1 = [];
     let rgb2 = [];
     let j = 0;
@@ -422,7 +422,7 @@ module.exports = {
       rgb2[i] = Math.floor((r.gene[j++] + r.gene[j++]) * 2.5);
     }
     let modelPoint = r.gene.charAt(r.gene.length - 1);
-    let model = Math.floor(modelPoint / 1.60950001);
+    let model = Math.floor(modelPoint / 1.286);
     let weapon1List = [
       "Bolt Basic",
       "Bolt Poison",
@@ -477,7 +477,7 @@ module.exports = {
     return r;
   },
 
-  shipDB: function(id, res) {
+  shipDB: function (id, res) {
     let r = Ship.stats({ gene: res[9] });
     Ships.create({
       id: id,
@@ -500,7 +500,7 @@ module.exports = {
       secondaryWeapon: r.secondaryWeapon,
       primaryColor: r.primaryColor,
       secondaryColor: r.secondaryColor
-    }).exec(function(err, newAuction) {
+    }).exec(function (err, newAuction) {
       if (err) {
         console.log(id, "create has error");
         console.log(err);
@@ -510,7 +510,7 @@ module.exports = {
     });
   },
 
-  getFull: function(id, name) {
+  getFull: function (id, name) {
     return new Promise((resolve, reject) => {
       CoreContract.methods.getKitty(id).call({}, (err, res) => {
         //to do todo web3 1.0
@@ -524,11 +524,11 @@ module.exports = {
     });
   },
 
-  get: function(id, name) {
+  get: function (id, name) {
     return new Promise((resolve, reject) => {
       // limiter.removeTokens(1, () => {
       console.log("tryering", id);
-      CoreContract.methods.getKitty(id).call({}, (err, res) => {
+      CoreContract.methods.getKitty(Number(id)).call({}, (err, res) => {
         //to do todo web3 1.0
         if (err) {
           console.log(err);

@@ -1,1 +1,150 @@
-webpackJsonp([6],{242:function(l,n,u){"use strict";function o(l){return e._21(0,[(l()(),e.Z(0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),e._19(1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.offset+1)})}function a(l){return e._21(0,[(l()(),e.Z(0,0,null,null,2,"ion-spinner",[],[[2,"spinner-paused",null]],null,null,Z.b,Z.a)),e.Y(1,114688,null,0,v.a,[j.a,e.j,e.z],null,null),(l()(),e._19(-1,null,[" "]))],function(l,n){l(n,1,0)},function(l,n){l(n,0,0,e._13(n,1)._paused)})}function t(l){return e._21(0,[(l()(),e.Z(0,0,null,null,2,"ship-card",[["class","col"],["col-12",""],["col-lg-6",""],["col-md-6",""],["col-xl-4",""],["col-xxl-3",""],["ion-col",""]],[[8,"hidden",0]],null,null,y.b,y.a)),e.Y(1,114688,null,0,I.a,[z.a,F.a,P.d],{ship:[0,"ship"]},null),e.Y(2,16384,null,0,k.a,[],null,null)],function(l,n){l(n,1,0,n.context.$implicit)},function(l,n){l(n,0,0,!n.component.show)})}function i(l){return e._21(0,[(l()(),e.Z(0,0,[["head",1]],null,6,"ion-header",[],null,null,null,null,null)),e.Y(1,16384,null,0,q.a,[j.a,e.j,e.z,[2,x.a]],null,null),(l()(),e._19(-1,null,["\n  "])),(l()(),e.Z(3,0,null,null,2,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,R.b,R.a)),e.Y(4,49152,null,0,T.a,[O.a,[2,x.a],[2,F.a],j.a,e.j,e.z],null,null),(l()(),e._19(-1,3,[" "])),(l()(),e._19(-1,null,["\n"])),(l()(),e._19(-1,null,["\n"])),(l()(),e.Z(8,0,null,null,1,"header-component",[],null,null,null,U.b,U.a)),e.Y(9,114688,null,0,V.a,[F.a,z.a,e.u],null,null),(l()(),e._19(-1,null,["\n\n"])),(l()(),e.Z(11,0,null,null,32,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,A.b,A.a)),e.Y(12,4374528,null,0,D.a,[j.a,L.a,M.a,e.j,e.z,O.a,C.a,e.u,[2,x.a],[2,F.a]],null,null),(l()(),e._19(-1,1,["\n  "])),(l()(),e.Z(14,0,null,1,25,"ion-grid",[["class","contentRoom grid"]],null,null,null,null,null)),e.Y(15,16384,null,0,J.a,[],null,null),(l()(),e._19(-1,null,["\n    "])),(l()(),e.Z(17,0,null,null,14,"ion-row",[["class","pagination row"]],null,null,null,null,null)),e.Y(18,16384,null,0,N.a,[],null,null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.Z(20,0,null,null,1,"ion-icon",[["name","ios-arrow-back"],["role","img"],["tappable",""]],[[4,"opacity",null],[2,"hide",null]],[[null,"tap"]],function(l,n,u){var o=!0;if("tap"===n){o=!1!==l.component.changeTab(-1)&&o}return o},null,null)),e.Y(21,147456,null,0,S.a,[j.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.U(16777216,null,null,1,null,o)),e.Y(24,16384,null,0,W.i,[e.I,e.F],{ngIf:[0,"ngIf"]},null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.U(16777216,null,null,1,null,a)),e.Y(27,16384,null,0,W.i,[e.I,e.F],{ngIf:[0,"ngIf"]},null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.Z(29,0,null,null,1,"ion-icon",[["name","ios-arrow-forward"],["role","img"],["tappable",""]],[[2,"hide",null]],[[null,"tap"]],function(l,n,u){var o=!0;if("tap"===n){o=!1!==l.component.changeTab(1)&&o}return o},null,null)),e.Y(30,147456,null,0,S.a,[j.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._19(-1,null,["\n    "])),(l()(),e._19(-1,null,["\n\n    "])),(l()(),e.Z(33,0,null,null,5,"ion-row",[["class","ships-row row"]],null,null,null,null,null)),e.Y(34,16384,null,0,N.a,[],null,null),(l()(),e._19(-1,null,["\n      "])),(l()(),e.U(16777216,null,null,1,null,t)),e.Y(37,802816,null,0,W.h,[e.I,e.F,e.p],{ngForOf:[0,"ngForOf"]},null),(l()(),e._19(-1,null,["\n    "])),(l()(),e._19(-1,null,["\n  "])),(l()(),e._19(-1,1,["\n\n  "])),(l()(),e.Z(41,0,null,1,1,"footer-component",[],null,null,null,X.b,X.a)),e.Y(42,49152,null,0,$.a,[],null,null),(l()(),e._19(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,9,0);l(n,21,0,"ios-arrow-back");l(n,24,0,!u.loading);l(n,27,0,u.loading);l(n,30,0,"ios-arrow-forward");l(n,37,0,u.ships)},function(l,n){var u=n.component;l(n,3,0,e._13(n,4)._hidden,e._13(n,4)._sbPadding);l(n,11,0,e._13(n,12).statusbarPadding,e._13(n,12)._hasRefresher);l(n,20,0,0==u.offset?0:1,e._13(n,21)._hidden);l(n,29,0,e._13(n,30)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(0),s=(u(5),u(23),u(205),function(){function l(l,n){this.navCtrl=l,this.navParams=n,this.loading=!0,this.offset=0,this.show=!1,console.log("auction con"),this.request(!0)}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AuctionsPage")},l.prototype.request=function(l){var n=this;console.log("io auctions//"),io.socket.get("/api/v1/shipsRandom?offset="+(3759+12*this.offset),function(u){n.loading=!1,u?(console.log(u),u.length>0&&(u.sort(function(l,n){return l.id-n.id}),n.ships=u,l&&setTimeout(function(){n.show=!0},150),n.loading=!1)):console.log("unable to load ships")})},l.prototype.changeTab=function(l){this.offset+=l,this.loading=!0,this.request()},l.prototype.parseResult=function(l){console.log("got result",l),this.loading=!1,console.log(l),l.length>0&&(this.ships=l),console.log("done")},l}()),r=u(120),c=u(121),d=function(){return function(){}}(),_=u(191),f=u(192),p=u(193),g=u(194),h=u(195),b=u(196),m=u(197),w=u(198),Y=u(199),Z=u(203),v=u(57),j=u(1),y=u(207),I=u(80),z=u(21),F=u(13),P=u(44),k=u(45),q=u(77),x=u(4),R=u(200),T=u(24),O=u(8),U=u(201),V=u(76),A=u(202),D=u(22),L=u(3),M=u(9),C=u(28),J=u(56),N=u(46),S=u(41),W=u(10),X=u(204),$=u(78),B=u(11),E=e.X({encapsulation:2,styles:[],data:{}}),G=e.V("page-auctions",s,function(l){return e._21(0,[(l()(),e.Z(0,0,null,null,1,"page-auctions",[],null,null,null,i,E)),e.Y(1,49152,null,0,s,[F.a,B.a],null,null)],null,null)},{},{},[]),H=u(18),K=u(122),Q=u(40);u.d(n,"AuctionsPageModuleNgFactory",function(){return ll});var ll=e.W(d,[],function(l){return e._10([e._11(512,e.i,e.S,[[8,[_.a,f.a,p.a,g.a,h.a,b.a,m.a,w.a,Y.a,G]],[3,e.i],e.s]),e._11(4608,W.k,W.j,[e.r,[2,W.s]]),e._11(4608,H.q,H.q,[]),e._11(4608,H.d,H.d,[]),e._11(512,W.b,W.b,[]),e._11(512,H.o,H.o,[]),e._11(512,H.g,H.g,[]),e._11(512,H.n,H.n,[]),e._11(512,K.a,K.a,[]),e._11(512,c.a,c.a,[]),e._11(512,r.a,r.a,[]),e._11(512,K.b,K.b,[]),e._11(512,d,d,[]),e._11(256,Q.a,s,[])])})}});
+webpackJsonp([6],{
+
+/***/ 269:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuctionsPageModule", function() { return AuctionsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auctions__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__ = __webpack_require__(193);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var AuctionsPageModule = (function () {
+    function AuctionsPageModule() {
+    }
+    AuctionsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_ship_card_ship_card_module__["a" /* ShipCardComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__auctions__["a" /* AuctionsPage */])
+            ]
+        })
+    ], AuctionsPageModule);
+    return AuctionsPageModule;
+}());
+
+//# sourceMappingURL=auctions.module.js.map
+
+/***/ }),
+
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuctionsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuctionsPage = (function () {
+    function AuctionsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.loading = true;
+        this.offset = 0;
+        this.show = false;
+        console.log("auction con");
+        this.request(true);
+    }
+    AuctionsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad AuctionsPage");
+    };
+    AuctionsPage.prototype.request = function (initial) {
+        var _this = this;
+        console.log("io auctions//");
+        // io.socket.get("/api/auction", event => {
+        //   console.log(event)
+        //   let result = []
+        //   event.auctions.forEach(record => {
+        //     record.stats["price"] = record.currentPrice
+        //     result.push(record.stats)
+        //   })
+        //   this.ships = result
+        //   this.loading = false
+        // })
+        io.socket.get("/api/v1/shipsRandom?offset=" + (7759 + this.offset * 12), function (data) {
+            _this.loading = false;
+            if (data) {
+                console.log(data);
+                if (data.length > 0) {
+                    // data.forEach(ship => {
+                    //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+                    // })
+                    data.sort(function (a, b) {
+                        return a.id - b.id;
+                    });
+                    _this.ships = data;
+                    if (initial) {
+                        setTimeout(function () {
+                            _this.show = true;
+                        }, 150);
+                    }
+                    _this.loading = false;
+                }
+            }
+            else {
+                console.log("unable to load ships");
+            }
+        });
+    };
+    AuctionsPage.prototype.changeTab = function (ment) {
+        this.offset += ment;
+        this.loading = true;
+        // this.ships = null;
+        this.request();
+    };
+    AuctionsPage.prototype.parseResult = function (data) {
+        console.log("got result", data);
+        this.loading = false;
+        console.log(data);
+        if (data.length > 0) {
+            // data.forEach(ship => {
+            //   ship["img"] = "randomColo" + Math.floor(Math.random() * 4.99) + ".png"
+            // })
+            this.ships = data;
+        }
+        console.log("done");
+    };
+    AuctionsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-auctions",template:/*ion-inline-start:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/'<ion-header #head>\n  <ion-navbar> </ion-navbar>\n</ion-header>\n<header-component></header-component>\n\n<ion-content no-padding>\n  <ion-grid class="contentRoom">\n    <ion-row class="pagination">\n      <ion-icon name="ios-arrow-back" [style.opacity]="offset == 0 ? 0 : 1" (tap)="changeTab(-1)" tappable></ion-icon>\n      <span *ngIf="!loading">{{ offset + 1 }}</span>\n      <ion-spinner *ngIf="loading"> </ion-spinner>\n      <ion-icon name="ios-arrow-forward" (tap)="changeTab(1)" tappable></ion-icon>\n    </ion-row>\n\n    <ion-row class="ships-row">\n      <ship-card *ngFor="let ship of ships" ion-col col-12 col-xxl-3 col-xl-4 col-lg-6 col-md-6 [hidden]="!show" [ship]="ship"></ship-card>\n    </ion-row>\n  </ion-grid>\n\n  <footer-component></footer-component>\n</ion-content>'/*ion-inline-end:"C:\Users\VX\Desktop\dev\ionicgame\src\pages\auctions\auctions.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], AuctionsPage);
+    return AuctionsPage;
+}());
+
+//# sourceMappingURL=auctions.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=6.js.map
